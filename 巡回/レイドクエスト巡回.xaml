@@ -69,7 +69,7 @@
                     <DelegateInArgument x:TypeArguments="x:String" Name="attribute" />
                   </ActivityAction.Argument>
                   <DoWhile DisplayName="回数/アイテム制限繰り返し" sap:VirtualizedContainerService.HintSize="484,249" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[Not result=&quot;PASS&quot;]">
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト（例外処理付） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="イベント（例外処理付）\レイドクエスト（例外処理付）.xaml">
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト（例外処理付） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="イベント/レイドクエスト_例外処理付.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="attribute">[attribute]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="difficulty">[difficulty]</InArgument>
