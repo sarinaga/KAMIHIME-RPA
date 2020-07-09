@@ -1,0 +1,36 @@
+{
+  "name": "神姫プロジェクト",
+  "description": "神姫プロジェクトのユニオンイベント",
+  "main": "巡回\\レイドクエスト巡回.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.6.0]",
+    "UiPath.Mail.Activities": "[1.5.0]",
+    "UiPath.System.Activities": "[19.5.0]",
+    "UiPath.UIAutomation.Activities": "[19.5.0]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.8.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfoCollection": []
+  },
+  "expressionLanguage": "VisualBasic"
+}

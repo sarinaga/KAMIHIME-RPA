@@ -1,0 +1,318 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ユニオンイベント" this:ユニオンイベント.ultimate="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ultimate" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1124,883</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Windows.Controls</x:String>
+      <x:String>System.Windows.Documents</x:String>
+      <x:String>System.Windows.Shapes</x:String>
+      <x:String>System.Windows.Shell</x:String>
+      <x:String>System.Windows.Navigation</x:String>
+      <x:String>System.Windows.Data</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Controls.Primitives</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows.Input</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Windows.Ink</x:String>
+      <x:String>System.Windows.Automation</x:String>
+      <x:String>System.Windows.Media.TextFormatting</x:String>
+      <x:String>System.Windows.Media.Effects</x:String>
+      <x:String>System.Windows.Media.Imaging</x:String>
+      <x:String>System.Windows.Media.Media3D</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.POP3.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="ユニオンイベント" sap:VirtualizedContainerService.HintSize="1134,718" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="closed" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">30,12.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">60,87.5 60,109.52 140,109.52</av:PointCollection>
+        <x:Double x:Key="Width">1100</x:Double>
+        <x:Double x:Key="Height">682.06</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID9</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">140,84.02</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">340,109.52 370,109.52 370,70 420,70</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;ユニオンイベント開始&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">420,44.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">620,70 650,70 650,24.5 820,24.5 820,54.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="イベント一覧画面に移動" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_41" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.1" TargetImageBase64="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" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">720,54.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">820,105.5 820,190 780,190</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ユニオンイベントを選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_42" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:ClickImage.CursorPosition>
+                <ui:ClickImage.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+                </ui:ClickImage.Image>
+                <ui:ClickImage.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:ClickImage.Target>
+              </ui:ClickImage>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">580,164.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">580,190 530,190</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ユニオンイベント主難易度選択 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="イベント\サブ処理\ユニオンイベント主難易度選択.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">330,164.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">430,215.5 430,245.5 540,245.5 540,306.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘開始まで行う（レイド） workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/幻獣とパーティーを選択して戦闘開始.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:Boolean" x:Key="selectChaos">False</InArgument>
+                          <OutArgument x:TypeArguments="x:Boolean" x:Key="closed">[closed]</OutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <FlowStep.Next>
+                        <FlowDecision x:Name="__ReferenceID6" Condition="[Not closed]" DisplayName="戦闘開始？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <av:Point x:Key="ShapeLocation">505,306.5</av:Point>
+                              <av:Size x:Key="ShapeSize">70,87</av:Size>
+                              <av:PointCollection x:Key="TrueConnector">505,350 475,350 475,280 250,280</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">575,350 580,350 580,474.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <FlowDecision.True>
+                            <FlowStep x:Name="__ReferenceID4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">50,254.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">150,305.5 150,354.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘を行う workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/戦闘（クエスト）.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful" />
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">50,354.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">150,405.5 150,435.5 390,435.5 390,604.5</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦後処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦後処理/結果処理.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID0">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">290,604.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">350,119.52 440,119.52 440,184.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;ユニオンイベント終了&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:LogMessage>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.True>
+                          <FlowDecision.False>
+                            <FlowStep x:Name="__ReferenceID7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">480,474.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">580,525.5 580,555.5 390,555.5 390,604.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokeWorkflowFile.Arguments>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InvokeWorkflowFile>
+                              <FlowStep.Next>
+                                <x:Reference>__ReferenceID0</x:Reference>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.False>
+                        </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowStep.Next>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+  </Flowchart>
+</Activity>
