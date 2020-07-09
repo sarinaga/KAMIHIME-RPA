@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="レイドクエスト" this:レイドクエスト.difficulty="ULTIMATE" this:レイドクエスト.attribute="光" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd2="clr-namespace:System.Diagnostics;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd3="clr-namespace:System.Drawing;assembly=System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:si="clr-namespace:System.IO;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sx="clr-namespace:System.Xml;assembly=System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.Core;assembly=UiPath.UiAutomation.Activities, Version=19.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="difficulty" Type="InArgument(x:String)" />
@@ -92,7 +91,7 @@
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">780,14.5</av:Point>
               <av:Size x:Key="ShapeSize">200,93</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">880,107.5 880,137.5 990,137.5 990,164.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">980,61 990,61 990,164.5</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="ここで間違ってメインクエストに飛ぶことがある。なぜだ？" ClickType="CLICK_SINGLE" DisplayName="レイドクエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -1380,7 +1379,7 @@
                                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">0,474.5</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">100,525.5 100,894.5 180,894.5 180,924.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">100,525.5 100,864.02 140,864.02 140,894.02</av:PointCollection>
                                     </scg1:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKボタンを押す（注意を閉じる）" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -1410,12 +1409,12 @@
                                     <FlowStep x:Name="__ReferenceID37">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">80,924.5</av:Point>
+                                          <av:Point x:Key="ShapeLocation">40,894.02</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">180,975.5 180,1005.5 179.895,1005.5 179.895,1065.5</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">140,945.02 140,975.02 179.895,975.02 179.895,1065.5</av:PointCollection>
                                         </scg1:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="起動\サブ処理\マイページに戻る.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg1:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1526,7 +1525,7 @@
                                               <av:Point x:Key="ShapeLocation">205,686.5</av:Point>
                                               <av:Size x:Key="ShapeSize">70,87</av:Size>
                                               <av:PointCollection x:Key="FalseConnector">275,730 560,730 560,754.5</av:PointCollection>
-                                              <av:PointCollection x:Key="TrueConnector">205,730 180,730 180,924.5</av:PointCollection>
+                                              <av:PointCollection x:Key="TrueConnector">205,730 140,730 140,894.02</av:PointCollection>
                                             </scg1:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <FlowDecision.False>
@@ -1793,7 +1792,6 @@
     <x:Reference>__ReferenceID50</x:Reference>
     <x:Reference>__ReferenceID51</x:Reference>
     <x:Reference>__ReferenceID52</x:Reference>
-    <x:Reference>__ReferenceID37</x:Reference>
     <x:Reference>__ReferenceID53</x:Reference>
     <x:Reference>__ReferenceID54</x:Reference>
     <x:Reference>__ReferenceID55</x:Reference>
@@ -1804,5 +1802,6 @@
     <x:Reference>__ReferenceID60</x:Reference>
     <x:Reference>__ReferenceID61</x:Reference>
     <x:Reference>__ReferenceID38</x:Reference>
+    <x:Reference>__ReferenceID37</x:Reference>
   </Flowchart>
 </Activity>
