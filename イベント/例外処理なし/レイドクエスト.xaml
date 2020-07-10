@@ -4,7 +4,7 @@
     <x:Property Name="attribute" Type="InArgument(x:String)" />
     <x:Property Name="result" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1134,1779</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1304,1779</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -91,7 +91,7 @@
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">780,14.5</av:Point>
               <av:Size x:Key="ShapeSize">200,93</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">980,61 990,61 990,164.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">880,107.5 880,190 890,190</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="ここで間違ってメインクエストに飛ぶことがある。なぜだ？" ClickType="CLICK_SINGLE" DisplayName="レイドクエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -152,12 +152,12 @@
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID61">
+                    <FlowStep x:Name="__ReferenceID60">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">399,230</av:Point>
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">530,230 530,165.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">530,230 530,185.5</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
@@ -174,15 +174,15 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID56">
+                        <FlowStep x:Name="__ReferenceID61">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">430,114.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">430,134.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">530,114.5 530,65.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">530,134.5 530,65.5</av:PointCollection>
                             </scg1:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="起動\サブ処理\マイページに戻る.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <scg1:Dictionary x:TypeArguments="x:String, Argument" />
                             </ui:InvokeWorkflowFile.Arguments>
@@ -1414,7 +1414,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">140,945.02 140,975.02 179.895,975.02 179.895,1065.5</av:PointCollection>
                                         </scg1:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="起動\サブ処理\マイページに戻る.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="起動\サブ処理\マイページに戻る.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg1:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -1425,7 +1425,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID57">
+                                        <FlowStep x:Name="__ReferenceID56">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">48.895,1065.5</av:Point>
@@ -1588,7 +1588,7 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </ui:InvokeWorkflowFile>
                                                       <FlowStep.Next>
-                                                        <FlowStep x:Name="__ReferenceID60">
+                                                        <FlowStep x:Name="__ReferenceID59">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">740,725.5</av:Point>
@@ -1638,7 +1638,7 @@
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:InvokeWorkflowFile>
                                                                   <FlowStep.Next>
-                                                                    <FlowStep x:Name="__ReferenceID58">
+                                                                    <FlowStep x:Name="__ReferenceID57">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <av:Point x:Key="ShapeLocation">469,1150</av:Point>
@@ -1667,7 +1667,7 @@
                                                                 </FlowStep>
                                                               </FlowDecision.True>
                                                               <FlowDecision.False>
-                                                                <FlowStep x:Name="__ReferenceID59">
+                                                                <FlowStep x:Name="__ReferenceID58">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <av:Point x:Key="ShapeLocation">809,1090</av:Point>
@@ -1800,8 +1800,8 @@
     <x:Reference>__ReferenceID58</x:Reference>
     <x:Reference>__ReferenceID59</x:Reference>
     <x:Reference>__ReferenceID60</x:Reference>
-    <x:Reference>__ReferenceID61</x:Reference>
     <x:Reference>__ReferenceID38</x:Reference>
     <x:Reference>__ReferenceID37</x:Reference>
+    <x:Reference>__ReferenceID61</x:Reference>
   </Flowchart>
 </Activity>
