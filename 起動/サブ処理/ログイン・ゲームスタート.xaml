@@ -79,7 +79,7 @@
           <av:PointCollection x:Key="ConnectorLocation">670,60 720,60 720,124.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;ログイン・ゲームスタート開始&quot;]" />
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ログイン・ゲームスタート開始&quot;]" />
       <FlowStep.Next>
         <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
@@ -95,16 +95,32 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="画面確認" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence DisplayName="画面確認" sap:VirtualizedContainerService.HintSize="476,406" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="variable1" />
+                    <Variable x:TypeArguments="ui:Window" Name="attachedWindow" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:WaitUiElementAppear DisplayName="未ログイン時の画面検知" FoundElement="[imageJustPlayNow]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitActive="False" WaitVisible="False">
+                  <ui:WindowScope SearchScope="{x:Null}" Window="{x:Null}" ApplicationWindow="[attachedWindow]" DisplayName="ウィンドウにアタッチ 'chrome.exe 神姫PROJECT'" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="dc7c230f785aa26d6a6ce379df7853da" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - オンラインゲーム - FANZA GAMES（旧DMM GAMES R18）' /&gt;" TimeoutMS="3000">
+                    <ui:WindowScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <ui:MaximizeWindow DisplayName="ウィンドウを最大化" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" Window="[attachedWindow]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:MaximizeWindow>
+                      </ActivityAction>
+                    </ui:WindowScope.Body>
+                  </ui:WindowScope>
+                  <ui:WaitUiElementAppear DisplayName="未ログイン時の画面検知" FoundElement="[imageJustPlayNow]" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitActive="False" WaitVisible="False">
                     <ui:WaitUiElementAppear.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5df5aeb0f8dcbbaeccf1806b26e5d2c3" Selector="&lt;webctrl id='game-play-top' tag='A' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
                     </ui:WaitUiElementAppear.Target>
@@ -224,7 +240,7 @@
                           <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
                         </ui:WaitImageAppear.Image>
                         <ui:WaitImageAppear.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="20000" WaitForReady="INTERACTIVE" />
                         </ui:WaitImageAppear.Target>
                       </ui:WaitImageAppear>
                       <FlowStep.Next>
@@ -283,7 +299,7 @@
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;ログイン・ゲームスタート終了&quot;]" />
+                                  <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;ログイン・ゲームスタート終了&quot;]" />
                                 </FlowStep>
                               </FlowStep.Next>
                             </FlowStep>
