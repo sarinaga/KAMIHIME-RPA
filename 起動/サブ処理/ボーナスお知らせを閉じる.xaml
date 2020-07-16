@@ -156,16 +156,16 @@
                   <av:PointCollection x:Key="ConnectorLocation">620,244.5 620,284.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If sap2010:Annotation.AnnotationText="制限を超過したらBusinessRuleException" Condition="[i &gt; max]" DisplayName="繰り返し回数制限" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="If_1">
+              <If sap2010:Annotation.AnnotationText="制限を超過したらBusinessRuleException" Condition="[i &gt; max]" DisplayName="繰り返し回数制限" sap:VirtualizedContainerService.HintSize="484,239" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If.Else>
+                <If.Then>
                   <Throw DisplayName="制限回数例外" Exception="[new BusinessRuleException(&quot;お知らせからマイページに遷移できない.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                </If.Else>
+                </If.Then>
               </If>
               <FlowStep.Next>
                 <FlowStep x:Name="__ReferenceID6">
