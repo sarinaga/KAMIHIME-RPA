@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="未確認バトル確認" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="closeUnconfirmed" Type="OutArgument(x:Boolean)" />
@@ -6,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1108,948</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>836,948</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>未確認バトル確認_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -57,7 +56,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="結果未確認が出ているかどうかを確認し、出ているときは結果を確認し、マイページに戻る&#xD;&#xA;出ていないときはなにもしない&#xD;&#xA;&#xD;&#xA;引数&#xD;&#xA;　なし&#xD;&#xA;&#xD;&#xA;戻り値&#xD;&#xA;　closeUnconfirmed:結果未確認を閉じた=True&#xD;&#xA;　" DisplayName="未確認バトル確認" sap:VirtualizedContainerService.HintSize="634,783" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="結果未確認が出ているかどうかを確認し、出ているときは結果を確認し、マイページに戻る&#xA;出ていないときはなにもしない&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　closeUnconfirmed:結果未確認を閉じた=True&#xA;　" DisplayName="未確認バトル確認" sap:VirtualizedContainerService.HintSize="634,783" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="imageUnconfirmed" />
     </Flowchart.Variables>
@@ -219,7 +218,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">150,156.5 150,204.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;未確認バトル確認終了&quot;]">
+                              <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;未確認バトル確認終了:closeUnconfirmed=&quot; &amp; closeUnconfirmed]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
