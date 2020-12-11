@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="属性クエスト巡回" this:属性クエスト巡回.max="10" this:属性クエスト巡回.random="True" this:属性クエスト巡回.thru="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="アクセクエスト巡回" this:アクセクエスト巡回.level="7" this:アクセクエスト巡回.random="False" this:アクセクエスト巡回.thru="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="max" Type="InArgument(x:Int32)" />
+    <x:Property Name="level" Type="InArgument(x:Int32)" />
     <x:Property Name="dweek" Type="InArgument(x:Int32)" />
     <x:Property Name="random" Type="InArgument(x:Boolean)" />
     <x:Property Name="thru" Type="InArgument(x:Boolean)" />
@@ -8,8 +8,8 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1205,1039</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>SPデイリークエスト巡回_1</sap2010:WorkflowViewState.IdRef>
+  <sap:VirtualizedContainerService.HintSize>873,725</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>アクセクエスト巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -30,10 +30,12 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
-      <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -54,33 +56,25 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="引数&#xD;&#xA;　max: 繰り返し回数&#xD;&#xA;　dweek: thruをtrueにした上で、曜日(0-6)を指定するとその日の属性を処理&#xD;&#xA;　random: trueにするとランダム。falseの時は実日付。&#xD;&#xA;　thru: trueにすると常にdweekの値を使う。そうでない場合はランダムか実日付の曜日" DisplayName="属性クエスト巡回" sap:VirtualizedContainerService.HintSize="526,874" sap2010:WorkflowViewState.IdRef="Sequence_2">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="dweek" />
-    </Sequence.Variables>
+  <Sequence DisplayName="アクセクエスト巡回" sap:VirtualizedContainerService.HintSize="526,560" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <While DisplayName="繰り返し回数指定" sap:VirtualizedContainerService.HintSize="484,695" sap2010:WorkflowViewState.IdRef="While_1">
-      <While.Variables>
-        <Variable x:TypeArguments="x:Int32" Default="0" Name="i" />
-      </While.Variables>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <While.Condition>[i &lt; max]</While.Condition>
-      <Sequence DisplayName="繰り返し内容" sap:VirtualizedContainerService.HintSize="376,537" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <DoWhile DisplayName="回数制限になるまで行う" sap:VirtualizedContainerService.HintSize="484,468" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+      <DoWhile.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="succeeded" />
+      </DoWhile.Variables>
+      <DoWhile.Condition>[succeeded]</DoWhile.Condition>
+      <Sequence DisplayName="曜日決定とクエスト実行" sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -99,21 +93,14 @@
             </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 属性クエスト（例外処理付） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="イベント/属性クエスト_例外処理付.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke アクセクエスト_例外処理付 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="イベント\アクセクエスト_例外処理付.xaml">
           <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:Int32" x:Key="level">[level]</InArgument>
             <InArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InArgument>
+            <OutArgument x:TypeArguments="x:Boolean" x:Key="succeeded">[succeeded]</OutArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
-        <Assign DisplayName="カウントアップ" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-          <Assign.To>
-            <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="x:Int32">[i + 1]</InArgument>
-          </Assign.Value>
-        </Assign>
-        <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[i &amp; &quot;回目&quot;]" />
       </Sequence>
-    </While>
+    </DoWhile>
   </Sequence>
 </Activity>

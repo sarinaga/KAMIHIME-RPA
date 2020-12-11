@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1072,920</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>873,920</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>アクセクエスト_例外処理付_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,7 +65,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="438,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;アクセクエスト（例外処理付）開始&quot;]">
+    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="438,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;アクセクエスト（例外処理付）開始:level={0}, dweek={1}&quot;, level, dweek)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -76,15 +76,9 @@
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke アクセクエスト workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント\例外処理なし\アクセクエスト.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:Int32" x:Key="dweek">
-              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="dweek" />
-            </InArgument>
-            <InArgument x:TypeArguments="x:Int32" x:Key="level">
-              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="level" />
-            </InArgument>
-            <OutArgument x:TypeArguments="x:Boolean" x:Key="succeeded">
-              <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="succeeded" />
-            </OutArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InArgument>
+            <InArgument x:TypeArguments="x:Int32" x:Key="level">[level]</InArgument>
+            <OutArgument x:TypeArguments="x:Boolean" x:Key="succeeded">[succeeded]</OutArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </TryCatch.Try>
