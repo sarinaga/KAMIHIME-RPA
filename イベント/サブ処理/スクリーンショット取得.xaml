@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="scnShotFile" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>869,989</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1046,989</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -46,7 +46,7 @@
     </ui:LogMessage>
     <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="スクリーンショット" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[scnShot]">
       <ui:TakeScreenshot.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5d8dac9b15ba8824597314ca27d3aff1" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES（旧DMM GAMES R18）' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="754fc4a5518d52daee3c0fd62ff819d3" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;&lt;webctrl id='game_frame' tag='IFRAME' /&gt;&lt;webctrl id='game' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:TakeScreenshot.Target>
     </ui:TakeScreenshot>
     <Assign DisplayName="出力ファイル名" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">

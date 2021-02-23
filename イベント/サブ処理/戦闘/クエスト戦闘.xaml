@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="condition" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1272,1018</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1128,1018</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -53,7 +53,7 @@
           <av:PointCollection x:Key="ConnectorLocation">380,240 410,240 410,50 480,50</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘自動モード切り替え workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/戦闘自動モード切り替え.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘自動モード切り替え workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/戦闘自動モード切り替え.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:Boolean" x:Key="useAbility">True</InArgument>
           <InArgument x:TypeArguments="x:Boolean" x:Key="useBurst">True</InArgument>
@@ -73,17 +73,11 @@
               <av:PointCollection x:Key="ConnectorLocation">580,75.5 580,224.5</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘処理 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/戦闘処理.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/戦闘処理.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:String" x:Key="condition">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="condition" />
-              </OutArgument>
-              <InArgument x:TypeArguments="x:Boolean" x:Key="ignoreNext">
-                <Literal x:TypeArguments="x:Boolean" Value="True" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:Boolean" x:Key="request">
-                <Literal x:TypeArguments="x:Boolean" />
-              </InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="condition">[condition]</OutArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="ignoreNext">True</InArgument>
+              <InArgument x:TypeArguments="x:Boolean" x:Key="request">False</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,10 +132,10 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="戦闘開始状態になったことを待つ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
             <ui:WaitImageAppear.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAsAAAAdCAYAAAB8I5agAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOESURBVDhPZVR7TI1xGP6trBl/pJH6Iw3Z2AzN0jjTEplpQy7JyiUtXUiKOqIOHd3oSE4ppeMkJHWsHeWU2yq6nGMzlHRqSCq5NXObCXl879tOC9/2bt/leZ/f+77P+3zCb7wV5o6zhpfLBCij/NF+9wo0KTvg5zEV0f4yFCRsRffdi/jdUwfhOdYKjjbWcHMYA3VaPL6860JH3SUYzueiRq9HTnIcDm/3QnNJEkSw3TCz38I5qK3UYejNc/xsvY2e2hK0GM5goNWAmrNJyIxcDZE2yQreElixKwR9D+8w6ETsRgT7zOZSDgV747GhAFn7AyDUDlbwkUrQqI/g8yszv5TNsGEgxUr3adDlKZmdmXe4OqOmTIW22iLkxG7BGVUKnprNHJe1BbjfeBNtdeUQyU4TGFxdnIYmXSY3k59xEM9NtzDUfx8Y+gB86kGfUQKfcrZFoKM1NFkx6DTqkK+IQPhaGfYFLEW5Kg5dN4q4YQpRPMMW4c7WSI30RX+DDqXpkUiVh/LISlTReNFUDuOlo2gtz4KomGmLPVLdJEqZRoG+x9VQhvlghasdzqXvxMOqfMg3L2Eyofewh2V8QUsWwHT1LItCAEpYv9gJh7d5cjCzBUwq7l3vxkeaqwpHGKk8euZpEJAkt8hOIPpISRq5H67l7mclRa7nFGyYPG5kmehoEuXfhBuFCZKC0x1ZwYhN3jDV30RP9zOcTInhJErovF2EtqocLk9YQD8GB8GXJMK3gVY0XLuIPGUsavWX8fVzL9503IJof3Ad+PmagxSzCEDxq8uI3186Rt6LMFcHqKJ8/1KK7jNjg7Bx2RzJCKH42FCBxpxRNdOGaZQhqFAnIHSVO9eclxGPd20mGE4l8M6IYhcHWKxFYwtcPo/jmGL3X8Dm0rRhZsucnSeO4bElx4eyESzARu0RDD2t/595NFAZ5juyeZQgKmWzcEDyIdWtiAniPaYPJ2P8cTRqG+RbV3IS3TOYTMuGLTnBAmgTQ7hJslrfEyNvYf7xxGEw7TM19KLlDnswfmcg0hPlSI4LR/ujexh4/5abFRdk9oibbYsyrcRar2dWOlarTsJLSfofg9+Hfw/N0iLludlDPn8KG7a5KpvtlJ2hRH9HE09gtFAie90iRLjPhO78aXSaqtmDqeG+rBgFjY4mw9MgcIDLeG7ge6+ZPSgPWcNBp1BJBC5Nj8QffFEeyDCpXk0AAAAASUVORK5CYII=" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA0AAAAXCAYAAADQpsWBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOKSURBVDhPZZR/TJR1HMcfsT9gLDJGW7ujpshqlc3JJplZbOEU5ybioDyIlE7z4CRwgAIeciBwaXGHgISnQKBGnT9OGaCcx0IGw2ie5xQIMlcXRdxGc6yNSdir+35vsFjP9t7zfZ7n+/5+Pu/35/N5lMSwQEKfCWHTm1F0X7UxN/kTs/du8PO353F3WpkactDVYuQz/WZaDKnkpKxDqQhbysbQpRhztHju9PDQ0cjRfXGkxC4ncb0Kw4fvcr/zFJU5Grku1G33k7aqgmiuMzEzfhvr4SQ2RAayOWr5Ai5aTTJabf776JO3+EnvvRLBxZYq3DeaMGdrOHnMyMjwkESrtRrXzU7czq+pz03io9iXUY6HP4t21Qp52sAFM+W6BM5UVfBgoIu5CRc8eQR/TeAZtNNQmibTVurUy9gbHkhzbT6jt+x8UZTOrrgochKjaTNnSY3CGIEm417i1z6P0hjhI6kCKNVt47e+C/JDYWYqZYY8ao37Ges5z21bJSOXq/GOuvhjchKldeUystRLiHs9lEsNpXjudVGk3SLNqC/W4m63krszZuFQEVHpXK9m3nYhUuga7flKbhTE2FUhGJI3YNJu4rTPPW/vWRT7OhVHfISo4CBWPheIfutqXK2fM9J+5j8RbPLZlBHv1yTcSwgLkASBteoA8nZESw0CLYUpdNQVMHW3DTw9jHWcRDkVE4kmIlhunk9H3OeJIqqoj+P0EaaHrzPqbEQ5sUaN5oUgMnfHMzjQy/ivDzAZ0iVRpCf03bl+joztb8vUBZQDmo0MOjuYfTyDvHzFnPlzlF7HVarLinDYv2HaO87vd7u51nAMZ9sllGGXA/72SIgOmC+kwNzDfpj+YdH7ubFulD0vhWLJ3rGo8mJtyU4g+Z0VfFmu41HvFfprislLekNar1SHh8kaiTEQvdVec1DmLTRZSj7Be7+fa3UHKdHGYD+RS7PpY78RwvJIn90CO2Nek71nKclaRBhorZCW/3KzGaVsdbiMpA4JkPBHWEzoayqTWoTlwnoZKS34KUn8H2HfNmxVRXL0BVFo0ie8hdK35kXZRoJUoE+VcyQ2mA98QFnmbg7tipX/BzGczivn+OfJYxTbqyoynl4itXSfPY7bbqa+YA9pcdFYK414hgYo3x9Pg6WY2ZlJab9sWDEan+br+PF7B5ZDyQvzdDQvnWH3d0x5J2TKI5druNVwmH8BksjyBxIz+7QAAAAASUVORK5CYII=" />
             </ui:WaitImageAppear.Image>
             <ui:WaitImageAppear.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES（旧DMM GAMES R18）' /&gt;" TimeoutMS="8000" WaitForReady="INTERACTIVE" />
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="8000" WaitForReady="INTERACTIVE" />
             </ui:WaitImageAppear.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
