@@ -4,7 +4,7 @@
     <x:Property Name="attribute" Type="InArgument(x:String)" />
     <x:Property Name="result" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1178,2150</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1178,2050</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -29,7 +29,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="レイドクエストを自発で行う&#xA;&#xA;引数&#xA;　difficulty: 難易度(STANDARD|EXPERT|ULTIMATE|RAGNAROK50|RAGNAROK60|RAGNAROK+)&#xA;　attribute:属性(火|水|風|雷|光|闇)&#xA;&#xA;戻り値&#xA;　result:終了後の状況&#xA;　　正常終了=&quot;COMPLETE&quot;&#xA;　　時間切れ、敗北、クラッシュ=&quot;FAILURE&quot;&#xA;　　戦闘に入らなかった=&quot;PASS&quot;&#xA;" DisplayName="レイドクエスト" sap:VirtualizedContainerService.HintSize="1188,1985" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="レイドクエストを自発で行う&#xA;&#xA;引数&#xA;　difficulty: 難易度(STANDARD|EXPERT|ULTIMATE|RAGNAROK50|RAGNAROK60|RAGNAROK80|MALICIOUS)&#xA;　attribute:属性(火|水|風|雷|光|闇)&#xA;&#xA;戻り値&#xA;　result:終了後の状況&#xA;　　正常終了=&quot;COMPLETE&quot;&#xA;　　時間切れ、敗北、クラッシュ=&quot;FAILURE&quot;&#xA;　　戦闘に入らなかった=&quot;PASS&quot;&#xA;" DisplayName="レイドクエスト" sap:VirtualizedContainerService.HintSize="1188,1985" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="imageRaidOk" />
       <Variable x:TypeArguments="ui:UiElement" Name="imageRaidNg1" />
@@ -162,7 +162,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">290,140 240,140 240,226.5</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Parallel DisplayName="回数制限" sap:VirtualizedContainerService.HintSize="1964,152" sap2010:WorkflowViewState.IdRef="Parallel_1">
+                      <Parallel DisplayName="回数制限" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Parallel_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
