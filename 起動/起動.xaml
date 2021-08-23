@@ -29,7 +29,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="起動" sap:VirtualizedContainerService.HintSize="925,1091" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="すでに起動している場合はマイページに移動。&#xD;&#xA;起動している場、マイページに移動できない場合は再起動。&#xD;&#xA;起動していない場合は、ブラウザを立ち上げて起動。" DisplayName="起動" sap:VirtualizedContainerService.HintSize="925,1148" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="openedKamiPro" />
       <Variable x:TypeArguments="ui:UiElement" Name="imageMyPageButton" />
@@ -42,6 +42,7 @@
         <x:Double x:Key="Width">891</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">80,70 290,70 290,104.5</av:PointCollection>
         <x:Double x:Key="Height">1055</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -61,13 +62,6 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_31">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg1:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Sequence>
           </ActivityAction>
         </ui:BrowserScope.Body>
         <sap:WorkflowViewStateService.ViewState>
@@ -87,7 +81,7 @@
               <av:Point x:Key="ShapeLocation">450.5,266.5</av:Point>
               <av:Size x:Key="ShapeSize">78,87</av:Size>
               <av:PointCollection x:Key="TrueConnector">450.5,310 220,310 220,364.5</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">528.5,310 670,310 670,404.5</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">528.5,310 710,310 710,364.5</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -123,7 +117,7 @@
                       <av:Point x:Key="ShapeLocation">159.5,456.5</av:Point>
                       <av:Size x:Key="ShapeSize">121,87</av:Size>
                       <av:PointCollection x:Key="TrueConnector">159.5,500 120,500 120,604.5</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">280.5,500 380,500 380,604.5</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">280.5,500 410,500</av:PointCollection>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
@@ -168,9 +162,9 @@
                     <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">280,604.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">410,474.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">380,655.5 380,685.5 520,685.5 520,824.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">610,500 710,500 710,604.5</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke リロード・ゲームスタート workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="起動\サブ処理\リロード・ゲームスタート.xaml">
@@ -184,7 +178,23 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                       <FlowStep.Next>
-                        <x:Reference>__ReferenceID0</x:Reference>
+                        <FlowStep x:Name="__ReferenceID1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">610,604.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">710,655.5 710,685.5 520,685.5 520,824.5</av:PointCollection>
+                            </scg1:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke スプラッシュからマイページまで workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="起動/サブ処理/ボーナスお知らせを閉じる.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="max">20</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.False>
@@ -193,12 +203,12 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowStep x:Name="__ReferenceID1">
+            <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">570,404.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">610,364.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">670,455.5 670,494.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">710,415.5 710,604.5</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ログイン・ゲームスタート workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="起動/サブ処理/ログイン・ゲームスタート.xaml">
@@ -207,31 +217,15 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">570,494.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">670,545.5 670,575.5 520,575.5 520,824.5</av:PointCollection>
-                    </scg1:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke スプラッシュからマイページまで workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="起動/サブ処理/ボーナスお知らせを閉じる.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="max">20</InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                  <FlowStep.Next>
-                    <x:Reference>__ReferenceID0</x:Reference>
-                  </FlowStep.Next>
-                </FlowStep>
+                <x:Reference>__ReferenceID1</x:Reference>
               </FlowStep.Next>
             </FlowStep>
           </FlowDecision.False>
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
     <FlowStep x:Name="__ReferenceID9">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
