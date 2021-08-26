@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,1201</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1216</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SPデイリークエスト巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,10 +59,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="引数&#xA;　max: 繰り返し回数&#xA;　dweek: thruをtrueにした上で、曜日(0-6)を指定するとその日の属性を処理&#xA;　random: trueにするとランダム。falseの時は実日付。&#xA;　thru: trueにすると常にdweekの値を使う。そうでない場合はランダムか実日付の曜日" DisplayName="属性クエスト巡回" sap:VirtualizedContainerService.HintSize="526,1136" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="引数&#xA;　max: 繰り返し回数&#xA;　dweek: thruをtrueにした上で、曜日(0-6)を指定するとその日の属性を処理&#xA;　random: trueにするとランダム。falseの時は実日付。&#xA;　thru: trueにすると常にdweekの値を使う。そうでない場合はランダム(random=true)の場合か実日付(random=Falseの場合)の曜日" DisplayName="属性クエスト巡回" sap:VirtualizedContainerService.HintSize="526,1151" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="dweek" />
     </Sequence.Variables>

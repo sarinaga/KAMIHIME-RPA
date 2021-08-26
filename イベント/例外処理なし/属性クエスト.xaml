@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1060,1143</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1103</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SP曜日クエスト_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,7 +56,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="日替わりクエストの属性クエストの処理を行う&#xA;&#xA;引数&#xA;　dweek: 曜日(0=日曜～6=土曜)" DisplayName="属性クエスト" sap:VirtualizedContainerService.HintSize="1070,978" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="日替わりクエストの属性クエストの処理を行う。&#xD;&#xA;&#xD;&#xA;引数&#xA;　dweek: 曜日(0=日曜～6=土曜)&#xD;&#xA;&#xD;&#xA;前提&#xD;&#xA;　属性クエストは敗北しないほどにパーティーが強いこと。&#xA;" DisplayName="属性クエスト" sap:VirtualizedContainerService.HintSize="1070,1038" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="selected" />
       <Variable x:TypeArguments="x:String" Name="condition" />
@@ -164,7 +164,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">770,195.5 770,225.5 406.5,225.5 406.5,266.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日と一致したSPデイリークエストを選ぶ workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/属性クエスト選択.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日と一致したSPデイリークエストを選ぶ workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/属性クエスト選択.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="selected">[selected]</OutArgument>
@@ -241,7 +241,7 @@
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">800,304.5</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">900,355.5 900,424.02</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">900,355.5 900,394.02</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 幻獣・パーティーを選択する workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/幻獣とパーティーを選択して戦闘開始.xaml">
@@ -259,12 +259,12 @@
                                 <FlowStep x:Name="__ReferenceID6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">800,424.02</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,108</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">800,478.02 770,478.02 770,479.52 760,479.52</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">800,394.02</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,123</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">800,455.52 770,455.52 770,489.52 750,489.52</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="本来は敗北した後の処理を書くべきだが、現状それは起きないので敗北処理を省略する" DisplayName="Invoke 戦闘を行う（クエスト） workflow" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/クエスト戦闘.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="本来は敗北した後の処理を書くべきだが、初心者でなければそれは起きないので敗北処理を省略する" DisplayName="Invoke 戦闘を行う（クエスト） workflow" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/クエスト戦闘.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful" />
                                     </ui:InvokeWorkflowFile.Arguments>
@@ -279,9 +279,9 @@
                                     <FlowStep x:Name="__ReferenceID11">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">560,454.02</av:Point>
+                                          <av:Point x:Key="ShapeLocation">550,464.02</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">560,479.52 530,479.52 530,416.5 315.5,416.5 315.5,446.5</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">550,489.52 520,489.52 520,416.5 315.5,416.5 315.5,446.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘終了処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="イベント\サブ処理\戦後処理\戦闘終了処理.xaml">
