@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="属性クエスト巡回" this:属性クエスト巡回.max="10" this:属性クエスト巡回.random="True" this:属性クエスト巡回.thru="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="開始ログ" this:開始ログ.max="10" this:開始ログ.random="True" this:開始ログ.thru="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="max" Type="InArgument(x:Int32)" />
     <x:Property Name="dweek" Type="InArgument(x:Int32)" />
@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1205,1039</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1201</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SPデイリークエスト巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,9 +58,11 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="引数&#xD;&#xA;　max: 繰り返し回数&#xD;&#xA;　dweek: thruをtrueにした上で、曜日(0-6)を指定するとその日の属性を処理&#xD;&#xA;　random: trueにするとランダム。falseの時は実日付。&#xD;&#xA;　thru: trueにすると常にdweekの値を使う。そうでない場合はランダムか実日付の曜日" DisplayName="属性クエスト巡回" sap:VirtualizedContainerService.HintSize="526,874" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="引数&#xA;　max: 繰り返し回数&#xA;　dweek: thruをtrueにした上で、曜日(0-6)を指定するとその日の属性を処理&#xA;　random: trueにするとランダム。falseの時は実日付。&#xA;　thru: trueにすると常にdweekの値を使う。そうでない場合はランダムか実日付の曜日" DisplayName="属性クエスト巡回" sap:VirtualizedContainerService.HintSize="526,1136" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="dweek" />
     </Sequence.Variables>
@@ -70,6 +72,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;属性クエスト巡回開始&quot;]" />
     <While DisplayName="繰り返し回数指定" sap:VirtualizedContainerService.HintSize="484,695" sap2010:WorkflowViewState.IdRef="While_1">
       <While.Variables>
         <Variable x:TypeArguments="x:Int32" Default="0" Name="i" />
@@ -88,15 +91,9 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日決定 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/曜日決定.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InOutArgument x:TypeArguments="x:Int32" x:Key="dweek">
-              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="dweek" />
-            </InOutArgument>
-            <InArgument x:TypeArguments="x:Boolean" x:Key="random">
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="random" />
-            </InArgument>
-            <InArgument x:TypeArguments="x:Boolean" x:Key="thru">
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="thru" />
-            </InArgument>
+            <InOutArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InOutArgument>
+            <InArgument x:TypeArguments="x:Boolean" x:Key="random">[random]</InArgument>
+            <InArgument x:TypeArguments="x:Boolean" x:Key="thru">[thru]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 属性クエスト（例外処理付） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="イベント/属性クエスト_例外処理付.xaml">
@@ -112,8 +109,9 @@
             <InArgument x:TypeArguments="x:Int32">[i + 1]</InArgument>
           </Assign.Value>
         </Assign>
-        <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[i &amp; &quot;回目&quot;]" />
+        <ui:LogMessage DisplayName="カウントログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[i &amp; &quot;回目&quot;]" />
       </Sequence>
     </While>
+    <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;属性クエスト巡回終了&quot;]" />
   </Sequence>
 </Activity>

@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>873,725</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,887</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>アクセクエスト巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,14 +61,23 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="アクセクエスト巡回" sap:VirtualizedContainerService.HintSize="526,560" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="アクセクエスト巡回" sap:VirtualizedContainerService.HintSize="526,822" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;アクセクエスト巡回開始&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
     <DoWhile DisplayName="回数制限になるまで行う" sap:VirtualizedContainerService.HintSize="484,468" sap2010:WorkflowViewState.IdRef="DoWhile_1">
       <DoWhile.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="succeeded" />
@@ -82,15 +91,9 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日決定 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/曜日決定.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InOutArgument x:TypeArguments="x:Int32" x:Key="dweek">
-              <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="dweek" />
-            </InOutArgument>
-            <InArgument x:TypeArguments="x:Boolean" x:Key="random">
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="random" />
-            </InArgument>
-            <InArgument x:TypeArguments="x:Boolean" x:Key="thru">
-              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="thru" />
-            </InArgument>
+            <InOutArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InOutArgument>
+            <InArgument x:TypeArguments="x:Boolean" x:Key="random">[random]</InArgument>
+            <InArgument x:TypeArguments="x:Boolean" x:Key="thru">[thru]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke アクセクエスト_例外処理付 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="イベント\アクセクエスト_例外処理付.xaml">
@@ -102,5 +105,12 @@
         </ui:InvokeWorkflowFile>
       </Sequence>
     </DoWhile>
+    <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;アクセクエスト巡回終了&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
   </Sequence>
 </Activity>
