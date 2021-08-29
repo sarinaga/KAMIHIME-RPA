@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1108,827</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SP曜日クエスト例外処理付_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,7 +56,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="属性クエスト例外処理付" sap:VirtualizedContainerService.HintSize="1118,721" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="素材クエストを実行（例外処理付き）&#xA;&#xA;引数&#xA;　target: 0=ジェム, 1=神姫強化, 2=ウェポン強化, 3=幻獣強化" DisplayName="属性クエスト例外処理付" sap:VirtualizedContainerService.HintSize="1118,793" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="crashed" />
     </Flowchart.Variables>
@@ -68,6 +68,7 @@
         <x:Double x:Key="Width">1083.5</x:Double>
         <x:Double x:Key="Height">685</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">100,60 260,60</av:PointCollection>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
