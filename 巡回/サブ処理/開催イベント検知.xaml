@@ -1,0 +1,148 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="開催イベント検知" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="adventinmisson" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="raidinmission" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="unioninmisson" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1208,1444</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>開催イベント検知_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="552,1379" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="開催中のイベントを検知する.&#xD;&#xA;※レイドイベントとユニオンイベントの検知はまだ未実装&#xA;&#xD;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　adventinmisson: 降臨戦(開催中の時はTrue以下同じ)&#xD;&#xA;　raidinmission: レイド&#xD;&#xA;　unioninmisson: ユニオン&#xD;&#xA;&#xD;&#xA;" DisplayName="開催イベント検知" sap:VirtualizedContainerService.HintSize="510,1287" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:UiElement" Name="imageadvent" />
+        <Variable x:TypeArguments="ui:UiElement" Name="imageraid" />
+        <Variable x:TypeArguments="ui:UiElement" Name="imageunion" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="468,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;開催イベント検知開始&quot;]" />
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="イベントボタンを押す" sap:VirtualizedContainerService.HintSize="468,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+        <ui:ClickImage.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:ClickImage.CursorPosition>
+        <ui:ClickImage.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+        </ui:ClickImage.Image>
+        <ui:ClickImage.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:ClickImage.Target>
+      </ui:ClickImage>
+      <Parallel DisplayName="イベント確認" sap:VirtualizedContainerService.HintSize="468,152" sap2010:WorkflowViewState.IdRef="Parallel_1">
+        <ui:WaitImageAppear ContinueOnError="True" DisplayName="降臨戦イベント検知" FoundElement="[imageadvent]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+          <ui:WaitImageAppear.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAWCAYAAAB+F+RbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATESURBVFhHldg/7GVTFMXxN0PxQ9Bh0JAoJEZESTeJRhCJhEJEIURDqESDQkKUtJpJiI5OQkSERhRToCChIZREI6J55nPH9812vefPTdacc/Zee+29zzn3zpvZfHjzyS28f92VC769+cbtK9ec2D59+WXLyPb5tVcv4IPWIY2pA9noPHLRxQvM37z+xF4dNnx+8c9fdj7mq9tv2/nYjaDO+y+5aBmLO1TnBnFC0ANXnfiLTcIKhwTNH73uhr/xge2f7BqoKNAMrUP8/2tX22xUjs2L9927Dc/cc2pH/uHrL7dvvf7S9oVHH9zZIFGb8tStJxfb1Fjj2bNN4P/6y0/bn3/8bvvJB6f/1tTUF/PGi88tdvriXn3y8R2X74szHy8jv7nHaI1bnRpuI2ET2WOOKKBHcesGYBbYoxmb1EOvDeuhV+FTA9hox7Mp6dVE9doEG9naaAM8bQ5+jS7N2o0eJAkU3SMZoWlTyCyyR7KK9eSvoH971ny5a8AzD4F9co1q72lzPrzjjqXR5Roz/v7b7wuQBbWGNkDibPO6g4e9ZuPxpV8xM+4Q0nB6boaRdlrvnX59x61e41zHefmmW86fLGPO5k6uIE1mh3as9xXyrZu1KW4ELUXz70NarqWRTVwx8selNWOq87NP39nFViN0skuzmmnnBEasUEL8IGkiZx5+aDevORr7TnZyFIU3N1BMWpOLMzddXD664tb+CVo+Ut/cddeCjSY0NZMFJ1yjROc1dD2aSxYP5nrNqYh5Vfc1mx3fupObOmxqtz7Y7NmT/f6Rx5bDWZrNEdqxRIiaE15zYd2I0RoOceSIc6hZXKdrrp59MdXWZuDPQ9Fkr8fSbKdGvGBNzrtPvJPufUr0vzTbWjG04tA61Ky61BGv2qCYPmB8Xj1zMevfB7BBIsSpEEUQOnXBhQueOHX7LoF5f3Hj3nnFpQsnP7u10ZpuOjbqEGxaPJj50sLLR5fPeuaq8elvQ9g2mjRRfE4CYQrYiOy4IX92YzYbIvHEPpu8az32tKqPPd86V1BnWnKJxdtIEomTSMEabVcSEQSJQXzXzgkYi0mvK5ktftypWSysGwmHmqXXjfMPhjRh44/IBGazrc0VWoI14rcZk188ux1ON1t84z7tqbfPT0t+fuiV8HNRs6ePH1t+x792xdG5ZhObxbX2JUvMeiYKNasw/FlcenyaTcfIBs3x3bTyQjeruODbEb/60uA3gkbPHB1t3z1+/NzPRcTITqe1+Uw2rzHc/afgTLZutjXff2nWxxEvdP1h2tWCP+tjZ+vDZyPUqNG3jx0793MRfLYlqoCwbn76CEHJ2DQXn681nzzm0wbmPpTpTeSHtU89cs8NmZvtKuN9dLbR5WTXAmtUGEFXZx+nhJIr2hzEFs+n2ezxwbxmvWPeNdfPumZxyqeJtByQuswn+HH9x4NrrOGl2V7kNfgqzN/HNTv9kF+CGghi1r5pA3NFp6249DXLD9Z45q6vj1E10GXvCqub3YeJHizN6jpDYOPrlxUkHr/dV0A7bD1RvNckm3cpPsxY1412zfKV39qpTq1qYI9bo2yzp01fq33gEwBTPH8bMuHauCnzKkI67JM/9btyYeZd86FTo5ktHq2/HuLR9g+lwGRZ3XUX8AAAAABJRU5ErkJggg==" />
+          </ui:WaitImageAppear.Image>
+          <ui:WaitImageAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="4000" WaitForReady="INTERACTIVE" />
+          </ui:WaitImageAppear.Target>
+        </ui:WaitImageAppear>
+      </Parallel>
+      <Assign DisplayName="降臨戦イベント" sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[adventinmisson]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[imageadvent IsNot Nothing]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="レイドイベント" sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[raidinmission]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[imageraid IsNot Nothing]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="ユニオンイベント" sap:VirtualizedContainerService.HintSize="468,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[unioninmisson]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">[imageunion IsNot Nothing]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="468,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="468,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;開催イベント検知終了&quot;]" />
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>自動巡回選択</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!--
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+-->
+<style>
+  .numberinput{ width : 20em; }
+  body { margin : 1em; }
+</style>
+</head>
+
+<body>
+
+  <fieldset class="form-group">
+
+    <legend>処理</legend>
+    <div class="form-check form-check-inline">
+      <input id="weaponsell"  type="checkbox" class="form-check-label">
+      <label for="weaponsell"                 class="form-check-input">ウェポン処分</label>
+    </div>
+    <div class="form-check form-check-inline">
+       <input id="gacha"       type="checkbox" class="form-check-label">
+       <label for="gacha"                      class="form-check-input">ノーマルガチャ</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <legend >素材収集</legend>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-label" id="accquest">
+      <label for="accquest" class="form-check-input">アクセサリクエスト</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-label" id="elementquest">
+      <label for="elementquest" class="form-check-input">属性クエスト</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-label" id="materialquest">
+      <label for="elementquest" class="form-check-input">素材クエスト</label>
+    </div>
+
+
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-label" id="mainbuilding">
+      <label for="mainbuilding" class="form-check-input">推究の正殿</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-label" id="battlefield">
+      <label for="battlefield" class="form-check-input">兵仗の戦場</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <legend>レイドクエスト</legend>
+    <div class="form-check  form-check-inline">
+      <input id="raidquest"   type="checkbox" class="form-check-label" >
+      <label for="raidquest"                  class="form-check-input">Ultimate以下</label>
+    </div>
+
+    <div class="form-check  form-check-inline">
+      <input type="checkbox" class="form-check-label" id="raidragnarok">
+      <label for="raidragnarok" class="form-check-input">Ragnarok</label>
+    </div>
+
+    <div class="form-check  form-check-inline">
+      <input type="checkbox" class="form-check-label" id="raidragnarokplus">
+      <label for="raidragnarokplus" class="form-check-input">Ragnarok+以上</label>
+    </div>
+
+  </fieldset>
+
+  <fieldset class="form-group">
+    <legend>レイドクエスト(支援)</legend>
+    <div class="raidsupport">
+      <label for="raidsupport"  class="form-label" >支援(Ragnarok以下)</label>
+      <div class="numberinput">
+        <input type="number" class="form-control" id="raidsupport" value="100">
+      </div>
+    </div>
+  </fieldset>
+
+
+
+  <fieldset class="form-group">
+    <legend>イベント</legend>
+
+    <div class="weeklyadvent">
+      <label for="weeklyadvent" class="form-label">降臨戦(週替)</label>
+      <div class="numberinput">
+        <input type="number" class="form-control" id="weeklyadvent" value="10">
+      </div>
+    </div>
+
+
+    <div class="advent">
+      <label for="advent" class="form-label">降臨戦(イベント)</label>
+      <div class="numberinput">
+        <input type="number" class="form-control" id="advent" value="100">
+      </div>
+   </div>
+
+    <div class="unionsub">
+      <label for="unionsub" class="form-label">ユニオン(サブ)</label>
+      <div class="numberinput">
+        <input type="number" class="form-control" id="unionsub" value="100">
+      </div>
+    </div>
+
+    <div class="unionmain">
+      <label for="unionmain" class="form-label">ユニオン(メイン)</label>
+      <div class="numberinput">
+        <input type="number" class="form-control" id="unionmain" value="100">
+      </div>
+    </div>
+
+    
+  </fieldset>
+
+<div class="form-group">
+  <button type="submit" class="btn btn-primary" onclick="SubmitValues();">OK</button>
+</div>
+
+  <script type="text/javascript">
+    function SubmitValues() {
+      var csv = "";
+      const elements = $('input[id]');
+      elements.each(function(i, element){ csv += element.id + "=" + Number(element.checked) + "," } );
+      csv = csv.slice(0, -1);
+      window.external.setResult(csv);
+      return true;
+    }
+  </script>
+
+</body>
+</html>
