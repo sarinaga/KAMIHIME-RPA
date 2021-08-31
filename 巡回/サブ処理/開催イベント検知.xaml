@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1095,1430</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1095,1428</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>開催イベント検知_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,13 +65,13 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="926,1365" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="926,1363" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="開催中のイベントを検知する.&#xA;※レイドイベントとユニオンイベントの検知はまだ未実装&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　adventinmisson: 降臨戦(開催中の時はTrue以下同じ)&#xA;　raidinmission: レイド&#xA;　unioninmisson: ユニオン&#xA;&#xA;" DisplayName="開催イベント検知" sap:VirtualizedContainerService.HintSize="884,1273" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence sap2010:Annotation.AnnotationText="開催中のイベントを検知する.&#xA;※レイドイベントとユニオンイベントの検知はまだ未実装&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　adventinmisson: 降臨戦(開催中の時はTrue以下同じ)&#xA;　raidinmission: レイド&#xA;　unioninmisson: ユニオン&#xA;&#xA;" DisplayName="開催イベント検知" sap:VirtualizedContainerService.HintSize="884,1271" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:UiElement" Name="imageadvent" />
         <Variable x:TypeArguments="ui:UiElement" Name="imageraid" />
@@ -83,7 +83,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="842,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;開催イベント検知開始&quot;]" />
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="842,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;開催イベント検知開始&quot;]" />
       <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="イベントボタンを押す" sap:VirtualizedContainerService.HintSize="842,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
@@ -149,7 +149,7 @@
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="468,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;開催イベント検知終了&quot;]" />
+      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="842,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;開催イベント検知終了&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>

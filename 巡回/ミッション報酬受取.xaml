@@ -52,14 +52,10 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="ミッション巡回" sap:VirtualizedContainerService.HintSize="1106,812" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="ミッション報酬受取" sap:VirtualizedContainerService.HintSize="1106,812" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="imageRecieve" />
-      <Variable x:TypeArguments="x:Int32" Name="i">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="i" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -82,7 +78,7 @@
           <av:PointCollection x:Key="ConnectorLocation">240,135.5 240,194.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ミッション巡回開始&quot;]" />
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ミッション報酬受取開始&quot;]" />
       <FlowStep.Next>
         <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
@@ -124,7 +120,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">240,345.5 240,394.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <While DisplayName="タブ4種類" sap:VirtualizedContainerService.HintSize="484,218" sap2010:WorkflowViewState.IdRef="While_1">
+              <While DisplayName="タブ4種類" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="While_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,10 +143,7 @@
                   <Flowchart.StartNode>
                     <x:Reference>__ReferenceID10</x:Reference>
                   </Flowchart.StartNode>
-                  <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID10" DisplayName="タブ4種類" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
-                    <FlowSwitch.Expression>
-                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="i" />
-                    </FlowSwitch.Expression>
+                  <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID10" DisplayName="タブ4種類" Expression="[i]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -494,7 +487,7 @@
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;ミッション巡回終了&quot;]" />
+                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;ミッション報酬受取終了&quot;]" />
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
