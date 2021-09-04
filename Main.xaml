@@ -57,7 +57,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="神姫プロジェクト" sap:VirtualizedContainerService.HintSize="1714,1036" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -94,7 +93,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">940,736</av:Point>
           <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">940,770 440,770 440,864</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">940,769 440,769 440,864</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="ブラウザを閉じる" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
@@ -668,7 +667,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">1310,124.04 1310,164</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 開催イベント検知 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="巡回\サブ処理\開催イベント検知.xaml">
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 開催イベント検知 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="巡回\サブ処理\開催イベント検知.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <OutArgument x:TypeArguments="x:Boolean" x:Key="adventinmisson">[adventinmisson]</OutArgument>
                                               <OutArgument x:TypeArguments="x:Boolean" x:Key="raidinmission">[raidinmission]</OutArgument>
