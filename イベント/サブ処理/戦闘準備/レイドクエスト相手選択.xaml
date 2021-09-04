@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1094,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1095,1124</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>レイドクエスト選択_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -51,26 +51,34 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="レイドクエスト選択" sap:VirtualizedContainerService.HintSize="1104,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="レイドクエスト相手選択" sap:VirtualizedContainerService.HintSize="1050,1059" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">200,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <x:Double x:Key="Width">1070</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">230,77.5 230,106.5</av:PointCollection>
+        <x:Double x:Key="Width">1015.5</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">230,77.5 230,117.5</av:PointCollection>
+        <x:Double x:Key="Height">1023.4320000000002</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID80</x:Reference>
+      <x:Reference>__ReferenceID82</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID77">
+    <FlowStep x:Name="__ReferenceID78">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">650,124.5</av:Point>
+          <av:Point x:Key="ShapeLocation">630,264.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">730,315.5 730,814.5 430,814.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart DisplayName="闇" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_19">
@@ -441,15 +449,34 @@
           </ui:ClickImage>
         </FlowStep>
       </Flowchart>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID25">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">330,844.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">240,178.5 240,256.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;レイドクエスト選択終了&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </FlowStep>
+      </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID76">
+    <FlowStep x:Name="__ReferenceID77">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">620,64.5</av:Point>
+          <av:Point x:Key="ShapeLocation">760,204.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">860,255.5 860,814.5 430,814.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="光" sap:VirtualizedContainerService.HintSize="1134,1029" sap2010:WorkflowViewState.IdRef="Flowchart_18">
+      <Flowchart DisplayName="光" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_18">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -817,12 +844,16 @@
         <x:Reference>__ReferenceID22</x:Reference>
         <x:Reference>__ReferenceID23</x:Reference>
       </Flowchart>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID25</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID79">
+    <FlowStep x:Name="__ReferenceID80">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">450,334.5</av:Point>
+          <av:Point x:Key="ShapeLocation">470,514.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">570,565.5 570,595.5 430,595.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart DisplayName="雷" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_17">
@@ -837,9 +868,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID37</x:Reference>
+          <x:Reference>__ReferenceID38</x:Reference>
         </Flowchart.StartNode>
-        <FlowStep x:Name="__ReferenceID37">
+        <FlowStep x:Name="__ReferenceID38">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">220,24.5</av:Point>
@@ -871,9 +902,9 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
           <FlowStep.Next>
-            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID31" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_36">
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID32" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_36">
               <FlowSwitch.Default>
-                <FlowStep x:Name="__ReferenceID29">
+                <FlowStep x:Name="__ReferenceID30">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">90,164.5</av:Point>
@@ -900,9 +931,9 @@
                     </ui:ClickImage.Target>
                   </ui:ClickImage>
                   <FlowStep.Next>
-                    <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID28" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_34">
+                    <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID29" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_34">
                       <FlowSwitch.Default>
-                        <FlowStep x:Name="__ReferenceID27">
+                        <FlowStep x:Name="__ReferenceID28">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">390,524.5</av:Point>
@@ -944,7 +975,7 @@
                           <x:String x:Key="DefaultCaseDisplayName">ULTIMATE</x:String>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <FlowStep x:Key="STANDARD" x:Name="__ReferenceID30">
+                      <FlowStep x:Key="STANDARD" x:Name="__ReferenceID31">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">0,414.5</av:Point>
@@ -970,7 +1001,7 @@
                           </ui:ClickImage.Target>
                         </ui:ClickImage>
                       </FlowStep>
-                      <FlowStep x:Key="EXPERT" x:Name="__ReferenceID26">
+                      <FlowStep x:Key="EXPERT" x:Name="__ReferenceID27">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">250,424.5</av:Point>
@@ -1016,7 +1047,7 @@
                   <av:PointCollection x:Key="RAGNAROK50Connector">527.5,203.5 527.5,233.5 900,233.5 900,279</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID25">
+              <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">800,279</av:Point>
@@ -1032,9 +1063,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </Delay>
                 <FlowStep.Next>
-                  <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID32" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_35">
+                  <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID33" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_35">
                     <FlowSwitch.Default>
-                      <FlowStep x:Name="__ReferenceID36">
+                      <FlowStep x:Name="__ReferenceID37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">910,424.5</av:Point>
@@ -1078,7 +1109,7 @@
                         <x:String x:Key="DefaultCaseDisplayName">MALICIOUS</x:String>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID33">
+                    <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID34">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">540,594.5</av:Point>
@@ -1109,7 +1140,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ClickImage>
                     </FlowStep>
-                    <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID34">
+                    <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID35">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">650,684.5</av:Point>
@@ -1140,7 +1171,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ClickImage>
                     </FlowStep>
-                    <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID35">
+                    <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID36">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">790,604.5</av:Point>
@@ -1174,31 +1205,35 @@
                   </FlowSwitch>
                 </FlowStep.Next>
               </FlowStep>
-              <x:Reference>__ReferenceID25<x:Key>RAGNAROK60</x:Key></x:Reference>
-              <x:Reference>__ReferenceID25<x:Key>RAGNAROK50</x:Key></x:Reference>
-              <x:Reference>__ReferenceID25<x:Key>MALICIOUS</x:Key></x:Reference>
+              <x:Reference>__ReferenceID26<x:Key>RAGNAROK60</x:Key></x:Reference>
+              <x:Reference>__ReferenceID26<x:Key>RAGNAROK50</x:Key></x:Reference>
+              <x:Reference>__ReferenceID26<x:Key>MALICIOUS</x:Key></x:Reference>
             </FlowSwitch>
           </FlowStep.Next>
         </FlowStep>
-        <x:Reference>__ReferenceID26</x:Reference>
         <x:Reference>__ReferenceID27</x:Reference>
         <x:Reference>__ReferenceID28</x:Reference>
         <x:Reference>__ReferenceID29</x:Reference>
         <x:Reference>__ReferenceID30</x:Reference>
         <x:Reference>__ReferenceID31</x:Reference>
         <x:Reference>__ReferenceID32</x:Reference>
-        <x:Reference>__ReferenceID25</x:Reference>
         <x:Reference>__ReferenceID33</x:Reference>
+        <x:Reference>__ReferenceID26</x:Reference>
         <x:Reference>__ReferenceID34</x:Reference>
         <x:Reference>__ReferenceID35</x:Reference>
         <x:Reference>__ReferenceID36</x:Reference>
+        <x:Reference>__ReferenceID37</x:Reference>
       </Flowchart>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID25</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID78">
+    <FlowStep x:Name="__ReferenceID79">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">240,354.5</av:Point>
+          <av:Point x:Key="ShapeLocation">240,514.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">340,565.5 340,595.5 430,595.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart DisplayName="風" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_20">
@@ -1213,9 +1248,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID50</x:Reference>
+          <x:Reference>__ReferenceID51</x:Reference>
         </Flowchart.StartNode>
-        <FlowStep x:Name="__ReferenceID39">
+        <FlowStep x:Name="__ReferenceID40">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">280,484.5</av:Point>
@@ -1241,7 +1276,7 @@
             </ui:ClickImage.Target>
           </ui:ClickImage>
         </FlowStep>
-        <FlowStep x:Name="__ReferenceID50">
+        <FlowStep x:Name="__ReferenceID51">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">270,34.5</av:Point>
@@ -1273,9 +1308,9 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
           <FlowStep.Next>
-            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID43" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_46">
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID44" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_46">
               <FlowSwitch.Default>
-                <FlowStep x:Name="__ReferenceID44">
+                <FlowStep x:Name="__ReferenceID45">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">90,164.5</av:Point>
@@ -1302,7 +1337,7 @@
                     </ui:ClickImage.Target>
                   </ui:ClickImage>
                   <FlowStep.Next>
-                    <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID40}" x:Name="__ReferenceID42" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_43">
+                    <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID41}" x:Name="__ReferenceID43" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_43">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">345,286.5</av:Point>
@@ -1313,8 +1348,8 @@
                           <av:PointCollection x:Key="ULTIMATEConnector">415,308.25 510,308.25 510,374.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <x:Reference>__ReferenceID39<x:Key>EXPERT</x:Key></x:Reference>
-                      <FlowStep x:Key="STANDARD" x:Name="__ReferenceID40">
+                      <x:Reference>__ReferenceID40<x:Key>EXPERT</x:Key></x:Reference>
+                      <FlowStep x:Key="STANDARD" x:Name="__ReferenceID41">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">70,404.5</av:Point>
@@ -1340,7 +1375,7 @@
                           </ui:ClickImage.Target>
                         </ui:ClickImage>
                       </FlowStep>
-                      <FlowStep x:Key="ULTIMATE" x:Name="__ReferenceID41">
+                      <FlowStep x:Key="ULTIMATE" x:Name="__ReferenceID42">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">410,374.5</av:Point>
@@ -1386,7 +1421,7 @@
                   <av:PointCollection x:Key="RAGNAROK50Connector">527.5,203.5 527.5,233.5 900,233.5 900,279</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID38">
+              <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID39">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">800,279</av:Point>
@@ -1402,9 +1437,9 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </Delay>
                 <FlowStep.Next>
-                  <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID45" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_45">
+                  <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID46" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_45">
                     <FlowSwitch.Default>
-                      <FlowStep x:Name="__ReferenceID49">
+                      <FlowStep x:Name="__ReferenceID50">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">1040,454.5</av:Point>
@@ -1449,7 +1484,7 @@
                         <x:String x:Key="DefaultCaseDisplayName">MALICIOUS</x:String>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID48">
+                    <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID49">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">550,504.5</av:Point>
@@ -1480,7 +1515,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ClickImage>
                     </FlowStep>
-                    <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID47">
+                    <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID48">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">750,584.5</av:Point>
@@ -1511,7 +1546,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ClickImage>
                     </FlowStep>
-                    <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID46">
+                    <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID47">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">900,654.5</av:Point>
@@ -1545,30 +1580,34 @@
                   </FlowSwitch>
                 </FlowStep.Next>
               </FlowStep>
-              <x:Reference>__ReferenceID38<x:Key>RAGNAROK60</x:Key></x:Reference>
-              <x:Reference>__ReferenceID38<x:Key>RAGNAROK50</x:Key></x:Reference>
-              <x:Reference>__ReferenceID38<x:Key>MALICIOUS</x:Key></x:Reference>
+              <x:Reference>__ReferenceID39<x:Key>RAGNAROK60</x:Key></x:Reference>
+              <x:Reference>__ReferenceID39<x:Key>RAGNAROK50</x:Key></x:Reference>
+              <x:Reference>__ReferenceID39<x:Key>MALICIOUS</x:Key></x:Reference>
             </FlowSwitch>
           </FlowStep.Next>
         </FlowStep>
-        <x:Reference>__ReferenceID41</x:Reference>
         <x:Reference>__ReferenceID42</x:Reference>
-        <x:Reference>__ReferenceID38</x:Reference>
         <x:Reference>__ReferenceID43</x:Reference>
+        <x:Reference>__ReferenceID39</x:Reference>
         <x:Reference>__ReferenceID44</x:Reference>
         <x:Reference>__ReferenceID45</x:Reference>
         <x:Reference>__ReferenceID46</x:Reference>
         <x:Reference>__ReferenceID47</x:Reference>
         <x:Reference>__ReferenceID48</x:Reference>
-        <x:Reference>__ReferenceID40</x:Reference>
         <x:Reference>__ReferenceID49</x:Reference>
+        <x:Reference>__ReferenceID41</x:Reference>
+        <x:Reference>__ReferenceID50</x:Reference>
       </Flowchart>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID25</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID75">
+    <FlowStep x:Name="__ReferenceID76">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">130,464.5</av:Point>
+          <av:Point x:Key="ShapeLocation">130,624.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">230,675.5 230,705.5 430,705.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart DisplayName="水" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_16">
@@ -1583,9 +1622,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID61</x:Reference>
+          <x:Reference>__ReferenceID62</x:Reference>
         </Flowchart.StartNode>
-        <FlowStep x:Name="__ReferenceID52">
+        <FlowStep x:Name="__ReferenceID53">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">280,364.5</av:Point>
@@ -1616,7 +1655,7 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
         </FlowStep>
-        <FlowStep x:Name="__ReferenceID51">
+        <FlowStep x:Name="__ReferenceID52">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">100,464.5</av:Point>
@@ -1647,7 +1686,7 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
         </FlowStep>
-        <FlowStep x:Name="__ReferenceID61">
+        <FlowStep x:Name="__ReferenceID62">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">260,34.5</av:Point>
@@ -1679,9 +1718,9 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
           <FlowStep.Next>
-            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID55" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_33">
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID56" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_33">
               <FlowSwitch.Default>
-                <FlowStep x:Name="__ReferenceID56">
+                <FlowStep x:Name="__ReferenceID57">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">140,174.5</av:Point>
@@ -1708,7 +1747,7 @@
                     </ui:ClickImage.Target>
                   </ui:ClickImage>
                   <FlowStep.Next>
-                    <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID53}" x:Name="__ReferenceID54" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_32">
+                    <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID54}" x:Name="__ReferenceID55" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_32">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">205,246.5</av:Point>
@@ -1719,7 +1758,7 @@
                           <av:PointCollection x:Key="ULTIMATEConnector">275,268.25 380,268.25 380,364.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <FlowStep x:Key="STANDARD" x:Name="__ReferenceID53">
+                      <FlowStep x:Key="STANDARD" x:Name="__ReferenceID54">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">0,364.5</av:Point>
@@ -1745,8 +1784,8 @@
                           </ui:ClickImage.Target>
                         </ui:ClickImage>
                       </FlowStep>
-                      <x:Reference>__ReferenceID51<x:Key>EXPERT</x:Key></x:Reference>
-                      <x:Reference>__ReferenceID52<x:Key>ULTIMATE</x:Key></x:Reference>
+                      <x:Reference>__ReferenceID52<x:Key>EXPERT</x:Key></x:Reference>
+                      <x:Reference>__ReferenceID53<x:Key>ULTIMATE</x:Key></x:Reference>
                     </FlowSwitch>
                   </FlowStep.Next>
                 </FlowStep>
@@ -1762,7 +1801,7 @@
                   <av:PointCollection x:Key="RAGNAROK50Connector">520,183.5 520,213.5 580,213.5 580,554.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID57">
+              <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID58">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">480,554.5</av:Point>
@@ -1793,7 +1832,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ClickImage>
               </FlowStep>
-              <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID58">
+              <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID59">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">600,484.5</av:Point>
@@ -1824,7 +1863,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ClickImage>
               </FlowStep>
-              <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID59">
+              <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID60">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">710,414.5</av:Point>
@@ -1855,7 +1894,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ClickImage>
               </FlowStep>
-              <FlowStep x:Key="MALICIOUS" x:Name="__ReferenceID60">
+              <FlowStep x:Key="MALICIOUS" x:Name="__ReferenceID61">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">840,324.5</av:Point>
@@ -1889,21 +1928,25 @@
             </FlowSwitch>
           </FlowStep.Next>
         </FlowStep>
-        <x:Reference>__ReferenceID54</x:Reference>
         <x:Reference>__ReferenceID55</x:Reference>
         <x:Reference>__ReferenceID56</x:Reference>
-        <x:Reference>__ReferenceID53</x:Reference>
         <x:Reference>__ReferenceID57</x:Reference>
+        <x:Reference>__ReferenceID54</x:Reference>
         <x:Reference>__ReferenceID58</x:Reference>
         <x:Reference>__ReferenceID59</x:Reference>
         <x:Reference>__ReferenceID60</x:Reference>
+        <x:Reference>__ReferenceID61</x:Reference>
       </Flowchart>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID25</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID74">
+    <FlowStep x:Name="__ReferenceID75">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">10,534.5</av:Point>
+          <av:Point x:Key="ShapeLocation">10,694.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">110,745.5 110,775.5 430,775.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart DisplayName="火" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_15">
@@ -1918,11 +1961,11 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID73</x:Reference>
+          <x:Reference>__ReferenceID74</x:Reference>
         </Flowchart.StartNode>
-        <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID73" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_31">
+        <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID74" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_31">
           <FlowSwitch.Default>
-            <FlowStep x:Name="__ReferenceID65">
+            <FlowStep x:Name="__ReferenceID66">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">20,214.5</av:Point>
@@ -1949,7 +1992,7 @@
                 </ui:ClickImage.Target>
               </ui:ClickImage>
               <FlowStep.Next>
-                <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID63}" x:Name="__ReferenceID66" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_29">
+                <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID64}" x:Name="__ReferenceID67" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_29">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">235,346.5</av:Point>
@@ -1960,7 +2003,7 @@
                       <av:PointCollection x:Key="ULTIMATEConnector">305,368.25 590,368.25 590,464.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <FlowStep x:Key="EXPERT" x:Name="__ReferenceID67">
+                  <FlowStep x:Key="EXPERT" x:Name="__ReferenceID68">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">270,464.5</av:Point>
@@ -1991,7 +2034,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ClickImage>
                   </FlowStep>
-                  <FlowStep x:Key="STANDARD" x:Name="__ReferenceID63">
+                  <FlowStep x:Key="STANDARD" x:Name="__ReferenceID64">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">20,464.5</av:Point>
@@ -2017,7 +2060,7 @@
                       </ui:ClickImage.Target>
                     </ui:ClickImage>
                   </FlowStep>
-                  <FlowStep x:Key="ULTIMATE" x:Name="__ReferenceID64">
+                  <FlowStep x:Key="ULTIMATE" x:Name="__ReferenceID65">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">490,464.5</av:Point>
@@ -2063,7 +2106,7 @@
               <av:PointCollection x:Key="RAGNAROK80Connector">335,138.25 810,138.25 810,329</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID62">
+          <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID63">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">710,329</av:Point>
@@ -2079,9 +2122,9 @@
               </sap:WorkflowViewStateService.ViewState>
             </Delay>
             <FlowStep.Next>
-              <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID69" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_30">
+              <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID70" DisplayName="難易度" Expression="[difficulty]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_30">
                 <FlowSwitch.Default>
-                  <FlowStep x:Name="__ReferenceID72">
+                  <FlowStep x:Name="__ReferenceID73">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">730,684.5</av:Point>
@@ -2123,7 +2166,7 @@
                     <av:PointCollection x:Key="RAGNAROK60Connector">535,641.75 460,641.75 460,814.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID68">
+                <FlowStep x:Key="RAGNAROK50" x:Name="__ReferenceID69">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">180,704.5</av:Point>
@@ -2154,7 +2197,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ClickImage>
                 </FlowStep>
-                <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID70">
+                <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID71">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">360,814.5</av:Point>
@@ -2185,7 +2228,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ClickImage>
                 </FlowStep>
-                <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID71">
+                <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID72">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">610,794.5</av:Point>
@@ -2219,43 +2262,66 @@
               </FlowSwitch>
             </FlowStep.Next>
           </FlowStep>
-          <x:Reference>__ReferenceID62<x:Key>RAGNAROK60</x:Key></x:Reference>
-          <x:Reference>__ReferenceID62<x:Key>RAGNAROK80</x:Key></x:Reference>
-          <x:Reference>__ReferenceID62<x:Key>MALICIOUS</x:Key></x:Reference>
+          <x:Reference>__ReferenceID63<x:Key>RAGNAROK60</x:Key></x:Reference>
+          <x:Reference>__ReferenceID63<x:Key>RAGNAROK80</x:Key></x:Reference>
+          <x:Reference>__ReferenceID63<x:Key>MALICIOUS</x:Key></x:Reference>
         </FlowSwitch>
-        <x:Reference>__ReferenceID64</x:Reference>
         <x:Reference>__ReferenceID65</x:Reference>
         <x:Reference>__ReferenceID66</x:Reference>
         <x:Reference>__ReferenceID67</x:Reference>
-        <x:Reference>__ReferenceID63</x:Reference>
         <x:Reference>__ReferenceID68</x:Reference>
+        <x:Reference>__ReferenceID64</x:Reference>
         <x:Reference>__ReferenceID69</x:Reference>
-        <x:Reference>__ReferenceID62</x:Reference>
         <x:Reference>__ReferenceID70</x:Reference>
+        <x:Reference>__ReferenceID63</x:Reference>
         <x:Reference>__ReferenceID71</x:Reference>
         <x:Reference>__ReferenceID72</x:Reference>
+        <x:Reference>__ReferenceID73</x:Reference>
       </Flowchart>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID25</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
-    <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID74}" x:Name="__ReferenceID80" DisplayName="属性分岐" Expression="[attribute]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_44">
+    <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID75}" x:Name="__ReferenceID81" DisplayName="属性分岐" Expression="[attribute]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_44">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">195,106.5</av:Point>
+          <av:Point x:Key="ShapeLocation">195,246.5</av:Point>
           <av:Size x:Key="ShapeSize">70,87</av:Size>
-          <av:PointCollection x:Key="Default">195,128.25 15,128.25 15,433.5 110,433.5 110,534.5</av:PointCollection>
-          <av:PointCollection x:Key="火Connector">195,150 110,150 110,534.5</av:PointCollection>
-          <av:PointCollection x:Key="水Connector">195,171.75 170,171.75 170,434.5 230,434.5 230,464.5</av:PointCollection>
-          <av:PointCollection x:Key="風Connector">230,193.5 230,223.5 340,223.5 340,354.5</av:PointCollection>
-          <av:PointCollection x:Key="雷Connector">265,171.75 550,171.75 550,334.5</av:PointCollection>
-          <av:PointCollection x:Key="光Connector">265,128.25 295,128.25 295,90 620,90</av:PointCollection>
-          <av:PointCollection x:Key="闇Connector">265,150 650,150</av:PointCollection>
+          <av:PointCollection x:Key="Default">195,268.25 110,268.25 110,694.5</av:PointCollection>
+          <av:PointCollection x:Key="火Connector">195,290 110,290 110,694.5</av:PointCollection>
+          <av:PointCollection x:Key="水Connector">195,311.75 170,311.75 170,594.5 230,594.5 230,624.5</av:PointCollection>
+          <av:PointCollection x:Key="風Connector">230,333.5 230,363.5 340,363.5 340,514.5</av:PointCollection>
+          <av:PointCollection x:Key="雷Connector">265,311.75 570,311.75 570,514.5</av:PointCollection>
+          <av:PointCollection x:Key="光Connector">265,268.25 295,268.25 295,230 760,230</av:PointCollection>
+          <av:PointCollection x:Key="闇Connector">265,290 630,290</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <x:Reference>__ReferenceID74<x:Key>火</x:Key></x:Reference>
-      <x:Reference>__ReferenceID75<x:Key>水</x:Key></x:Reference>
-      <x:Reference>__ReferenceID76<x:Key>光</x:Key></x:Reference>
-      <x:Reference>__ReferenceID77<x:Key>闇</x:Key></x:Reference>
-      <x:Reference>__ReferenceID78<x:Key>風</x:Key></x:Reference>
-      <x:Reference>__ReferenceID79<x:Key>雷</x:Key></x:Reference>
+      <x:Reference>__ReferenceID75<x:Key>火</x:Key></x:Reference>
+      <x:Reference>__ReferenceID76<x:Key>水</x:Key></x:Reference>
+      <x:Reference>__ReferenceID77<x:Key>光</x:Key></x:Reference>
+      <x:Reference>__ReferenceID78<x:Key>闇</x:Key></x:Reference>
+      <x:Reference>__ReferenceID79<x:Key>風</x:Key></x:Reference>
+      <x:Reference>__ReferenceID80<x:Key>雷</x:Key></x:Reference>
     </FlowSwitch>
+    <FlowStep x:Name="__ReferenceID82">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">130,117.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">230,168.5 230,246.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;レイドクエスト選択開始:attribute={0},difficulty={1}&quot;, attribute, difficulty)]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID81</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID25</x:Reference>
   </Flowchart>
 </Activity>
