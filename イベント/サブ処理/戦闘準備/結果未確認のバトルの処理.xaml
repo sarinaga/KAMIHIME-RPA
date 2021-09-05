@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1095,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>952,1009</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>結果未確認のバトルの処理_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,10 +58,9 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="未確認結果がある場合、それを処理する&#xD;&#xA;&#xD;&#xA;引数：&#xD;&#xA;　なし&#xD;&#xA;&#xD;&#xA;戻り値：&#xD;&#xA;　processed: 結果未確認を処理した=True" DisplayName="結果未確認のバトルの処理" sap:VirtualizedContainerService.HintSize="962,944" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="未確認結果がある場合、それを処理する&#xA;&#xA;引数：&#xA;　なし&#xA;&#xA;戻り値：&#xA;　processed: 結果未確認を処理した=True" DisplayName="結果未確認のバトルの処理" sap:VirtualizedContainerService.HintSize="962,944" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="imageSuccess" />
       <Variable x:TypeArguments="ui:UiElement" Name="imageFail" />
@@ -88,7 +87,7 @@
           <av:PointCollection x:Key="ConnectorLocation">240,265.5 240,295.5 235.5,295.5 235.5,306.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Parallel DisplayName="結果未確認があるかどうか？" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <Parallel DisplayName="結果未確認があるかどうか？" sap:VirtualizedContainerService.HintSize="842,152" sap2010:WorkflowViewState.IdRef="Parallel_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -102,12 +101,17 @@
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
           </ui:WaitImageAppear.Target>
         </ui:WaitImageAppear>
+        <ui:WaitImageAppear ContinueOnError="True" DisplayName="撃破失敗を検知" FoundElement="[imageFail]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+          <ui:WaitImageAppear.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+          </ui:WaitImageAppear.Image>
+          <ui:WaitImageAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+          </ui:WaitImageAppear.Target>
+        </ui:WaitImageAppear>
       </Parallel>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID3" DisplayName="撃破成功？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-          <FlowDecision.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="imageSuccess IsNot Nothing" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID3" Condition="[imageSuccess IsNot Nothing]" DisplayName="撃破成功？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -198,7 +202,7 @@
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;結果未確認のバトルの処理終了:processed=&quot; &amp; processed]" />
+                          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;結果未確認のバトルの処理終了:processed=&quot; &amp; processed]" />
                         </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
@@ -208,10 +212,7 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID5" DisplayName="撃破失敗？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-              <FlowDecision.Condition>
-                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="imageFail IsNot Nothing" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID5" Condition="[imageFail IsNot Nothing]" DisplayName="撃破失敗？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -242,7 +243,7 @@
                       </ui:CursorPosition>
                     </ui:ClickImage.CursorPosition>
                     <ui:ClickImage.Image>
-                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAYCAYAAAB5j+RNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAqRSURBVEhLjVf5W1TXGZ5f+rRpqtlMakxU0OAGM2zDzLDMsA+IOMgOw6IgA8iOgAKyyb6DArIqi4CsIiD7piGKCqLgggrGmrbapolJmj/g7XcPgbR92qY/vM/57nfOvec933ou7/s3f4M8JA/7HMKgIZJDz0AMWxsrBB92RkqkN6IDXJEU7oVTYUrEB7syXVKYB5JC3ZDKyaHu7JnTnwpxQ3KYJ5OjAlxwWOkEezs5dulIoO0chcXll/jxxx8w8cUd9IxN4/r8U4aZxRV8++Y7vPrTSyw//xIjN+aZnvfixZdwTajEzP0nKG3uwx6xBeRW5lC6OyEj2hdHfWnjCB8khHoh2F9JOh/EBisRetSLzYcFeOJ4kDeTQ47SAUJXZS93ZzgctIPMxAQfSFzROTiGv//wHW4sPoPsSBI2GXlii6kvgzyqFN9+8zWWV56jbewONPYHMT2PU9R2j+L161ewD8+DhrYINlYW8HRzRMART6g4+CmZvAbumSP9n+bW4OqsgLmpCdR0LBCeV4/vv3uDyblHEPsk41O+DAK+Hvha+nifb43ArHp88/VrjM4uobR9kg7jzuZ4tT1T4BCc24jNokMwlBjioP1++ChdEaLyxbEAH4aQALIMYf35F+asyPo62vrQ9kzAw2fPMTH7GAZeiVDTMmEbCwT6bPxA5ITargl89dUfGLm8xn6o68uJPJE7XdeP1Np+7I8oZi+Ym0rhoDgAXy83tgk3Bvp5Mdnd5RAbOayt4VynsLdjIwPpOZgYG0GLL8QGiRIeKXV4S6bCpwJz/Gq7ET7ZLYGGphiaAjE+knrjxYsXePlylZwyqZJiVIZ3dxqC9+rVK/Rev4uPrYMYOTOZCQ7YWsP+gA0b7QgK2pQbOTAyP0FO7udI6OkZwIgszsmcjlu3m0sCxwj4ZTX8T5ws78Kbb/6C2YWHjNzp2u71Od6F7nHousVhF98QAjKzrp4Q+kID6BsQuPHfZJFYDKmJMYSk09UV4h2+DX5nqmLgZE7Hrdsm3I+0yi789fUffxGv/vwV2kdmGLn5peV1PU/gEgs1oQ3UdwuxV1MfGkJrbLX0xw6bwH8Z17DdzAvaFEvcQdTF9ihsHsTs/Bwmpz/HRqkf02+nb+3UMoKmQzi47/832EUV48bcAvpGJ1DUNMigyrwAgWscm+f9mm8PNfoYR26HpiG0SDl+Yw5zZOZb8wvr4xqkfmkU1MbYqCaCvpUbZu4uYmn5OQXyADboKPCJhgE09grZN3fso9jSWsUeXQl2CX5+fpu/HwHptXj6bBk1HSOIP9eDsy3D8E2rxU5dc7aGV9QyAtuIImjoWUCTLCdRBEDim4Jc2owrM6PXZyAPzmIlwDa8EPLIEtgdL6WxGM4ny3Hn3gNMzy4iuerK+hwHk8BsbBB7QJvi2EAkgh0VdmOKSc6y+4jkDkUUbi0+xeTsQ0SVdCC8qA2pNb1Ir7mCD6W+7D3elbGbKGjowWcGtsytHN4VuaHk0ihuLjyFS3wlS+2PdeQ4UVyPFSL88uULVn66J+6wNY1915FdP4Dy9jE8WfmSzXcNX8dHZkcgFIqw34YSiTLY2Gg1rnfb+KN1cBqPHi8hv6EPTicqkEbEMs/343zPNZgF52Grtil4XCC/LVZiL18EHQpm7uXNlN59U3dYgBoG5GCPtjE+07NEbvMwHjx+gpLmfrxldoxZfPDmA0SXdkLdKQHeyVV4sryCsuYhiI9ms/fEEjHkluawMjeFQEeEt3UPIb++l3mlrv8GfaMYG82DEUNZW9s5jur2UXDl7fcyH0oIIsOZUI8yjMtUNb4JZEE5ePhkBdVXprHFNgwfU3FWN3ZCWRdZ69o9OMSW4TciamGFrewAQbktEPll4vLEbQzfuA+rkHx8JHaBptZqRnPYqmuBvYpwlFzsZ8Smbs5DEXsW20yVrN6JPE+gffQWI3dp+CYicuvA+y3fjmWfJZ2Ms9wHhh443zWO2w+eobJtBCVNVxkcYs6gdWwWPSMTVCirwSVSZv0gI5dS0Ynk8g4sPVvBqcpubLAMhZbWqhc4bOJbQUuZioGp24xY09AtOMWVsQKsrbtqlM0CS+xyT0HHwKr1mihUWLZyluNOt1MghW1oDp6Sa+p7JuGRXIexmQVMzNyDgX8WOibvorx1GPax5ays9IzfpBIyDf+sRuxwiqcLRBWzoMjCCZs0DMla1th1MAyxpW24TcE/v/AYJQ1dECiT8aHOfujri2Art2JF28jQGB/yLWHsn46azkE0946Bt96I6YSfmHigqXcS9x4s4Uj6BWx1TEBr3wSiS9pgFZaP4Zv3kVLdi5K2cYxNz2KO1hUT2QyyYP+1O0zHwSOpFgL3RORRjF6bmcfS02Vwxf5AdCm7jezWk8LM1BSuLo4IDfJHsOoInB0dYGlmhq1CObYpYhCWWw8e5yp1qRt2UV3heuDc4mOcrroMbe/TjNzI1CQUx4spzkow8Pkc3BKr4Uix4pNaC/f4chgeToVVcC4ayVV90/fRMjDFyN1eXML0nQVyzxTswvKwzVoFdYEJJYgEB+1sqE874niYCicjAxEXoUJkSAA83V1gaWEGob4Y7+odBG/XgRBqXRJspJpU3jaK5Io2FNR3QxaYw1zEkRP6ZSC66CLKWgep1hVRVxhhsVbcMkRlxxVCr3j0T88jNL8F+n5Z2OYQB7eEMmgeisAmiRt26pnBTCqDtZUlDinsEUbWyjwZgsLkCFTlxOFMahhyEkIZgo4eJisqqEdbgWdAvZLzPdcXDQ6n43BGA7oGR6GIKSPXNqL96jgEPulovjKG3Po+FrRnOyZZ0B7NbMB7Eg8kk6uHbj2CiSob75n4suuOjkBIxVfMLg+cy5QeroiNDGaozIlFRWYUzmUdR13RKdQUxKMqN47J2YmhiIs6xg7A8/NVwt35EBVLMTYbKCjzLqHj6ggE3mlE5iqKyIoGP1nQnayh5pxIa5oZOVVOMw7GncMoxVV8RTe2HIzDdn1ryKQmcKHT+/l6IlR1GKfjjiEnKZKRqSDUFCSgOj8eNfkJDOeyYtZ1lUSytiARpenR4JWlRzJTSoyMsEXmjcrWHrT1D4HvlYbh24+QU9tGreUS2q6OQhKYh7f0nHEg5iybC85rRRfVvbaJORgF5WODtj1dm6RwcXZE2olQ2jCRrJGEC8XJuFCS8n/h/D+t5V0oSUbgUV9GTs06APXdg8iq60NSeScuD00g/kwLqtoGqEWNQ8s9AXu0xHhH5o/LU3cRRaRL2iegyjhPpYVuJORKudyaXHcM1Xkn0HAmDc0VWcxdzRWZaKRnbr+L5Vk/EUhGy7ksRqi+NI3kbCY3laXTmkzwuBdV/kTO0BC7XeIp6IfglXoBu91OYQ+Vg+iCBgzR35A7ZaA69d/3ZUdwKKYU/V8soJB6sk9aPaIKLuJTefDqTdrMFMcjglgMtVXnM1IcOmoK0VqVi0sETr865jG0VmYTmQymayrLYPOtlTmc5VIQGugHqVQKERXalHNdEFN2vifzg4T66tCth8g+34t9VOElqlwkVfeh74tFVPVOs3Uh+a0obBlFOllby/0kdhrasQRIT4hAZ10RuuvPEEoZuM3XZM4yq/LP82u4zHSl+AenhqGkE03U+QAAAABJRU5ErkJggg==" />
                     </ui:ClickImage.Image>
                     <ui:ClickImage.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
