@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1095,1428</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1290,1428</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>開催イベント検知_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,13 +65,13 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="926,1363" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1300,1363" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="開催中のイベントを検知する.&#xA;※レイドイベントとユニオンイベントの検知はまだ未実装&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　adventinmisson: 降臨戦(開催中の時はTrue以下同じ)&#xA;　raidinmission: レイド&#xA;　unioninmisson: ユニオン&#xA;&#xA;" DisplayName="開催イベント検知" sap:VirtualizedContainerService.HintSize="884,1271" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence sap2010:Annotation.AnnotationText="開催中のイベントを検知する.&#xA;※レイドイベントとユニオンイベントの検知はまだ未実装&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　adventinmisson: 降臨戦(開催中の時はTrue以下同じ)&#xA;　raidinmission: レイド&#xA;　unioninmisson: ユニオン&#xA;&#xA;" DisplayName="開催イベント検知" sap:VirtualizedContainerService.HintSize="1258,1271" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:UiElement" Name="imageadvent" />
         <Variable x:TypeArguments="ui:UiElement" Name="imageraid" />
@@ -83,8 +83,8 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="842,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;開催イベント検知開始&quot;]" />
-      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="イベントボタンを押す" sap:VirtualizedContainerService.HintSize="842,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="1216,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;開催イベント検知開始&quot;]" />
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="イベントボタンを押す" sap:VirtualizedContainerService.HintSize="1216,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -102,7 +102,7 @@
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
         </ui:ClickImage.Target>
       </ui:ClickImage>
-      <Parallel DisplayName="イベント確認" sap:VirtualizedContainerService.HintSize="842,152" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <Parallel DisplayName="イベント確認" sap:VirtualizedContainerService.HintSize="1216,152" sap2010:WorkflowViewState.IdRef="Parallel_1">
         <ui:WaitImageAppear ContinueOnError="True" DisplayName="降臨戦イベント検知" FoundElement="[imageadvent]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
           <ui:WaitImageAppear.Image>
             <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAWCAYAAAB+F+RbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATESURBVFhHldg/7GVTFMXxN0PxQ9Bh0JAoJEZESTeJRhCJhEJEIURDqESDQkKUtJpJiI5OQkSERhRToCChIZREI6J55nPH9812vefPTdacc/Zee+29zzn3zpvZfHjzyS28f92VC769+cbtK9ec2D59+WXLyPb5tVcv4IPWIY2pA9noPHLRxQvM37z+xF4dNnx+8c9fdj7mq9tv2/nYjaDO+y+5aBmLO1TnBnFC0ANXnfiLTcIKhwTNH73uhr/xge2f7BqoKNAMrUP8/2tX22xUjs2L9927Dc/cc2pH/uHrL7dvvf7S9oVHH9zZIFGb8tStJxfb1Fjj2bNN4P/6y0/bn3/8bvvJB6f/1tTUF/PGi88tdvriXn3y8R2X74szHy8jv7nHaI1bnRpuI2ET2WOOKKBHcesGYBbYoxmb1EOvDeuhV+FTA9hox7Mp6dVE9doEG9naaAM8bQ5+jS7N2o0eJAkU3SMZoWlTyCyyR7KK9eSvoH971ny5a8AzD4F9co1q72lzPrzjjqXR5Roz/v7b7wuQBbWGNkDibPO6g4e9ZuPxpV8xM+4Q0nB6boaRdlrvnX59x61e41zHefmmW86fLGPO5k6uIE1mh3as9xXyrZu1KW4ELUXz70NarqWRTVwx8selNWOq87NP39nFViN0skuzmmnnBEasUEL8IGkiZx5+aDevORr7TnZyFIU3N1BMWpOLMzddXD664tb+CVo+Ut/cddeCjSY0NZMFJ1yjROc1dD2aSxYP5nrNqYh5Vfc1mx3fupObOmxqtz7Y7NmT/f6Rx5bDWZrNEdqxRIiaE15zYd2I0RoOceSIc6hZXKdrrp59MdXWZuDPQ9Fkr8fSbKdGvGBNzrtPvJPufUr0vzTbWjG04tA61Ky61BGv2qCYPmB8Xj1zMevfB7BBIsSpEEUQOnXBhQueOHX7LoF5f3Hj3nnFpQsnP7u10ZpuOjbqEGxaPJj50sLLR5fPeuaq8elvQ9g2mjRRfE4CYQrYiOy4IX92YzYbIvHEPpu8az32tKqPPd86V1BnWnKJxdtIEomTSMEabVcSEQSJQXzXzgkYi0mvK5ktftypWSysGwmHmqXXjfMPhjRh44/IBGazrc0VWoI14rcZk188ux1ON1t84z7tqbfPT0t+fuiV8HNRs6ePH1t+x792xdG5ZhObxbX2JUvMeiYKNasw/FlcenyaTcfIBs3x3bTyQjeruODbEb/60uA3gkbPHB1t3z1+/NzPRcTITqe1+Uw2rzHc/afgTLZutjXff2nWxxEvdP1h2tWCP+tjZ+vDZyPUqNG3jx0793MRfLYlqoCwbn76CEHJ2DQXn681nzzm0wbmPpTpTeSHtU89cs8NmZvtKuN9dLbR5WTXAmtUGEFXZx+nhJIr2hzEFs+n2ezxwbxmvWPeNdfPumZxyqeJtByQuswn+HH9x4NrrOGl2V7kNfgqzN/HNTv9kF+CGghi1r5pA3NFp6249DXLD9Z45q6vj1E10GXvCqub3YeJHizN6jpDYOPrlxUkHr/dV0A7bD1RvNckm3cpPsxY1412zfKV39qpTq1qYI9bo2yzp01fq33gEwBTPH8bMuHauCnzKkI67JM/9btyYeZd86FTo5ktHq2/HuLR9g+lwGRZ3XUX8AAAAABJRU5ErkJggg==" />
@@ -119,8 +119,16 @@
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="4000" WaitForReady="INTERACTIVE" />
           </ui:WaitImageAppear.Target>
         </ui:WaitImageAppear>
+        <ui:WaitImageAppear ContinueOnError="True" DisplayName="ユニオンイベント検知" FoundElement="[imageunion]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
+          <ui:WaitImageAppear.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+          </ui:WaitImageAppear.Image>
+          <ui:WaitImageAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="4000" WaitForReady="INTERACTIVE" />
+          </ui:WaitImageAppear.Target>
+        </ui:WaitImageAppear>
       </Parallel>
-      <Assign DisplayName="降臨戦イベント" sap:VirtualizedContainerService.HintSize="842,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="降臨戦イベント" sap:VirtualizedContainerService.HintSize="1216,60" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Boolean">[adventinmisson]</OutArgument>
         </Assign.To>
@@ -128,7 +136,7 @@
           <InArgument x:TypeArguments="x:Boolean">[imageadvent IsNot Nothing]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="レイドイベント" sap:VirtualizedContainerService.HintSize="842,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign DisplayName="レイドイベント" sap:VirtualizedContainerService.HintSize="1216,60" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Boolean">[raidinmission]</OutArgument>
         </Assign.To>
@@ -136,7 +144,7 @@
           <InArgument x:TypeArguments="x:Boolean">[imageraid IsNot Nothing]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="ユニオンイベント" sap:VirtualizedContainerService.HintSize="842,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign DisplayName="ユニオンイベント" sap:VirtualizedContainerService.HintSize="1216,60" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Boolean">[unioninmisson]</OutArgument>
         </Assign.To>
@@ -144,7 +152,7 @@
           <InArgument x:TypeArguments="x:Boolean">[imageunion IsNot Nothing]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="842,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="1216,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
