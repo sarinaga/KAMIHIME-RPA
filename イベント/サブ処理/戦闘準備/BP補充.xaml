@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="useEnergy" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1104,918</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>757,965</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -27,7 +27,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="BP不足の時にエナジーシードを利用する&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　useEnergy: エナジーシードを利用した=True" DisplayName="BP補充" sap:VirtualizedContainerService.HintSize="658,753" sap2010:WorkflowViewState.IdRef="Flowchart_8">
+  <Flowchart sap2010:Annotation.AnnotationText="BP不足の時にエナジーシードを利用する&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　useEnergy: エナジーシードを利用した=True" DisplayName="BP補充" sap:VirtualizedContainerService.HintSize="745,900" sap2010:WorkflowViewState.IdRef="Flowchart_8">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="imageSeed" />
     </Flowchart.Variables>
@@ -36,9 +36,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 132,107.5 132,124.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 200,107.5 200,134.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        <x:Double x:Key="Width">624</x:Double>
+        <x:Double x:Key="Width">711</x:Double>
+        <x:Double x:Key="Height">747.48000000000366</x:Double>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -47,9 +48,9 @@
     <FlowStep x:Name="__ReferenceID6">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">32,124.5</av:Point>
+          <av:Point x:Key="ShapeLocation">100,134.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">232,150 262,150 262,130 360,130</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">200,185.5 200,224.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;BP補充開始&quot;]">
@@ -60,12 +61,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID1">
+        <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">360,104.5</av:Point>
+              <av:Point x:Key="ShapeLocation">100,224.5</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">460,155.5 460,210</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,250 379,250</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:WaitImageAppear ContinueOnError="True" DisplayName="BP不足画面検知" FoundElement="[imageSeed]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
@@ -85,9 +86,9 @@
             <FlowStep x:Name="__ReferenceID5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">329,210</av:Point>
+                  <av:Point x:Key="ShapeLocation">379,220</av:Point>
                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">460,270 460,300 344.5,300 344.5,326.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">510,280 510,326.5</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Assign DisplayName="エナジーシード利用画面検知" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -108,19 +109,19 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">280.5,326.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">446,326.5</av:Point>
                       <av:Size x:Key="ShapeSize">128,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">280.5,370 132,370 132,404.5</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">408.5,370 442,370 442,484.5</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">446,370 250,370 250,404.5</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">574,370 610,370 610,494.5</av:PointCollection>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
                     <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">32,404.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">150,404.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">132,455.5 132,484.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">250,455.5 250,484.5</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="エナジーシードを利用する" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -145,12 +146,12 @@
                         <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">32,484.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">150,484.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">132,535.5 132,565.5 312,565.5 312,510 342,510</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">150,510 70,510 70,250 100,250</av:PointCollection>
                             </scg1:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="エナジーシードの利用完了確認" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="エナジーシードの利用完了確認" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                             <ui:ClickImage.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -174,29 +175,29 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ClickImage>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID0">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">342,484.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">310,185.5 310,254.5</av:PointCollection>
-                                </scg1:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;BP補充終了:useEnergy=&quot; &amp; useEnergy]">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg1:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:LogMessage>
-                            </FlowStep>
+                            <x:Reference>__ReferenceID0</x:Reference>
                           </FlowStep.Next>
                         </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <x:Reference>__ReferenceID0</x:Reference>
+                    <FlowStep x:Name="__ReferenceID1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">510,494.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">310,185.5 310,254.5</av:PointCollection>
+                        </scg1:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;BP補充終了:useEnergy=&quot; &amp; useEnergy]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg1:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </FlowStep>
                   </FlowDecision.False>
                 </FlowDecision>
               </FlowStep.Next>
@@ -205,8 +206,8 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>

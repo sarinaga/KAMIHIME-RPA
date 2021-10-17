@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1200,1365</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1200,1265</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>戦闘処理_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,7 +116,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">250,376 280,376 280,194.02 450,194.02 450,224.02</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="エラー発生時などの場合は実行を継続させることが重要。時間切れと戦闘終了の判断は戦闘終了検知で行う" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="攻撃ボタンを押す" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="エラー発生時などの場合は実行を継続させることが重要。時間切れと戦闘終了の判断は戦闘終了検知で行う" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="攻撃ボタンを押す" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                 <ui:ClickImage.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -128,7 +128,7 @@
                   </ui:CursorPosition>
                 </ui:ClickImage.CursorPosition>
                 <ui:ClickImage.Image>
-                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAwAAAAYCAYAAADOMhxqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN/SURBVDhPbZR/TNRlHMef9Vf902qtlUOc2Zk1WWkqtpTQ7jq1My6Yeh5eml6ogKDEnaZycdABasGxQ5TxQ8NfFAyPGKaHMJHBKKoTErm4zIw04jabo5rJsFf3PASzrT/e332/z/N8Ps/78/68P19RtMNM6X4ngf4rCjXlHvwXP6en5RPKbKvZpJ1FXvRj9Bln0BunQeRtjaeyOJ+rXT7Ghvxw7zb8McRgt5eq3I1YtNNJio6gzjCPXlMM4rAjmQ3LXyRzVTSNRdu51nyE0cvnFY46kzAueJLU+EXjZ16eiZCLe9LewpVl56AzjWDbSb6pLSRwuoTQgJ9fh4cZvTPCQLsXt0WHGLzsw2FdwWLNg5RlW+lpKse2NpbcrXHc7KibvC3QVInTugbRVVfEQNspdUgG6aIeJitxMfuseireMxFqP64g37fFzEekGl7AX/ORynB/ZvldkGJUNcgkq+ZEYpv3EmJBxAPYE6IVZ4ljeyycObSbW72NMNhG8Ewpe80GtLMjVaDQhh+SykSQvE3q31zxPiP95xhoOUK6yUCqZQ1fdbQibvx8lYKsFBUkKcl6Lp07QcqbMUi6EkmmFXT/2ychG3XntyDtzZ/hcTk47/2UkdANfult5WzVAVoa65W8Zw/tZMvK5xATskmMXeuEke9Upsm1YCtDX9crMRZFPDQeILvr3pFA4itP8XFeMrfbG+gsyca+eiEFYXkD9R76fDWcKslHNJXsVDxlDe6c7YT6OtX1OdZYvMU2qgs2k2meS0Opjd+/9SHWxs5WPnHnpP/ncFdNvpL1p4vVZKwzYFoyh+qcJMT/Ze446lLcpaxS3vX6hcyd9iiyZ+L+w84tcdQWO7h+4aQKkjVIp0oYoqaw9InHEXIO5GZRhgVX2gZ2rdfyYeoy5GC1NJzg73t31Xz4jjlJmD8D0eMtomz3O2xcHk15oZPBK13kbTNS6c4O23p4UmKpZGbiyjClXYmT8/CBPZn+S19yKzSkaAZOe/iiaq9yq2SxWR92q8zuSnub44cLuf7j94ze/Yux4R/401+H512jklv6bYnmEV6NnIqwrdPjOZDLzWC36vREh6W9D4ZnQNrBEDWdpREalkXOGp9p+SO4UG5TkLJKxSQF6Vo56zrNFPRTZ6ILQ9TuT8ex6Q0yzDq1KdVprtiHXC+2m5UArz87jfinn+e1yGf4B0hw81ApeQ1oAAAAAElFTkSuQmCC" />
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAkAAAAVCAYAAACUhcTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFoSURBVDhPhZI9SwNBEIYvIUJEsbGzsra2EmySxsbCpMlfEBFibSFYWASxELURJBaCRoKIhaKiaJEmB4qFaBQEhYBW5pqASsZ7JsxeTOPBsLezz3zsO+t9PPlyU60I3/ftuaRG+mUum9b/lXxWZvri4rExe94syOzksEKtt2uFFgdibehqpyC5sUEZHYrrQXF5QYPwrSU98UpL085xsjGva9D4FP9wXYMu42Em0uOgF4z+CMKf6e2Ru0TYU7m4qtGdACUBaFozvVRKClycHjuAIADA3VgIUfdgb98BBgE4qBsgK7djdVDrp+micxPj8l5/VWGDoOFg1Ynb1R5remgfYnJW948i6OGsqM5ua/pbbcjKoY3BHFqPHiobaE5bubmTANAGikUSJNqQicmQDTQxMYXK29FYAK30VDIRjSWfSev1gTBuCqgDDkGFGDBOstlToeyfp4Jw/z46Nph83Ws0ZfKZVMfzjckvenHVLrmPxuIAAAAASUVORK5CYII=" />
                 </ui:ClickImage.Image>
                 <ui:ClickImage.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
@@ -203,7 +203,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">670,500 790,500 790,546.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DisplayName="通信再試行" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="False" DisplayName="通信再試行" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                 <ui:ClickImage.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
