@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1185,2054</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1185,1954</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>戦闘終了検知_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -174,7 +174,7 @@
         </ui:WaitImageAppear>
         <ui:WaitImageAppear ContinueOnError="True" DisplayName="エラー" FoundElement="[imageError]" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="WaitImageAppear_9">
           <ui:WaitImageAppear.Image>
-            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAOCAYAAAC/10U/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK9SURBVEhL1ZRLS6pRFIb3DzMyrTCzO6WVXczMsAKd1MShEDpz1B/oJwQFEtXEHOjEQYQOpCsqGRWUqMUb74L94ZHvcOTkGZzBg597r7X3urx7KZfLBeJ0OtHf34++vr6uGBgYwOjoqPgSu92O2dlZ+Hw+UzweD0ZGRgz7XqAYAOHBGxsbeHx8xMfHh1Cv1/H5+Ymvry/51uvVahXb29uSsMPhkMCZuMVi+S20mZiYEB99509RY2NjIPzDBBhUOBwWdnd3cXNzg5eXF+zv7xvrOzs7Rvb08fv9OD4+xsnJicHp6SnOzs4MMpkMLi4u4PV65S766ru7pdNHzc3NQTM9PW0wOTkpVb2+vsbT05N0ZWpq6hcb+tAuEong9vYWd3d3BoVCAblcDtlsVn5rtRre398Ri8UwPj4Oq9UqXdBF+BO0JZSmjlfNzMzADAbaGTwD7rSjFGw2m0BptDM4OCi/7AyDz+fzGB4eFh8GXywW8fz83BWlUkliaL9b8SGZwcyYqQ5+c3MTbrfb1JbrZntco0SOjo7QaDSQTCalAKweg9cJdgsl2n6PWllZgRlamzr4ra0tLC8vm9qaQX/qMh6P4+3tTaq+trYmZywtLcke5UPZdQPtmXj7HWpxcVGyYDt1+wlH4dDQkBE8jdv3CQ+kfyesLKt0cHCA19dXlMtlSZ7dNLP/WxRnMCvBYC4vL3F/f2/w8PAgI7LZbMp3+97V1RVCoRBWV1cFnsHgqMX19XWkUim0Wi1JntOJe7TrnP8/QQUCAfmg/jg1otFoV+zt7WFhYUECnZ+fly4lEgmk02mRCSt+eHgoMmGVaMe7eoliNahPXs5HxAmjx5IZlAO7RFtqlnJigNzjg6xUKjg/P5fEuMazdXd6jeIU6QV8jEyM8uAoZELBYNDUtlcoXtArKD+202zvXyCa/z8J4BvyNcYOc9hh5QAAAABJRU5ErkJggg==" />
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAOCAYAAAC2POVFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMCSURBVEhLpZbJS7JRFMbv3+PKTbgIjCabCyubrMwmSyKhQVeBzRq1CCoIjFwEEbTrD2iAoAGbFg1GRZsW5cKNmwiej+fAK2Z+9VrCD3m95973nOcMV1VUVITi4mKUlJToprCwEAUFBUlmZ2dxfX2N5+fnjOzu7sJqtcp7Uvdli6qrq0N/fz9GR0fh9Xp/ZGRkBLW1taisrEzicrkwNDSE3t7ejLS0tMBkMqG8vPzTvmxRzc3N2NnZwdHREY6Pj4XT01Pc3NyIWufn5zg5OUmuHR4eIi8vTxSurq4WxxsaGuS7qqrqCzU1NUlon8kJvShGPT8/j+npaczMzAjBYBCPj494enrC0tKSpFlbm5iYgMFgQFlZGRwOBwKBAObm5v7LwsIC1tfXsbm5Cbfbjfr6+oxB6UFRFR6QWoelpaWi4t7enqjIutbWaEdVGSSdf39/x0+fj48PJBIJyZLmMN+bLYobWbdsAI3GxkZEIhHs7++Lc0xx6jqfbTYburq6pI5Zsz09PQJTbTabk+Tn52NwcBBvb2/Y2NiQZ54/NjYmqi8uLupGNTU1IZ22tjZR4eDgABaLBazrdBv+RhgoU1RRUSHQPrWRaBMOhxGLxWC32yX49vZ2bG9v4+zsDBcXF7pR3JgOFbu8vBRnmXLWZia77+Aep9MpdXt3dyeNaTQaRXme7/P50NHRIeWkF8Vo0+EhjERztrW19YvNT9BZjjMGHY1GJQCWAGuP5/1GAMXo0+FsvLq6EmfZbJlsvoNNNDk5KWo+PDxgZWVF5izV0RT/DYpDfnx8/BNTU1O4v78Xddk8qWt+v19SSIeYzu7uboEBDgwMyOWyurqK29tbvLy8IBQKiaMcdcyYZv8bFK/CbD4cQwxkeHhYGpEOMGqPx4Pl5WUZefF4HK+vr6JuTk6OjD7a/RXFEcIX9fX16YJKs8NZHlSWz2tra1KXdJCXCTudSubm5krqOzs7xe6vKMrLAzk39cC5zDnLPZyrPIQ3HGfy1taWBM7xxD8tbDQtoL/jwj9IxHuDoojcTQAAAABJRU5ErkJggg==" />
           </ui:WaitImageAppear.Image>
           <ui:WaitImageAppear.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />

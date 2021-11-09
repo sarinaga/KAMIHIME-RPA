@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1054,1155</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1054,1055</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>スプラッシュからマイページまで_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -347,7 +347,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">320,550 260,550 260,420 230,420</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="×ボタンを押す" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="×ボタンを押す" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                     <ui:ClickImage.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -359,10 +359,10 @@
                                       </ui:CursorPosition>
                                     </ui:ClickImage.CursorPosition>
                                     <ui:ClickImage.Image>
-                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG5SURBVEhLtZKxSgNBFEWnCZIEgn+gn6BfImIQf8FCO2sRewsrOzuxE/wCexsRGxsFS2sTlRRjzsAdX8Y3mw2YBzfL7t53z5u3CfHkOE72duNkcyNrvDpYisKyAVYZJuB9v/fHtIjor2UEfizoZWe7saFJ6qtlJBi66a7E1/OzmOr6yjU3SX56KbLItBmBGx4+HewnU65pU2muSRkCqci0GcGCPkcf8fv9LV1TtQCWoDLDAgP7VWGS2gBrIEmlbxhu19fytyrNJRAJpPsaSL1kw0gwTdcWiH/eiSxIQyWY1nHR6WSgbbTNhONDAtW8ZOEjW4z8158HRBTv23jI4kTKnoEhXs4DMnm5NomyIEFcWFugJ6oJ5MIs8PnuMoV44VYU3iYQcmGIpqN+N01bWxviHR68wDwIWagKo/G/YJILE4jVWFB8fHCvePCWQJ2oejJ7IqoEVe+npRMiDzgD81ZHqGTDvXd2pR4ww2TA/DUeNYY1DUOvBQrEQRKMh8NBL4fYgDIEn7zeUEhD4bPAYEFeo9dsewD6Pb/DCRjmgXhum/Qd2gypXg0YTg+30hRN5hK0CJCtwBgOevEH0UQjKCJW0y4AAAAASUVORK5CYII=" />
+                                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Enhanced" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAaCAYAAABLlle3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVEhLtZQ9Sx1BFIa3MajBL7ALgVinEP+EhQYL9S+IRSxSBgSbVGlioShoJzZCOhELSxErG0khBPILFFNEwlVx3Wf0Hc/OnZm9N5ADr/t13veZM7ve4n5ttbxfXChbE+NOd6Mj/13Fw8py2Zqb9VD0a3DQK2bqRLmMIpyQpuP+vvLsw7Q7ImvoRPIpw4I5d1B7g6bzTx9LVwf7PkA9TVI/Xoosri3YT8rN7697X4CqLsAhUBWCC/6EE7b+3pZ/ri+dqIfdHbegHJhn9NBLyU8WZcEOygX7r5JBonLgFND6Kb1jP2nOJGMM3AS03sOxdy/Qbs0C/4vHb68Fb77qaQzhQyEE6aOp9fy88L0hsA1qwfxSUWGQwtwvWQc9ZAEVMAq14B9H286sIBvMV6mv3MLcdVV4QyC5KApFAp/ufXUhPlBblzpWhScFzEIRppXhgdrEhFuFwNyEHUGRwKze/aPHYNWRZ/TQCzQGkxqhBAgam1SKQVPgJBSDgGyZnVIKF0EPvQKHMHYNeahWZoELQ31t29qoqjQxCoE1qBXNAFMTIqZMbbcmJiMGLsIJBcxNCIznKAfmuQXXoN0A7RQotxsh2ENjwNTqb54nVIj13Py+inq0K/QhP6n9aFLA0Kz3pOua9+Q46WWhDsrFl6WZukkypqmB/hrQgnnWBg4ytibfu14/Kaa9b0tPBmuqzmNAvZ8YOPQjsnnuJ9U75eb653nfiHJAxIJ13gZ+FpnK2Hj7pnwEFD/hpThtutgAAAAASUVORK5CYII=" />
                                     </ui:ClickImage.Image>
                                     <ui:ClickImage.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES（旧DMM GAMES R18）' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
                                     </ui:ClickImage.Target>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">

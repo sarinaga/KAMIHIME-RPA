@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>757,823</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1095,823</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -89,7 +89,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="AP不足の時にハーフエリクサーを利用する&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　useElixir: ハーフエリクサーを利用した=True" DisplayName="AP補充" sap:VirtualizedContainerService.HintSize="708,758" sap2010:WorkflowViewState.IdRef="Flowchart_13">
+  <Flowchart sap2010:Annotation.AnnotationText="AP不足の時にハーフエリクサーを利用する&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　useElixir: ハーフエリクサーを利用した=True" DisplayName="AP補充" sap:VirtualizedContainerService.HintSize="748,758" sap2010:WorkflowViewState.IdRef="Flowchart_13">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="imageEri" />
     </Flowchart.Variables>
@@ -99,20 +99,20 @@
         <av:Point x:Key="ShapeLocation">350,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">380,77.5 380,117.5</av:PointCollection>
-        <x:Double x:Key="Width">673.5</x:Double>
+        <x:Double x:Key="Width">714</x:Double>
         <x:Double x:Key="Height">605</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID5">
+    <FlowStep x:Name="__ReferenceID6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">280,117.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">380,168.5 380,204.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">480,143 580,143 580,204.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;AP補充開始&quot;]">
@@ -126,9 +126,9 @@
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">280,204.5</av:Point>
+              <av:Point x:Key="ShapeLocation">480,204.5</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">380,255.5 380,295.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">580,255.5 580,290</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:WaitImageAppear ContinueOnError="True" DisplayName="AP不足メッセージ確認" FoundElement="[imageEri]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
@@ -143,9 +143,9 @@
             <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">249,295.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">449,290</av:Point>
                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">380,355.5 380,396.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">580,350 580,380 380,380 380,416.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Assign DisplayName="エリクサー利用判断" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -166,19 +166,19 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">343,396.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">343,416.5</av:Point>
                       <av:Size x:Key="ShapeSize">74,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">343,440 220,440</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">417,440 510,440 510,524.5</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">343,460 240,460</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">417,460 510,460 510,524.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
                     <FlowStep x:Name="__ReferenceID2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">20,407</av:Point>
+                          <av:Point x:Key="ShapeLocation">40,427</av:Point>
                           <av:Size x:Key="ShapeSize">200,66</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">120,407 120,230 280,230</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">140,427 140,260</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence DisplayName="エリクサーの利用" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -230,7 +230,31 @@
                         </ui:ClickImage>
                       </Sequence>
                       <FlowStep.Next>
-                        <x:Reference>__ReferenceID0</x:Reference>
+                        <FlowStep x:Name="__ReferenceID5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">9,200</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">271,230 480,230</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="フラグクリア" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="ui:UiElement">[imageEri]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="ui:UiElement">[Nothing]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.True>
@@ -264,5 +288,6 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
   </Flowchart>
 </Activity>
