@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="推究の正殿素材集め" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1210,1664" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="推究の正殿素材集め" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1164,1609" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -81,7 +80,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="推究の正殿素材集め" sap:VirtualizedContainerService.HintSize="1170,1544" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart DisplayName="推究の正殿素材集め" sap:VirtualizedContainerService.HintSize="1174,1544" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="scenario" />
       <Variable x:TypeArguments="s:Random" Default="[New System.Random()]" Name="rand" />
@@ -104,11 +103,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">890,84.5</av:Point>
-          <av:Size x:Key="ShapeSize">216,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">998,135.5 998,165.5 1018,165.5 1018,194.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">990,135.5 990,165.5 1010,165.5 1010,194.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クエストボタンを押す" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -136,11 +135,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">910,194.5</av:Point>
-              <av:Size x:Key="ShapeSize">216,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">910,220 880,220 880,200 856,200</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">910,220 880,220 880,200 840,200</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="メインクエストボタンを押す" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="メインクエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -168,11 +167,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">640,174.5</av:Point>
-                  <av:Size x:Key="ShapeSize">216,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">640,200 610,200 610,150 586,150</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">640,200 610,200 610,150 570,150</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="ワールドマップを選択" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="ワールドマップを選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                 <ui:ClickImage.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -200,11 +199,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">370,124.5</av:Point>
-                      <av:Size x:Key="ShapeSize">216,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">370,150 198,150 198,174.5</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">370,150 190,150 190,174.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <While DisplayName="遺跡選択(1/2)に移動する" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="While_1">
+                  <While DisplayName="遺跡選択(1/2)に移動する" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="While_1">
                     <While.Variables>
                       <Variable x:TypeArguments="x:Int32" Default="[i]" Name="i" />
                       <Variable x:TypeArguments="x:Boolean" Default="False" Name="complete" />
@@ -300,11 +299,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">90,174.5</av:Point>
-                          <av:Size x:Key="ShapeSize">216,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">198,225.5 198,280 320,280</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">190,225.5 190,280 320,280</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Flowchart DisplayName="どのシナリオに行くかを決める" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                      <Flowchart DisplayName="どのシナリオに行くかを決める" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -696,11 +695,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">320,254.5</av:Point>
-                              <av:Size x:Key="ShapeSize">216,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">536,280 602,280</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">520,280 602,280</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="移動するをクリック" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="移動するをクリック" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                             <ui:ClickImage.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -728,11 +727,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">602,254.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">818,280 848,280 848,289.52 882,289.52</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">802,280 832,280 832,289.52 882,289.52</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:OnImageAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="メインクエストを選択" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="OnImageAppear_4" RepeatForever="True">
+                              <ui:OnImageAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="メインクエストを選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OnImageAppear_4" RepeatForever="True">
                                 <ui:OnImageAppear.Body>
                                   <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="タブを押す" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="ClickImage_37" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                     <ui:ClickImage.CursorPosition>
@@ -770,11 +769,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">882,264.02</av:Point>
-                                      <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">990,315.02 990,400 928,400</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">982,315.02 982,400 912,400</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="どれかクエストを選択" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="どれかクエストを選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                     <ui:ClickImage.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -802,11 +801,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">712,374.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">712,400 682,400 682,407.5 606,407.5</av:PointCollection>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">712,400 682,400 682,407.5 590,407.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AP補充 workflow" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/AP補充.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AP補充 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/AP補充.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -816,11 +815,11 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">390,374.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">216,66</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">390,407.5 360,407.5 360,420 266,420</av:PointCollection>
+                                              <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">390,407.5 360,407.5 360,420 250,420</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="イベントをスキップする" sap:VirtualizedContainerService.HintSize="216,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                          <Sequence DisplayName="イベントをスキップする" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -877,11 +876,11 @@
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">50,394.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">158,445.5 158,475.5 188,475.5 188,504.5</av:PointCollection>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">150,445.5 150,475.5 180,475.5 180,504.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="エピソードを選択" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="エピソードを選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                 <ui:ClickImage.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -909,11 +908,11 @@
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">80,504.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">188,555.5 188,585.5 138,585.5 138,624.02</av:PointCollection>
+                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">180,555.5 180,585.5 130,585.5 130,624.02</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKを押してクエストへ移動" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="ClickImage_35" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKを押してクエストへ移動" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_35" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                                     <ui:ClickImage.CursorPosition>
                                                       <ui:CursorPosition Position="Center">
                                                         <ui:CursorPosition.OffsetX>
@@ -941,11 +940,11 @@
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">30,624.02</av:Point>
-                                                          <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                                          <av:PointCollection x:Key="ConnectorLocation">138,675.02 138,705.02 168,705.02 168,734.5</av:PointCollection>
+                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">130,675.02 130,705.02 160,705.02 160,734.5</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 幻獣・パーティーを選択する workflow" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/幻獣とパーティーを選択して戦闘開始.xaml">
+                                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 幻獣・パーティーを選択する workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘準備/幻獣とパーティーを選択して戦闘開始.xaml">
                                                         <ui:InvokeWorkflowFile.Arguments>
                                                           <OutArgument x:TypeArguments="x:Boolean" x:Key="succeed">[succeed]</OutArgument>
                                                           <InArgument x:TypeArguments="x:Boolean" x:Key="selectChaos">True</InArgument>
@@ -961,15 +960,13 @@
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">60,734.5</av:Point>
-                                                              <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                                              <av:PointCollection x:Key="ConnectorLocation">168,785.5 168,815.5 268,815.5 268,854.5</av:PointCollection>
+                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">160,785.5 160,815.5 260,815.5 260,854.5</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘を行う（クエスト） workflow" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/クエスト戦闘.xaml">
+                                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘を行う（クエスト） workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦闘/クエスト戦闘.xaml">
                                                             <ui:InvokeWorkflowFile.Arguments>
-                                                              <InArgument x:TypeArguments="x:Boolean" x:Key="useMythical">False</InArgument>
-                                                              <InArgument x:TypeArguments="x:Boolean" x:Key="useAbility">False</InArgument>
-                                                              <InArgument x:TypeArguments="x:Boolean" x:Key="useBurst">False</InArgument>
+                                                              <OutArgument x:TypeArguments="x:String" x:Key="condition" />
                                                             </ui:InvokeWorkflowFile.Arguments>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -982,11 +979,11 @@
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <av:Point x:Key="ShapeLocation">160,854.5</av:Point>
-                                                                  <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                                                  <av:PointCollection x:Key="ConnectorLocation">376,880 400,880 400,705.02</av:PointCollection>
+                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">360,880 392,880 392,705.02</av:PointCollection>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦後処理 workflow" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦後処理/結果処理.xaml">
+                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦後処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="イベント/サブ処理/戦後処理/結果処理.xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
                                                                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                                 </ui:InvokeWorkflowFile.Arguments>
@@ -1001,11 +998,11 @@
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <av:Point x:Key="ShapeLocation">292,654.02</av:Point>
-                                                                      <av:Size x:Key="ShapeSize">216,51</av:Size>
-                                                                      <av:PointCollection x:Key="ConnectorLocation">400,654.02 400,624.02 558,624.02 558,754.02</av:PointCollection>
+                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                      <av:PointCollection x:Key="ConnectorLocation">392,654.02 392,624.02 550,624.02 550,754.02</av:PointCollection>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+                                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
                                                                     <ui:InvokeWorkflowFile.Arguments>
                                                                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                                     </ui:InvokeWorkflowFile.Arguments>
@@ -1020,10 +1017,10 @@
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <av:Point x:Key="ShapeLocation">450,754.02</av:Point>
-                                                                          <av:Size x:Key="ShapeSize">216,51</av:Size>
+                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;メインクエスト終了&quot;]">
+                                                                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;メインクエスト終了&quot;]">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1080,11 +1077,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">160,14.5</av:Point>
-          <av:Size x:Key="ShapeSize">216,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">376,40 998,40 998,84.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">360,40 390,40 390,110 890,110</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;メインクエスト開始&quot;]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;メインクエスト開始&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

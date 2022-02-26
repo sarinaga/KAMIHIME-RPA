@@ -57,6 +57,8 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="攻撃開始ボタンを押し、レイドバトルの場合は適時援軍を呼び、戦闘終了まで監視する&#xA;&#xA;引数&#xA;　ignoreNext:&#xA;　　終了判定にNextのボタンを検知しない=True&#xA;　request:&#xA;　　応援要請を行う=True&#xA;&#xA;戻り値&#xA;　condition:&#xA;　　戦闘終了後どうなったか。値は戦闘終了検知のものに準ずる&#xA;　　　レイドバトルが終了してMVPが表示されている=&quot;MVP&quot;&#xA;　　　レイドバトルが開始できずにNEXTが表示された状態=&quot;NEXT&quot;&#xA;　　　レイドバトルが時間切れになった場合=&quot;TIMEOUT&quot;&#xA;　　　クエストバトルが終了してクエストリザルトが表示されている=&quot;RESULT&quot;&#xA;　　　迷宮の進行になった=&quot;LABY&quot;&#xA;　　　敗北した場合=&quot;LOSE&quot;&#xA;　　　クラッシュした場合=&quot;CRASH&quot;" DisplayName="戦闘処理" sap:VirtualizedContainerService.HintSize="1210,1200" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -116,7 +118,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">250,376 280,376 280,194.02 450,194.02 450,224.02</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="エラー発生時などの場合は実行を継続させることが重要。時間切れと戦闘終了の判断は戦闘終了検知で行う" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="攻撃ボタンを押す" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="エラー発生時などの場合は実行を継続させることが重要。時間切れと戦闘終了の判断は戦闘終了検知で行う" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="攻撃ボタンを押す" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                 <ui:ClickImage.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -227,7 +229,10 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ClickImage>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID2" Condition="[stopwatch.ElapsedMilliseconds &gt; 305000 And request]" DisplayName="5分経過かつ救援？" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                <FlowDecision x:Name="__ReferenceID2" DisplayName="5分経過かつ救援？" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                  <FlowDecision.Condition>
+                                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="stopwatch.ElapsedMilliseconds &gt; 315000 And request" />
+                                  </FlowDecision.Condition>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
