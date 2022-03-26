@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="リロード_ゲームスタート" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="515,1073" sap2010:WorkflowViewState.IdRef="リロード_ゲームスタート_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="リロード_ゲームスタート" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="868,1081" sap2010:WorkflowViewState.IdRef="リロード_ゲームスタート_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -50,7 +50,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="リロード_ゲームスタート" sap:VirtualizedContainerService.HintSize="476,1008" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="リロード_ゲームスタート" sap:VirtualizedContainerService.HintSize="476,1016" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="attached" />
     </Sequence.Variables>
@@ -60,37 +60,24 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;リロード・ゲームスタート開始&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ 'chrome.exe 神姫PROJECT'" sap:VirtualizedContainerService.HintSize="434,592" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="594dd2ff4af51377f5c3ffc0cda341cd" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ 'chrome.exe 神姫PROJECT'" sap:VirtualizedContainerService.HintSize="434,600" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="594dd2ff4af51377f5c3ffc0cda341cd" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="アタッチ後処理" sap:VirtualizedContainerService.HintSize="376,406" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="アタッチ後処理" sap:VirtualizedContainerService.HintSize="376,454" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:RefreshBrowser Browser="{x:Null}" DisplayName="ブラウザーを更新" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
-            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ロゴをクリック" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-              <ui:ClickImage.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:ClickImage.CursorPosition>
-              <ui:ClickImage.Image>
-                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOdSURBVEhLtZZJTBNhGIaJytGr4BJxRxSBttNtZlraUrAL3aZTUKNxQQUvGL148KRe9GQ8uhzcolGjiftKcDcejEJiosZEozHihigiuPH6/f90ShvrQhsP3xyfvn2+9/9nCua6JSyUi7HOOBKvN60BuruAbwPAow50bV6PI5UzsHHKKKwuG4FVpSPQIhSiyVCIBabRSFRPh+J3od7vgxKuhyxLEEwmWMxmFFgsZvitk9BaUTgE/vEV6O8FHtzDS4Kfko3Y55+J7d7k+MqwNTQDzRQoVl2OSNCHcDAAUbTDaDRAEEwENlXAXVmMptJReKWD+94DXY81+JOH6D19CD1Hd2fM020bsCVQiga5BP66GoSCfthsVpgFgacusJqNcFeNywT30Nw5Bzx/CHztBz5/BD71DM3Ht+i7cBR7lHIslooQDdZBiYTgdrlgs1o1FWazgOrKLOBrh4CLe4EbJ4D710nLLW2edvIf62s7jl2BciyyFSEe8iHgm4tarxd2m00Dy5YKeKrG/Aq+ehC4tB84vxs4s4NmJ3B2F3C3PQXeH52NJeIYDmaJw6QjDVxJ4KLs4M4rpIH++rsXwDPSwuBp4J2UeCEljnoExKNhWmISTIUoEK0WuA1ZVOjggU/A4HdaaHcGuL/9JA7E5qQSNybUFJgNV1HzOxV/AOPaORxRDSlwnFQwsGi38/k/YOozqRCy1+0v4C/tp3BQmYMV7hKoYX8KnFLhsBn58lZXpB3pfwDrrVjmGAc1m2M7nRa3YTzWGoYHHrzKVFSlqQijrtbLNciSxMA2Dl5TNTyw7rjZOw1qJKCpqA/wiyiZWAPnu7z5jQ2kgi4iWh4Hs+gM3DIrN/Ay53i+PA5miUkDr5tkNdHyxg7bsQ5uqZ2OBKnQEvsh6Y5luxkeOnmrZueWOAOcTCxJIqmg2G7DBLroc0us1y0FpuVpKkQxp7rp4OaaqeRYVxEgFaKWmD3yAf+iQq9bPuCLCZneexO4CjV5bbKWORwyLY9kM8f5JG6I1vPE0VCQp+WXEKN7jLmDV7hK0KiE0agqUJUYV8ET5+t4uWsiPyANcQUxOtYMrPWYHvkkZirmxSNcRTwaGTp5eo9zBS+Vx6ZawRwzHqtcXj1uSzjQWlvGbzeeOBbji3M6HX8Bd1ymt/QH7Vuu900GeJAlTlBiqZjXLZ7+BrGz2+1PKm4eo48VSq1PGvjH7RM4PL8cKz2T+fLUWISrYGVwOh34CU0FD3yEzk2eAAAAAElFTkSuQmCC" />
-              </ui:ClickImage.Image>
-              <ui:ClickImage.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-              </ui:ClickImage.Target>
-            </ui:ClickImage>
+            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="ホームボタンで一番上に移動" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="home" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="92f557d940289095b7becf44861e7ddc" Selector="&lt;webctrl id='page' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
             <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ゲームスタートボタンを押す" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
               <ui:ClickImage.CursorPosition>
                 <ui:CursorPosition Position="Center">
