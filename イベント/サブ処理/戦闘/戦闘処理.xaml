@@ -58,7 +58,6 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="攻撃開始ボタンを押し、レイドバトルの場合は適時援軍を呼び、戦闘終了まで監視する&#xA;&#xA;引数&#xA;　ignoreNext:&#xA;　　終了判定にNextのボタンを検知しない=True&#xA;　request:&#xA;　　応援要請を行う=True&#xA;&#xA;戻り値&#xA;　condition:&#xA;　　戦闘終了後どうなったか。値は戦闘終了検知のものに準ずる&#xA;　　　レイドバトルが終了してMVPが表示されている=&quot;MVP&quot;&#xA;　　　レイドバトルが開始できずにNEXTが表示された状態=&quot;NEXT&quot;&#xA;　　　レイドバトルが時間切れになった場合=&quot;TIMEOUT&quot;&#xA;　　　クエストバトルが終了してクエストリザルトが表示されている=&quot;RESULT&quot;&#xA;　　　迷宮の進行になった=&quot;LABY&quot;&#xA;　　　敗北した場合=&quot;LOSE&quot;&#xA;　　　クラッシュした場合=&quot;CRASH&quot;" DisplayName="戦闘処理" sap:VirtualizedContainerService.HintSize="1210,1200" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -118,7 +117,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">250,376 280,376 280,194.02 450,194.02 450,224.02</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="エラー発生時などの場合は実行を継続させることが重要。時間切れと戦闘終了の判断は戦闘終了検知で行う" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="攻撃ボタンを押す" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:ClickImage DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="エラー発生時などの場合は実行を継続させることが重要。時間切れと戦闘終了の判断は戦闘終了検知で行う" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="攻撃ボタンを押す" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                 <ui:ClickImage.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -130,7 +129,7 @@
                   </ui:CursorPosition>
                 </ui:ClickImage.CursorPosition>
                 <ui:ClickImage.Image>
-                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAkAAAAVCAYAAACUhcTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFoSURBVDhPhZI9SwNBEIYvIUJEsbGzsra2EmySxsbCpMlfEBFibSFYWASxELURJBaCRoKIhaKiaJEmB4qFaBQEhYBW5pqASsZ7JsxeTOPBsLezz3zsO+t9PPlyU60I3/ftuaRG+mUum9b/lXxWZvri4rExe94syOzksEKtt2uFFgdibehqpyC5sUEZHYrrQXF5QYPwrSU98UpL085xsjGva9D4FP9wXYMu42Em0uOgF4z+CMKf6e2Ru0TYU7m4qtGdACUBaFozvVRKClycHjuAIADA3VgIUfdgb98BBgE4qBsgK7djdVDrp+micxPj8l5/VWGDoOFg1Ynb1R5remgfYnJW948i6OGsqM5ua/pbbcjKoY3BHFqPHiobaE5bubmTANAGikUSJNqQicmQDTQxMYXK29FYAK30VDIRjSWfSev1gTBuCqgDDkGFGDBOstlToeyfp4Jw/z46Nph83Ws0ZfKZVMfzjckvenHVLrmPxuIAAAAASUVORK5CYII=" />
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAALCAYAAABs3u23AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH6SURBVDhPbZM7SwNREIW38FfYWvkPFHsRbOwkqEW0sVeMonY+iJBKkGBEEJEgCKLiC0UJIlhIFhIwFmLhI0lhERBiTDaO+UZm2agXhnvvzJxzZubuOuWlCTGrr4elehTRszc1qFYYC0lnW4vsJJPCqrlnMj3aJ4/XSfFyad37OlplfXjAxwetnFoR725RpBRXc6rJRFMwmHwTHvojtjzeIws93SrCPShKDHIVyW3+sfrTkTgEg2ZBwJCkLi59sY35Ee2OIolH+tvVL4UbKdzuSai3yxeVz5N/rUkQoexBRIkgLhbzItVXXwyyq+2Y7uSxI/KWOW5g05obi87pVMgPCn19ZNQc2nzeimoCHUFgXUGCGOKQ0wU7I4aUAg2XPU38dOuVtFAwJkzMF8SJCAkQaVeNBZhuIAPEmZ1cFmcw+PfjMz55JX+v8fJ7SQufnZxQDHG4HKsEJ4bTRCBiRIDIw2/d0y04/MTJW1uNq/3HyQ6fQ1d1r6KjoGXe4eXB9UF0gJ8dkC17VwwMndmbWlFwqjVW7vbnaRx7J9QBQMBnDgkiiOKnSkAsyMFg+MHyodEl6zcf04CPpV+ptcyOIUIiQB6cO6aEjV/AxKwgjFFakcYR5MMPRt8QIsx101opY7Z3+y1qQCsUH/lMiq64nx/uaozRcsbHveaeyTfQ82T0vYWgBAAAAABJRU5ErkJggg==" />
                 </ui:ClickImage.Image>
                 <ui:ClickImage.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
@@ -229,10 +228,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ClickImage>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID2" DisplayName="5分経過かつ救援？" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                                  <FlowDecision.Condition>
-                                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="stopwatch.ElapsedMilliseconds &gt; 315000 And request" />
-                                  </FlowDecision.Condition>
+                                <FlowDecision x:Name="__ReferenceID2" Condition="[stopwatch.ElapsedMilliseconds &gt; 315000 And request]" DisplayName="5分経過かつ救援？" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
