@@ -57,6 +57,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="神姫プロジェクト" sap:VirtualizedContainerService.HintSize="1714,1036" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -74,6 +75,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="unioninmisson" />
       <Variable x:TypeArguments="x:Boolean" Name="raidinmission" />
       <Variable x:TypeArguments="x:Int32" Name="elementquest" />
+      <Variable x:TypeArguments="x:Int32" Name="raidsupport" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -86,7 +88,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID28</x:Reference>
+      <x:Reference>__ReferenceID29</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
@@ -260,10 +262,10 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1210,494</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">1410,520 1440,520 1440,44 1570,44 1570,74</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">1310,545 1310,584.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[raidinmission]" DisplayName="レイドイベント巡回" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_24">
+                      <If Condition="[raidinmission]" DisplayName="レイドイベント自発巡回" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_24">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,58 +284,60 @@
                           </ui:InvokeWorkflowFile>
                         </If.Then>
                         <If.Else>
-                          <ui:LogMessage DisplayName="スキップ" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;レイドイベントは実施されていません&quot;]" />
+                          <ui:LogMessage DisplayName="スキップ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;レイドイベントは実施されていません&quot;]" />
                         </If.Else>
                       </If>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID18">
+                        <FlowStep x:Name="__ReferenceID28">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">1470,74</av:Point>
+                              <av:Point x:Key="ShapeLocation">1210,584.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">1570,126 1570,154</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">1410,610 1440,610 1440,44 1570,44 1570,74</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[CBool(parsedValue.SelectToken(&quot;$.raidragnarok&quot;))]" DisplayName="レイドRagnarok" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_19">
+                          <If Condition="[raidinmission]" DisplayName="レイドイベント支援巡回" sap:VirtualizedContainerService.HintSize="713,249" sap2010:WorkflowViewState.IdRef="If_28">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="巡回\レイドクエスト巡回.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_57" UnSafe="False" WorkflowFileName="巡回\レイドボス支援巡回.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"火","水","風","雷","光","闇"}]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="dificulties">[{"RAGNAROK50", "RAGNAROK60"}]</InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="count">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="raidsupport" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Boolean" x:Key="isEvent">
+                                    <Literal x:TypeArguments="x:Boolean" Value="True" />
+                                  </InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
                             </If.Then>
+                            <If.Else>
+                              <ui:LogMessage DisplayName="スキップ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;レイドイベントは実施されていません(2回目)&quot;]" />
+                            </If.Else>
                           </If>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID19">
+                            <FlowStep x:Name="__ReferenceID18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">1470,154</av:Point>
+                                  <av:Point x:Key="ShapeLocation">1470,74</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">1570,206 1570,244</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">1570,126 1570,154</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.raidragnarokplus&quot;))]" DisplayName="レイドRagnarok+以上" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_20">
+                              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.raidragnarok&quot;))]" DisplayName="レイドRagnarok" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_19">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（超高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="巡回\レイドクエスト巡回.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="巡回\レイドクエスト巡回.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"火","水","風","雷","光","闇"}]</InArgument>
-                                      <InArgument x:TypeArguments="s:String[]" x:Key="dificulties">[{"RAGNAROK80", "MALICIOUS"}]</InArgument>
+                                      <InArgument x:TypeArguments="s:String[]" x:Key="dificulties">[{"RAGNAROK50", "RAGNAROK60"}]</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -344,77 +348,108 @@
                                 </If.Then>
                               </If>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID2">
+                                <FlowStep x:Name="__ReferenceID19">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">1470,244</av:Point>
+                                      <av:Point x:Key="ShapeLocation">1470,154</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">1570,295 1570,434.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">1570,206 1570,244</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="巡回\レイドボス支援巡回.xaml">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:Int32" x:Key="count">[Cint(parsedValue.SelectToken("$.raidsupportragnarok"))]</InArgument>
-                                    </ui:InvokeWorkflowFile.Arguments>
+                                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.raidragnarokplus&quot;))]" DisplayName="レイドRagnarok+以上" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_20">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                  </ui:InvokeWorkflowFile>
-                                  <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID27">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">1470,434.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">1570,485.5 1570,524.02</av:PointCollection>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.recievepresent&quot;))]" DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_27">
+                                    <If.Then>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（超高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="巡回\レイドクエスト巡回.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"火","水","風","雷","光","闇"}]</InArgument>
+                                          <InArgument x:TypeArguments="s:String[]" x:Key="dificulties">[{"RAGNAROK80", "MALICIOUS"}]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If.Then>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke プレゼント受取 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="巡回\プレゼント受取.xaml">
-                                            <ui:InvokeWorkflowFile.Arguments>
-                                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                                            </ui:InvokeWorkflowFile.Arguments>
-                                          </ui:InvokeWorkflowFile>
-                                        </If.Then>
-                                      </If>
+                                      </ui:InvokeWorkflowFile>
+                                    </If.Then>
+                                  </If>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID2">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">1470,244</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">1570,295 1570,434.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="巡回\レイドボス支援巡回.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="count">[Cint(parsedValue.SelectToken("$.raidsupportragnarok"))]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID26">
+                                        <FlowStep x:Name="__ReferenceID27">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">1470,524.02</av:Point>
+                                              <av:Point x:Key="ShapeLocation">1470,434.5</av:Point>
                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">1570,575.02 1570,769 1140,769</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">1570,485.5 1570,524.02</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <If Condition="[CBool(parsedValue.SelectToken(&quot;$.receivemission&quot;))]" DisplayName="ミッション報酬受取" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_26">
+                                          <If Condition="[CBool(parsedValue.SelectToken(&quot;$.recievepresent&quot;))]" DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_27">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ミッション巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="巡回\ミッション報酬受取.xaml">
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke プレゼント受取 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="巡回\プレゼント受取.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                 </ui:InvokeWorkflowFile.Arguments>
+                                              </ui:InvokeWorkflowFile>
+                                            </If.Then>
+                                          </If>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID26">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">1470,524.02</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">1570,575.02 1570,769 1140,769</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.receivemission&quot;))]" DisplayName="ミッション報酬受取" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_26">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                              </ui:InvokeWorkflowFile>
-                                            </If.Then>
-                                          </If>
-                                          <FlowStep.Next>
-                                            <x:Reference>__ReferenceID0</x:Reference>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ミッション巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="巡回\ミッション報酬受取.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <FlowStep.Next>
+                                                <x:Reference>__ReferenceID0</x:Reference>
+                                              </FlowStep.Next>
+                                            </FlowStep>
                                           </FlowStep.Next>
                                         </FlowStep>
                                       </FlowStep.Next>
@@ -667,17 +702,11 @@
                                               <av:PointCollection x:Key="ConnectorLocation">1310,124.04 1310,164</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 開催イベント検知 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="巡回\サブ処理\開催イベント検知.xaml">
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 開催イベント検知 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="巡回\サブ処理\開催イベント検知.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="adventinmisson">
-                                                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="adventinmisson" />
-                                              </OutArgument>
-                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="raidinmission">
-                                                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="raidinmission" />
-                                              </OutArgument>
-                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="unioninmisson">
-                                                <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="unioninmisson" />
-                                              </OutArgument>
+                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="adventinmisson">[adventinmisson]</OutArgument>
+                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="raidinmission">[raidinmission]</OutArgument>
+                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="unioninmisson">[unioninmisson]</OutArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -716,7 +745,7 @@
           <av:PointCollection x:Key="ConnectorLocation">110,410.5 110,440.5 186,440.5 186,476.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="27f3ef6c-0da3-409c-a247-256eb23dffca" DisableMaximizeButton="False" DisableMinimizeButton="False" Dismissed="[canceled]" DisplayName="巡回内容入力" FormFieldsOutputData="[inputedValue]" FormHeight="600" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;処理&quot;,&quot;key&quot;:&quot;Process&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;ウェポン処分&quot;,&quot;tableView&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;なし&quot;},&quot;key&quot;:&quot;weaponsell&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ノーマルガチャ&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;gacha&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;プレゼント受取&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;recievepresent&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ミッション報酬受取&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;receivemission&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;素材収集&quot;,&quot;key&quot;:&quot;collect&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;属性クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:5,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;elementquest&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;素材クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;materialquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;アクセサリクエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;accessoryquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;推究の正殿&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;mainbuilding&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;兵仗の戦場&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;battlefield&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;レイドクエスト(自発)&quot;,&quot;key&quot;:&quot;raidspontaneous&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;Ultimate以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidultimate&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidragnarok&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;raidragnarokplus&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;レイドクエスト(支援)&quot;,&quot;key&quot;:&quot;raidsupport&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;Ragnarok以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:20,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupportragnarok&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;イベント&quot;,&quot;key&quot;:&quot;event&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;降臨戦(週替)&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:10,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;customMessage&quot;:&quot;0から500までの数値を入力してください&quot;,&quot;min&quot;:0,&quot;max&quot;:500},&quot;errorLabel&quot;:&quot;weeklyadventerror&quot;,&quot;key&quot;:&quot;weeklyadvent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;降臨戦(イベント)&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;advent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100},{&quot;label&quot;:&quot;ユニオン(サブ)&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionsub&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100},{&quot;label&quot;:&quot;ユニオン(メイン)&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:true,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionmain&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100},{&quot;label&quot;:&quot;レイドイベント&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidevent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100}]}],&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="204,141" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
+      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="27f3ef6c-0da3-409c-a247-256eb23dffca" DisableMaximizeButton="False" DisableMinimizeButton="False" Dismissed="[canceled]" DisplayName="巡回内容入力" FormFieldsOutputData="[inputedValue]" FormHeight="600" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;処理&quot;,&quot;key&quot;:&quot;Process&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;ウェポン処分&quot;,&quot;tableView&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;なし&quot;},&quot;key&quot;:&quot;weaponsell&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ノーマルガチャ&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;gacha&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;プレゼント受取&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;recievepresent&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ミッション報酬受取&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;receivemission&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;素材収集&quot;,&quot;key&quot;:&quot;collect&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;属性クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:5,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;elementquest&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;素材クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;materialquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;アクセサリクエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;accessoryquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;推究の正殿&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;mainbuilding&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;兵仗の戦場&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;battlefield&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;レイドクエスト&quot;,&quot;key&quot;:&quot;raid&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;Ultimate以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidultimate&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidragnarok&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;raidragnarokplus&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;Ragnarok以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:20,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupportragnarok&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;イベント&quot;,&quot;key&quot;:&quot;event&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;降臨戦(週替)&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:10,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;customMessage&quot;:&quot;0から500までの数値を入力してください&quot;,&quot;min&quot;:0,&quot;max&quot;:500},&quot;errorLabel&quot;:&quot;weeklyadventerror&quot;,&quot;key&quot;:&quot;weeklyadvent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;降臨戦(イベント)&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;advent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100},{&quot;label&quot;:&quot;ユニオン(サブ)&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionsub&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100},{&quot;label&quot;:&quot;ユニオン(メイン)&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:true,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionmain&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:100},{&quot;label&quot;:&quot;レイドイベント(自発)&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:100,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidevent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;レイドイベント(支援)&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:100,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupport&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}]}],&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="204,141" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
         <ufa:FormActivity.Body>
           <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
         </ufa:FormActivity.Body>
@@ -851,12 +880,20 @@
                             <InArgument x:TypeArguments="x:Int32">[CInt(parsedValue.SelectToken("$.unionmain"))]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="レイドイベント" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                        <Assign DisplayName="レイドイベント自発" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[raidevent]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
                             <InArgument x:TypeArguments="x:Int32">[CInt(parsedValue.SelectToken("$.raidevent"))]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="レイドイベント支援" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[raidsupport]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[CInt(parsedValue.SelectToken("$.raidsupport"))]</InArgument>
                           </Assign.Value>
                         </Assign>
                         <Assign DisplayName="レイド支援" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
@@ -889,7 +926,7 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID5</x:Reference>
-    <FlowStep x:Name="__ReferenceID28">
+    <FlowStep x:Name="__ReferenceID29">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">10,164.5</av:Point>
@@ -930,5 +967,6 @@
     <x:Reference>__ReferenceID25</x:Reference>
     <x:Reference>__ReferenceID26</x:Reference>
     <x:Reference>__ReferenceID27</x:Reference>
+    <x:Reference>__ReferenceID28</x:Reference>
   </Flowchart>
 </Activity>
