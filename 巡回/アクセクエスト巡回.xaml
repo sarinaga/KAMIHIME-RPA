@@ -90,7 +90,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日決定 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘処理\戦闘準備\曜日決定.xaml">
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日決定 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\曜日決定.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InOutArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InOutArgument>
             <InArgument x:TypeArguments="x:Boolean" x:Key="random">[random]</InArgument>

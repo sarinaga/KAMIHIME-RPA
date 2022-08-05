@@ -196,7 +196,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">150,825.5 150,855.5 149.895,855.5 149.895,870</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="マイページに戻る" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="マイページに戻る" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="共通処理\マイページに戻る.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                         </ui:InvokeWorkflowFile.Arguments>
@@ -272,7 +272,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">400,595.5 400,666.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レイドアイテム利用確認" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="戦闘処理\戦闘準備\レイドアイテム利用確認.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レイドアイテム利用確認" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\レイドアイテム利用確認.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:Boolean" x:Key="isReady">
                             <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="isReady" />

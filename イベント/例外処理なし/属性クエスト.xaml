@@ -165,7 +165,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">770,195.5 770,225.5 406.5,225.5 406.5,266.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日と一致したSPデイリークエストを選ぶ workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="戦闘処理\戦闘準備\属性クエスト選択.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 曜日と一致したSPデイリークエストを選ぶ workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\属性クエスト選択.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InArgument>
                       <OutArgument x:TypeArguments="x:Boolean" x:Key="selected">[selected]</OutArgument>
@@ -226,7 +226,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">740,370 770,370 770,330 800,330</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘開始時AP補充 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="戦闘処理\戦闘準備\AP補充.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘開始時AP補充 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\AP補充.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <OutArgument x:TypeArguments="x:Boolean" x:Key="useElixir" />
                             </ui:InvokeWorkflowFile.Arguments>
@@ -245,7 +245,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">900,355.5 900,394.02</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 幻獣・パーティーを選択する workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘処理\戦闘準備\幻獣とパーティーを選択して戦闘開始.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 幻獣・パーティーを選択する workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\幻獣とパーティーを選択して戦闘開始.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:Boolean" x:Key="selectChaos">[(dweek = 0)]</InArgument>
                                   <OutArgument x:TypeArguments="x:Boolean" x:Key="closed" />
@@ -265,7 +265,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">800,455.52 770,455.52 770,489.52 750,489.52</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="本来は敗北した後の処理を書くべきだが、初心者でなければそれは起きないので敗北処理を省略する" DisplayName="Invoke 戦闘を行う（クエスト） workflow" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="戦闘処理\戦闘\クエスト戦闘.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="本来は敗北した後の処理を書くべきだが、初心者でなければそれは起きないので敗北処理を省略する" DisplayName="Invoke 戦闘を行う（クエスト） workflow" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\クエスト戦闘.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful" />
                                     </ui:InvokeWorkflowFile.Arguments>
@@ -285,7 +285,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">550,489.52 520,489.52 520,416.5 315.5,416.5 315.5,446.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘終了処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="戦闘処理\戦後処理\戦闘終了処理.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘終了処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="戦闘\戦後処理\戦闘終了処理.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="condition">[condition]</InArgument>
                                           <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful">[isSuccessful]</OutArgument>
@@ -316,7 +316,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">450,635.5 450,665.5 180,665.5 180,704.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 結果処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="戦闘処理\戦後処理\結果処理.xaml">
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 結果処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="戦闘\戦後処理\結果処理.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                 </ui:InvokeWorkflowFile.Arguments>

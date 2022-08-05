@@ -130,7 +130,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">550,976.5 550,1020</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 未確認バトル確認 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘処理\戦闘準備\未確認バトル確認_廃止予定.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 未確認バトル確認 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\未確認バトル確認_廃止予定.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:Boolean" x:Key="closeUnconfirmed">[closeUnconfirmed]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
@@ -357,7 +357,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">910,1086.5 910,1184.5</av:PointCollection>
                                 </scg1:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="サブ処理\マイページに戻る.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="共通処理\マイページに戻る.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <scg1:Dictionary x:TypeArguments="x:String, Argument" />
                                 </ui:InvokeWorkflowFile.Arguments>

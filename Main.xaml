@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1704,1101" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,6 +57,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="神姫プロジェクト" sap:VirtualizedContainerService.HintSize="1714,1036" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -88,7 +88,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID29</x:Reference>
+      <x:Reference>__ReferenceID28</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
@@ -164,7 +164,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID20">
+        <FlowStep x:Name="__ReferenceID18">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">1210,244</av:Point>
@@ -195,7 +195,7 @@
             </If.Else>
           </If>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID21">
+            <FlowStep x:Name="__ReferenceID19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">1210,324</av:Point>
@@ -226,7 +226,7 @@
                 </If.Else>
               </If>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID22">
+                <FlowStep x:Name="__ReferenceID20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">1210,404</av:Point>
@@ -257,7 +257,7 @@
                     </If.Else>
                   </If>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID23">
+                    <FlowStep x:Name="__ReferenceID21">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">1210,494</av:Point>
@@ -288,7 +288,7 @@
                         </If.Else>
                       </If>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID28">
+                        <FlowStep x:Name="__ReferenceID26">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">1210,584.5</av:Point>
@@ -315,7 +315,7 @@
                             </If.Else>
                           </If>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID18">
+                            <FlowStep x:Name="__ReferenceID16">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">1470,74</av:Point>
@@ -344,7 +344,7 @@
                                 </If.Then>
                               </If>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID19">
+                                <FlowStep x:Name="__ReferenceID17">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">1470,154</av:Point>
@@ -392,7 +392,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID27">
+                                        <FlowStep x:Name="__ReferenceID25">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">1470,434.5</av:Point>
@@ -407,7 +407,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke プレゼント受取 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="巡回\プレゼント受取.xaml">
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke プレゼント受取 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="確認受取等\プレゼント受取.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                 </ui:InvokeWorkflowFile.Arguments>
@@ -415,7 +415,7 @@
                                             </If.Then>
                                           </If>
                                           <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID26">
+                                            <FlowStep x:Name="__ReferenceID24">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">1470,524.02</av:Point>
@@ -430,7 +430,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <If.Then>
-                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ミッション巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="巡回\ミッション報酬受取.xaml">
+                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ミッション巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="確認受取等\ミッション報酬受取.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
                                                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                     </ui:InvokeWorkflowFile.Arguments>
@@ -471,7 +471,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">320,404</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">520,430 580,430 580,44 710,44 710,74</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">520,429.5 600,429.5 600,47 730,47 730,77</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 起動 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="起動\起動.xaml">
@@ -485,120 +485,178 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID16">
+        <FlowStep x:Name="__ReferenceID27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">610,74</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">710,126 710,154</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">630,77</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">730,143 730,154.5 870,154.5 870,0 1000,0 1000,4.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[CBool(parsedValue.SelectToken(&quot;$.gacha&quot;))]" DisplayName="ノーマルガチャ" sap:VirtualizedContainerService.HintSize="484,274" sap2010:WorkflowViewState.IdRef="If_17">
+          <Sequence DisplayName="確認受取等" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_132">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If.Then>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ノーマルガチャ巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="巡回\ノーマルガチャ巡回.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                </ui:InvokeWorkflowFile.Arguments>
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.gacha&quot;))]" DisplayName="ノーマルガチャ" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_29">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ノーマルガチャ巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_58" UnSafe="False" WorkflowFileName="確認受取等\ノーマルガチャ.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+              </If.Then>
+            </If>
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.weaponsell&quot;))]" DisplayName="還元" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_30">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ウェポン処分 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_59" UnSafe="False" WorkflowFileName="確認受取等\還元.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </If.Then>
+            </If>
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.recievepresent&quot;))]" DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="484,274" sap2010:WorkflowViewState.IdRef="If_31">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke プレゼント受取 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_60" UnSafe="False" WorkflowFileName="確認受取等\プレゼント受取.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_133">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.receivemission&quot;))]" DisplayName="ミッション報酬受け取り" sap:VirtualizedContainerService.HintSize="484,274" sap2010:WorkflowViewState.IdRef="If_32">
+              <If.Then>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ミッション報酬受取 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_61" UnSafe="False" WorkflowFileName="確認受取等\ミッション報酬受取.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_134">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">900,4.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">1000,55.5 1000,66 1010,66</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.raidultimate&quot;))]" DisplayName="レイドUltimateまで" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </ui:InvokeWorkflowFile>
-            </If.Then>
-          </If>
-          <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID17">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">610,154</av:Point>
-                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">710,206 710,224</av:PointCollection>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.weaponsell&quot;))]" DisplayName="武器売却" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_18">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ウェポン処分 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="巡回\還元.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回 workflow(Ultimateまで)" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="巡回\レイドクエスト巡回.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"風", "火","水","雷","光","闇"}]</InArgument>
+                      <InArgument x:TypeArguments="s:String[]" x:Key="dificulties" xml:space="preserve">[{"ULTIMATE", "EXPERT",  "STANDARD"}]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
                 </If.Then>
               </If>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID10">
+                <FlowStep x:Name="__ReferenceID23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">610,224</av:Point>
+                      <av:Point x:Key="ShapeLocation">910,66</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">710,276 710,306 880,306 880,36 1010,36 1010,66</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">1010,118 1010,154</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.raidultimate&quot;))]" DisplayName="レイドUltimateまで" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_7">
+                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.materialquest&quot;))]" DisplayName="素材クエスト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_25">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回 workflow(Ultimateまで)" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="巡回\レイドクエスト巡回.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 素材クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_50" UnSafe="False" WorkflowFileName="巡回\素材クエスト巡回.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"風", "火","水","雷","光","闇"}]</InArgument>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="dificulties" xml:space="preserve">[{"ULTIMATE", "EXPERT",  "STANDARD"}]</InArgument>
+                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
                         </ui:InvokeWorkflowFile.Arguments>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                     </If.Then>
                   </If>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID25">
+                    <FlowStep x:Name="__ReferenceID12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">910,66</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">1010,118 1010,154</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">910,154</av:Point>
+                          <av:Size x:Key="ShapeSize">200,82</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">1010,237 1010,274</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.materialquest&quot;))]" DisplayName="素材クエスト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_25">
+                      <If sap2010:Annotation.AnnotationText="未実装" Condition="[CBool(parsedValue.SelectToken(&quot;$.battlefield&quot;))]" DisplayName="兵仗の戦場" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="If_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If.Then>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 素材クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_50" UnSafe="False" WorkflowFileName="巡回\素材クエスト巡回.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                        </If.Then>
                       </If>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID12">
+                        <FlowStep x:Name="__ReferenceID13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">910,154</av:Point>
+                              <av:Point x:Key="ShapeLocation">910,274</av:Point>
                               <av:Size x:Key="ShapeSize">200,82</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">1010,237 1010,274</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">1010,357 1010,384</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If sap2010:Annotation.AnnotationText="未実装" Condition="[CBool(parsedValue.SelectToken(&quot;$.battlefield&quot;))]" DisplayName="兵仗の戦場" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="If_13">
+                          <If sap2010:Annotation.AnnotationText="未実装" Condition="[CBool(parsedValue.SelectToken(&quot;$.mainbuilding&quot;))]" DisplayName="推究の正殿" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="If_14">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -608,33 +666,47 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </If>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID13">
+                            <FlowStep x:Name="__ReferenceID14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">910,274</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,82</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">1010,357 1010,384</av:PointCollection>
+                                  <av:Point x:Key="ShapeLocation">910,384</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">1010,436 1010,454</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If sap2010:Annotation.AnnotationText="未実装" Condition="[CBool(parsedValue.SelectToken(&quot;$.mainbuilding&quot;))]" DisplayName="推究の正殿" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="If_14">
+                              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.accessoryquest&quot;))]" DisplayName="アクセサリクエスト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_15">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
+                                <If.Then>
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke アクセクエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="巡回\アクセクエスト巡回.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:Int32" x:Key="level">7</InArgument>
+                                      <InArgument x:TypeArguments="x:Int32" x:Key="dweek" />
+                                      <InArgument x:TypeArguments="x:Boolean" x:Key="random">False</InArgument>
+                                      <InArgument x:TypeArguments="x:Boolean" x:Key="thru">False</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:InvokeWorkflowFile>
+                                </If.Then>
                               </If>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID14">
+                                <FlowStep x:Name="__ReferenceID15">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">910,384</av:Point>
+                                      <av:Point x:Key="ShapeLocation">910,454</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">1010,436 1010,454</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">1110,480 1140,480 1140,42.04 1310,42.04 1310,72.04</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.accessoryquest&quot;))]" DisplayName="アクセサリクエスト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_15">
+                                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.elementquest&quot;))]" DisplayName="属性クエスト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_16">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -642,9 +714,9 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke アクセクエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="巡回\アクセクエスト巡回.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 属性クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="巡回\属性クエスト巡回.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:Int32" x:Key="level">7</InArgument>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="max">[elementquest]</InArgument>
                                           <InArgument x:TypeArguments="x:Int32" x:Key="dweek" />
                                           <InArgument x:TypeArguments="x:Boolean" x:Key="random">False</InArgument>
                                           <InArgument x:TypeArguments="x:Boolean" x:Key="thru">False</InArgument>
@@ -658,62 +730,28 @@
                                     </If.Then>
                                   </If>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID15">
+                                    <FlowStep x:Name="__ReferenceID22">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">910,454</av:Point>
+                                          <av:Point x:Key="ShapeLocation">1210,72.04</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">1110,480 1140,480 1140,42.04 1310,42.04 1310,72.04</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">1310,124.04 1310,164</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.elementquest&quot;))]" DisplayName="属性クエスト" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_16">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 開催イベント検知 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="共通処理\開催イベント検知.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="adventinmisson">[adventinmisson]</OutArgument>
+                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="raidinmission">[raidinmission]</OutArgument>
+                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="unioninmisson">[unioninmisson]</OutArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If.Then>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 属性クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="巡回\属性クエスト巡回.xaml">
-                                            <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="x:Int32" x:Key="max">[elementquest]</InArgument>
-                                              <InArgument x:TypeArguments="x:Int32" x:Key="dweek" />
-                                              <InArgument x:TypeArguments="x:Boolean" x:Key="random">False</InArgument>
-                                              <InArgument x:TypeArguments="x:Boolean" x:Key="thru">False</InArgument>
-                                            </ui:InvokeWorkflowFile.Arguments>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ui:InvokeWorkflowFile>
-                                        </If.Then>
-                                      </If>
+                                      </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID24">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">1210,72.04</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">1310,124.04 1310,164</av:PointCollection>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 開催イベント検知 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_49" UnSafe="False" WorkflowFileName="サブ処理\開催イベント検知.xaml">
-                                            <ui:InvokeWorkflowFile.Arguments>
-                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="adventinmisson">[adventinmisson]</OutArgument>
-                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="raidinmission">[raidinmission]</OutArgument>
-                                              <OutArgument x:TypeArguments="x:Boolean" x:Key="unioninmisson">[unioninmisson]</OutArgument>
-                                            </ui:InvokeWorkflowFile.Arguments>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ui:InvokeWorkflowFile>
-                                          <FlowStep.Next>
-                                            <x:Reference>__ReferenceID1</x:Reference>
-                                          </FlowStep.Next>
-                                        </FlowStep>
+                                        <x:Reference>__ReferenceID1</x:Reference>
                                       </FlowStep.Next>
                                     </FlowStep>
                                   </FlowStep.Next>
@@ -741,7 +779,7 @@
           <av:PointCollection x:Key="ConnectorLocation">110,410.5 110,440.5 186,440.5 186,476.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="27f3ef6c-0da3-409c-a247-256eb23dffca" DisableMaximizeButton="False" DisableMinimizeButton="False" Dismissed="[canceled]" DisplayName="巡回内容入力" FormFieldsOutputData="[inputedValue]" FormHeight="600" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;処理&quot;,&quot;key&quot;:&quot;Process&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;ウェポン幻獣処分&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;なし&quot;},&quot;key&quot;:&quot;weaponsell&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;ノーマルガチャ&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;gacha&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;プレゼント受取&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;recievepresent&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ミッション報酬受取&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;receivemission&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;素材収集&quot;,&quot;key&quot;:&quot;collect&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;属性クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:5,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;elementquest&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;素材クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;materialquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;アクセサリクエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;accessoryquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;推究の正殿&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;mainbuilding&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;兵仗の戦場&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;battlefield&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;レイドクエスト&quot;,&quot;key&quot;:&quot;raid&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;自発&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ultimate以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidultimate&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidragnarok&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;raidragnarokplus&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;title&quot;:&quot;支援&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel1&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ragnarok以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupportragnarok&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;number&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}]}]},{&quot;label&quot;:&quot;イベント&quot;,&quot;key&quot;:&quot;event&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;降臨戦&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;panel2&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;降臨戦&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;週替&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;customMessage&quot;:&quot;0から500までの数値を入力してください&quot;,&quot;min&quot;:0,&quot;max&quot;:500},&quot;errorLabel&quot;:&quot;weeklyadventerror&quot;,&quot;key&quot;:&quot;weeklyadvent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;イベント&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;advent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;ユニオン&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;panel3&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;ユニオン&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;サブ&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionsub&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;メイン&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:true,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionmain&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;レイドイベント&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;panel4&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;レイドイベント&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;自発&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidevent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;支援&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupport&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false}]}],&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="204,141" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
+      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="27f3ef6c-0da3-409c-a247-256eb23dffca" DisableMaximizeButton="False" DisableMinimizeButton="False" Dismissed="[canceled]" DisplayName="巡回内容入力" FormFieldsOutputData="[inputedValue]" FormHeight="600" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;確認・受取&quot;,&quot;key&quot;:&quot;確認・受取&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;ウェポン・幻獣・アクセサリ還元&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;なし&quot;},&quot;key&quot;:&quot;weaponsell&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;ノーマルガチャ&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;gacha&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;プレゼント受取&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;recievepresent&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ミッション報酬受取&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;receivemission&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true}]},{&quot;label&quot;:&quot;素材収集&quot;,&quot;key&quot;:&quot;collect&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;属性クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;elementquest&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;素材クエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;materialquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;アクセサリクエスト&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;accessoryquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;推究の正殿&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;mainbuilding&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;兵仗の戦場&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;battlefield&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;レイドクエスト&quot;,&quot;key&quot;:&quot;raid&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;自発&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ultimate以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidultimate&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidragnarok&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;raidragnarokplus&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;title&quot;:&quot;支援&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;panel1&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ragnarok以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupportragnarok&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;number&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}]}]},{&quot;label&quot;:&quot;イベント&quot;,&quot;key&quot;:&quot;event&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;降臨戦&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;panel2&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;降臨戦&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;週替&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;customMessage&quot;:&quot;0から500までの数値を入力してください&quot;,&quot;min&quot;:0,&quot;max&quot;:500},&quot;errorLabel&quot;:&quot;weeklyadventerror&quot;,&quot;key&quot;:&quot;weeklyadvent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;イベント&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;advent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;ユニオン&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;panel3&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;ユニオン&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;サブ&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionsub&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;メイン&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:true,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionmain&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;レイドイベント&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;panel4&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;レイドイベント&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;自発&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidevent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;支援&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupport&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false}]}],&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="204,141" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
         <ufa:FormActivity.Body>
           <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
         </ufa:FormActivity.Body>
@@ -922,7 +960,7 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID5</x:Reference>
-    <FlowStep x:Name="__ReferenceID29">
+    <FlowStep x:Name="__ReferenceID28">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">10,164.5</av:Point>
@@ -963,6 +1001,5 @@
     <x:Reference>__ReferenceID25</x:Reference>
     <x:Reference>__ReferenceID26</x:Reference>
     <x:Reference>__ReferenceID27</x:Reference>
-    <x:Reference>__ReferenceID28</x:Reference>
   </Flowchart>
 </Activity>

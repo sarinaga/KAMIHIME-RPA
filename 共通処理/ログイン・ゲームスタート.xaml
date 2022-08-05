@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1109,888</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1082,1136</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ログイン_ゲームスタート2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,10 +60,9 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="ブラウザでゲームが起動していないときは、ブラウザを起動します。&#xD;&#xA;ログインがされていない場合はログインします。&#xD;&#xA;&#xD;&#xA;引数&#xD;&#xA;　なし&#xD;&#xA;&#xD;&#xA;戻り値&#xD;&#xA;　ゲームスタートボタンを押すことができた: True&#xD;&#xA;　ゲームを開始することができなかった: False" DisplayName="ログインゲームスタート" sap:VirtualizedContainerService.HintSize="1026,1071" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="ブラウザでゲームが起動していないときは、ブラウザを起動します。&#xA;ログインがされていない場合はログインします。&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　ゲームスタートボタンを押すことができた: True&#xA;　ゲームを開始することができなかった: False" DisplayName="ログインゲームスタート" sap:VirtualizedContainerService.HintSize="1026,1071" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="browser" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -128,8 +127,8 @@
                   <av:PointCollection x:Key="ConnectorLocation">280,175.5 280,236.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Parallel DisplayName="概要かスプラッシュが表示されるまで待つ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Parallel_2">
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" BrowserType="Chrome" ContinueOnError="True" DisplayName="概要が表示されているかを判断" sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="b956047210fa774e85b27cfae68e1ef0" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R（神プロ）【ブラウザ版】 | 無料エロゲ FANZA GAMES' /&gt;" TimeoutMS="5000" UiBrowser="[attachedDetail]">
+              <Parallel DisplayName="概要かスプラッシュが表示されるまで待つ" sap:VirtualizedContainerService.HintSize="1042,207" sap2010:WorkflowViewState.IdRef="Parallel_2">
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" BrowserType="Chrome" ContinueOnError="True" DisplayName="概要が表示されているかを判断" sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="cda6289b4f59b1996ce34496d69a731b" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R（神プロ）【ブラウザ版】 | 無料エロゲ FANZA GAMES' /&gt;" TimeoutMS="5000" UiBrowser="[attachedDetail]">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -358,10 +357,7 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID8" DisplayName="スプラッシュが開いた？" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                      <FlowDecision.Condition>
-                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Not attachedPlay Is Nothing" />
-                      </FlowDecision.Condition>
+                    <FlowDecision x:Name="__ReferenceID8" Condition="[Not attachedPlay Is Nothing]" DisplayName="スプラッシュが開いた？" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID0}">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -371,9 +367,6 @@
                           <av:PointCollection x:Key="FalseConnector">695.5,310 770,310 770,670</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <FlowDecision.True>
-                        <x:Reference>__ReferenceID0</x:Reference>
-                      </FlowDecision.True>
                       <FlowDecision.False>
                         <FlowStep x:Name="__ReferenceID9">
                           <sap:WorkflowViewStateService.ViewState>

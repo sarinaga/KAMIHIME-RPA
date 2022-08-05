@@ -54,7 +54,7 @@
           <av:PointCollection x:Key="ConnectorLocation">380,240 410,240 410,50 480,50</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘自動モード切り替え workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="戦闘処理\戦闘\戦闘自動モード切り替え.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘自動モード切り替え workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\戦闘自動モード切り替え.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:Boolean" x:Key="useAbility">True</InArgument>
           <InArgument x:TypeArguments="x:Boolean" x:Key="useBurst">True</InArgument>
@@ -74,7 +74,7 @@
               <av:PointCollection x:Key="ConnectorLocation">580,75.5 580,224.5</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘処理\戦闘\戦闘処理.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 戦闘処理 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\戦闘処理.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="x:String" x:Key="condition">[condition]</OutArgument>
               <InArgument x:TypeArguments="x:Boolean" x:Key="ignoreNext">True</InArgument>
