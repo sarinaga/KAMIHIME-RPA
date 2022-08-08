@@ -59,11 +59,13 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="日替わりクエストの属性クエストの処理を行う。&#xA;&#xA;引数&#xA;　weapon: 対象武器(剣|槍|特殊剣|斧|ハンマー|杖|銃|弓|魔道具)&#xA;　difficulty: 難易度(NORMAL|HARD)&#xA;" DisplayName="兵仗の戦場" sap:VirtualizedContainerService.HintSize="1092,894" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="日替わりクエストの属性クエストの処理を行う。&#xA;&#xA;引数&#xA;　weapon: 対象武器(剣|槍|特殊剣|斧|ハンマー|杖|銃|弓|魔道具)&#xA;　difficulty: 難易度(NORMAL|HARD)&#xA;" DisplayName="兵仗の戦場ウェポンブレイク" sap:VirtualizedContainerService.HintSize="1092,894" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Default="[type]" Name="type" />
+      <Variable x:TypeArguments="x:String" Name="type" />
+      <Variable x:TypeArguments="x:String" Name="condition" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -87,7 +89,7 @@
           <av:PointCollection x:Key="ConnectorLocation">180,165.5 180,194.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;兵仗の戦場ウェポンブレイク:weapon=&quot; &amp; weapon]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;兵仗の戦場ウェポンブレイク開始:weapon=&quot; &amp; weapon &amp; &quot;, difficulty=&quot; &amp; difficulty]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -201,7 +203,8 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ウェポンブレイクのクエストを選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\ウェポンブレイク選択.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          <InArgument x:TypeArguments="x:String" x:Key="weapon">[weapon]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="difficulty">[difficulty]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -252,7 +255,9 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="幻獣一覧から有利属性を得る" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\幻獣一覧から有利属性を得る.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <OutArgument x:TypeArguments="x:String" x:Key="type">[type]</OutArgument>
+                                  <OutArgument x:TypeArguments="x:String" x:Key="type">
+                                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="type" />
+                                  </OutArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -309,7 +314,7 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="クエスト戦闘" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\クエスト戦闘.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                              <OutArgument x:TypeArguments="x:String" x:Key="condition">[condition]</OutArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -328,7 +333,8 @@
                                               </sap:WorkflowViewStateService.ViewState>
                                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="戦闘終了処理" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="戦闘\戦後処理\戦闘終了処理.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
-                                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                  <InArgument x:TypeArguments="x:String" x:Key="condition">[condition]</InArgument>
+                                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful" />
                                                 </ui:InvokeWorkflowFile.Arguments>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
