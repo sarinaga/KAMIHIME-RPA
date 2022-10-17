@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="レイドボス支援巡回" this:レイドボス支援巡回.count="300" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="レイドボス支援巡回" this:レイドボス支援巡回.count="300" this:レイドボス支援巡回.isEvent="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="count" Type="InArgument(x:Int32)" />
+    <x:Property Name="isEvent" Type="InArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,856</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>921,856</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>レイド支援_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -31,6 +31,9 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -55,6 +58,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="レイドボス支援巡回" sap:VirtualizedContainerService.HintSize="526,791" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -79,7 +83,9 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援（例外処理付） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント\例外処理あり\レイドボス支援_例外処理付.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            <InArgument x:TypeArguments="x:Boolean" x:Key="isEvent">
+              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="isEvent" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
         <Assign DisplayName="カウントアップ" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">

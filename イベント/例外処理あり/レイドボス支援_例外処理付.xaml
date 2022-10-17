@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="レイドボス討伐例外処理付き" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="873,919" sap2010:WorkflowViewState.IdRef="レイドボス討伐（例外処理付き）_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="レイドボス討伐例外処理付き" this:レイドボス討伐例外処理付き.isEvent="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="isEvent" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>921,894</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>レイドボス討伐（例外処理付き）_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -23,6 +31,9 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -47,9 +58,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="レイドボス討伐をする&#xA;レイドボスがいない場合は代わりに属性クエストを行う&#xA;クラッシュしたときはリロードしてログインをやり直しマイページ画面に遷移" DisplayName="レイドボス討伐例外処理付き" sap:VirtualizedContainerService.HintSize="734,754" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="レイドボスの討伐をする&#xA;クラッシュしたときはリロードしてログインをやり直しマイページ画面に遷移&#xA;&#xA;引数&#xA;　isEvent:支援するのがイベントかどうか&#xA;　　イベントを支援=True&#xA;　　通常=False&#xA;" DisplayName="レイドボス討伐例外処理付き" sap:VirtualizedContainerService.HintSize="734,829" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="crashed" />
       <Variable x:TypeArguments="x:String" Name="result" />
@@ -93,7 +105,12 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス討伐 workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント/例外処理なし/レイドボス支援.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:String" x:Key="result">[result]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="result">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="result" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:Boolean" x:Key="isEvent">
+                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="isEvent" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
@@ -186,7 +203,7 @@
           <av:PointCollection x:Key="ConnectorLocation">320,39.52 600,39.52 600,54.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;レイドボス支援（例外処理付き）開始&quot;]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;レイドボス支援（例外処理付き）開始:isEvent={0}&quot;, isEvent)]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
