@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,711</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>742,711</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>兵仗の戦場ウェポンブレイク巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -40,7 +40,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -75,6 +75,7 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="兵仗の戦場ウェポンブレイク巡回" sap:VirtualizedContainerService.HintSize="634,646" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -100,9 +101,9 @@
           <av:PointCollection x:Key="ConnectorLocation">300,270.5 300,299.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InterruptibleDoWhile DisplayName="繰り返し (後判定)" sap:VirtualizedContainerService.HintSize="523,374" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile Condition="[not result = &quot;LIMIT&quot;]" DisplayName="繰り返し (後判定)" sap:VirtualizedContainerService.HintSize="494,374" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
-          <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="441,244" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="412,244" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="variable1" />
             </Sequence.Variables>
@@ -111,24 +112,15 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 兵仗の戦場ウェポンブレイク workflow" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント\例外処理なし\常設\兵仗の戦場ウェポンブレイク.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 兵仗の戦場ウェポンブレイク workflow" sap:VirtualizedContainerService.HintSize="350,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント\例外処理なし\常設\ウェポンブレイク.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="weapon">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="weapon" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="difficulty">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="difficulty" />
-                </InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="result">
-                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="result" />
-                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="weapon">[weapon]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="difficulty">[difficulty]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="result">[result]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
         </ui:InterruptibleDoWhile.Body>
-        <ui:InterruptibleDoWhile.Condition>
-          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not result = &quot;LIMIT&quot;" />
-        </ui:InterruptibleDoWhile.Condition>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
