@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="プレゼント受取" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,819" sap2010:WorkflowViewState.IdRef="プレゼント受取_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="プレゼント受取" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,761" sap2010:WorkflowViewState.IdRef="プレゼント受取_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -27,10 +26,13 @@
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -52,41 +54,47 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="1031,639" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="1031,696" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;期限なし&quot;,&quot;期限あり&quot;}]" Name="list" />
+    </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">40,22.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">997</x:Double>
-        <x:Double x:Key="Height">603</x:Double>
+        <x:Double x:Key="Height">650.5</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">100,60 400,60 400,104.5</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID15</x:Reference>
+      <x:Reference>__ReferenceID18</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID15">
+    <FlowStep x:Name="__ReferenceID18">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">300,104.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">400,155.5 400,195.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,61</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">400,165.5 400,219.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;プレゼント受取開始&quot;]" />
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;プレゼント受取開始&quot;]" />
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID14">
+        <FlowStep x:Name="__ReferenceID16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">300,195.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">400,246.5 400,284.5</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">300,219.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,61</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">400,280.5 400,339.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="プレゼントをクリック" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="プレゼントをクリック" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -98,10 +106,14 @@
               </ui:CursorPosition>
             </ui:ClickImage.CursorPosition>
             <ui:ClickImage.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAbCAYAAABr/T8RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMkSURBVEhLtZZNSFZREIZvP4ImiJuwNlktInBhLopAWwgFEuiqhUmLNi1S2wpBRWBEEWgUSRFY4bIfbecqMbCghRAGZkEIuUhCIoj8omi6z9B7O9/xapq2eDnnnjt3npk5c873JQ+2VVhvQ5mdqtiQq77KjYaNxDPrzMdL1vkou9BWdqi5qjSbo976MkuaqxaHhpJj5nzzenelzTfV21z1llybvykpLy2xXdXbraOtxe6ca7GrhxqsfV95rnEosgL+tHpz7vtY+EVwGmt2WNJ//YpNTM/Y7OwHM/tp858/2sTLces6edwzCz+OM4rncbZ839G0x4YHH7pf952yhl9NWQJMev9uygiEzEdr93tWZIR4ZtSe4lQSOLbVnEwf9XXa2OiTjOXgsdERh/Exjmka9o49nDlQm40htGZTSaYQDij8Dj9vStf7t4ggqEBCSRXtXPVWN46FE2wEZGys2en71Xr4YNE6AeArzw/SSfDjxMLXE8dcsSFQnMkxsP5raV+kfcCe0RtkcLGrw1rq6zK7PHjISL5fPm1Ii6FCKJUBpj3Kk/dIGlRtXYPDKXueX3ieMdKCRkEpZd/tx96NXwrfcoGhsLk79MKOHO3M4KFfRDX8OLHhwN1g4IYbsaeAe7rPukOyoQkRmev4IeasUfL79255956/dNP7AB8kId/M2/eWW0KEfKiseQlUejZwIXMOHEAYACPllQRmBAAYP2+72t03HOwSRc4LnTteahRYF0AYABn2dJ/JgDwj3vGs4IHji2z9OHGB4ATH0xODbiQDRCACU5kQjpStgDEYX5KC4CIpAuOIaDhntHsMlhSAwGGmlBj5tZg+h2DBsef9ArB+dRDzGGw/PmXwEMxcisEkIDDrC8DsK5l6k6VivgCcaqVg9UsRGKDAz1vb1gBcXOqwYVcNVrkBDQ/9gep44WvFYPZWN8xSGS8GRnlg7fOywMxzM06lUi8GpuT/BRxnLOg/gynv2oBHHAQ0Bk8WCsVgDJbVXKkycOooBuOYNUHXFBzv8arB3FYryniZYASYvc8F88eMvUW5V+ZvLZWxgsoDYz9ZKNgvH3qfJHHtVpIAAAAASUVORK5CYII=" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAbCAYAAABr/T8RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMkSURBVEhLtZZNSFZREIZvP4ImiJuwNlktInBhLopAWwgFEuiqhUmLNi1S2wpBRWBEEWgUSRFY4bIfbecqMbCghRAGZkEIuUhCIoj8omi6z9B7O9/xapq2eDnnnjt3npk5c873JQ+2VVhvQ5mdqtiQq77KjYaNxDPrzMdL1vkou9BWdqi5qjSbo976MkuaqxaHhpJj5nzzenelzTfV21z1llybvykpLy2xXdXbraOtxe6ca7GrhxqsfV95rnEosgL+tHpz7vtY+EVwGmt2WNJ//YpNTM/Y7OwHM/tp858/2sTLces6edwzCz+OM4rncbZ839G0x4YHH7pf952yhl9NWQJMev9uygiEzEdr93tWZIR4ZtSe4lQSOLbVnEwf9XXa2OiTjOXgsdERh/Exjmka9o49nDlQm40htGZTSaYQDij8Dj9vStf7t4ggqEBCSRXtXPVWN46FE2wEZGys2en71Xr4YNE6AeArzw/SSfDjxMLXE8dcsSFQnMkxsP5raV+kfcCe0RtkcLGrw1rq6zK7PHjISL5fPm1Ii6FCKJUBpj3Kk/dIGlRtXYPDKXueX3ieMdKCRkEpZd/tx96NXwrfcoGhsLk79MKOHO3M4KFfRDX8OLHhwN1g4IYbsaeAe7rPukOyoQkRmev4IeasUfL79255956/dNP7AB8kId/M2/eWW0KEfKiseQlUejZwIXMOHEAYACPllQRmBAAYP2+72t03HOwSRc4LnTteahRYF0AYABn2dJ/JgDwj3vGs4IHji2z9OHGB4ATH0xODbiQDRCACU5kQjpStgDEYX5KC4CIpAuOIaDhntHsMlhSAwGGmlBj5tZg+h2DBsef9ArB+dRDzGGw/PmXwEMxcisEkIDDrC8DsK5l6k6VivgCcaqVg9UsRGKDAz1vb1gBcXOqwYVcNVrkBDQ/9gep44WvFYPZWN8xSGS8GRnlg7fOywMxzM06lUi8GpuT/BRxnLOg/gynv2oBHHAQ0Bk8WCsVgDJbVXKkycOooBuOYNUHXFBzv8arB3FYryniZYASYvc8F88eMvUW5V+ZvLZWxgsoDYz9ZKNgvH3qfJHHtVpIAAAAASUVORK5CYII=" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ed654d5b-a36d-4feb-a672-46b4c8b17899" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
             </ui:ClickImage.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -110,348 +122,468 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID12">
+            <FlowStep x:Name="__ReferenceID17">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">300,284.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">400,335.5 400,385.5</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">300,339.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,61</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">400,400.5 400,430.5 390,430.5 390,489.49999999999994</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <While DisplayName="タブ2種類" sap:VirtualizedContainerService.HintSize="484,218" sap2010:WorkflowViewState.IdRef="While_1">
-                <While.Variables>
-                  <Variable x:TypeArguments="x:Int32" Default="0" Name="i" />
-                </While.Variables>
+              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1026,1562" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[list]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                    </ActivityAction.Argument>
+                    <Flowchart DisplayName="プレゼント受け取り" sap:VirtualizedContainerService.HintSize="944,1432" sap2010:WorkflowViewState.IdRef="Flowchart_5">
+                      <Flowchart.Variables>
+                        <Variable x:TypeArguments="ui:UiElement" Name="imageRecieve" />
+                        <Variable x:TypeArguments="ui:UiElement" Name="imageCancel" />
+                      </Flowchart.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">50,42.5</av:Point>
+                          <av:Size x:Key="ShapeSize">60,75</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">110,80 370,80 370,126.5</av:PointCollection>
+                          <x:Double x:Key="Width">910</x:Double>
+                          <x:Double x:Key="Height">1386.0320000000002</x:Double>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Flowchart.StartNode>
+                        <x:Reference>__ReferenceID13</x:Reference>
+                      </Flowchart.StartNode>
+                      <FlowStep x:Name="__ReferenceID11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">30,274.02</av:Point>
+                            <av:Size x:Key="ShapeSize">200,61</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">230,304.52 300,304.52 300,365</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="期限ありをクリック" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                          <ui:ClickImage.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:ClickImage.CursorPosition>
+                          <ui:ClickImage.Image>
+                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                          </ui:ClickImage.Image>
+                          <ui:ClickImage.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bb649a4-41b2-484e-a1d7-1aa01a1f5326" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </ui:ClickImage.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ClickImage>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID0">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">169,365</av:Point>
+                                <av:Size x:Key="ShapeSize">262,70</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">300,435 300,480</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign DisplayName="変数初期化" sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="ui:UiElement">[imageRecieve]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="ui:UiElement">[Nothing]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">169,480</av:Point>
+                                    <av:Size x:Key="ShapeSize">262,70</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">300,550 300,574.02</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign DisplayName="変数初期化" sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="ui:UiElement">[imageCancel]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="ui:UiElement">[Nothing]</InArgument>
+                                  </Assign.Value>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Assign>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">200,574.02</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">400,605.02 440,605.02 440,656.5</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:WaitImageAppear ContinueOnError="True" DisplayName="一括受取を探す" FoundElement="[imageRecieve]" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="WaitImageAppear_8">
+                                      <ui:WaitImageAppear.Image>
+                                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                                      </ui:WaitImageAppear.Image>
+                                      <ui:WaitImageAppear.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be8831c9-9d3a-451d-ad98-51b22511d697" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="1500" WaitForReady="INTERACTIVE" />
+                                      </ui:WaitImageAppear.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:WaitImageAppear>
+                                    <FlowStep.Next>
+                                      <FlowDecision x:Name="__ReferenceID2" Condition="[imageRecieve IsNot Nothing]" DisplayName="一括受取がある？" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">392.5,656.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">95,87</av:Size>
+                                            <av:PointCollection x:Key="TrueConnector">392.5,700 170,700 170,784.5</av:PointCollection>
+                                            <av:PointCollection x:Key="FalseConnector">487.5,700 700,700 700,759.5</av:PointCollection>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <FlowDecision.True>
+                                          <FlowStep x:Name="__ReferenceID3">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">70,784.5</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">170,846.5 170,869.5</av:PointCollection>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="一括受取をクリック" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                              <ui:ClickImage.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:ClickImage.CursorPosition>
+                                              <ui:ClickImage.Image>
+                                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                                              </ui:ClickImage.Image>
+                                              <ui:ClickImage.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="61e94b8c-5194-4fc1-89ae-0dcfadff1111" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                </ui:Target>
+                                              </ui:ClickImage.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:ClickImage>
+                                            <FlowStep.Next>
+                                              <FlowStep x:Name="__ReferenceID7">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <av:Point x:Key="ShapeLocation">70,869.5</av:Point>
+                                                    <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                    <av:PointCollection x:Key="ConnectorLocation">270,900 690,900 690,1239.5</av:PointCollection>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:WaitImageAppear ContinueOnError="True" DisplayName="キャンセルを探す" FoundElement="[imageCancel]" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="WaitImageAppear_9">
+                                                  <ui:WaitImageAppear.Image>
+                                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                                                  </ui:WaitImageAppear.Image>
+                                                  <ui:WaitImageAppear.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be8831c9-9d3a-451d-ad98-51b22511d697" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="1500" WaitForReady="INTERACTIVE" />
+                                                  </ui:WaitImageAppear.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:WaitImageAppear>
+                                                <FlowStep.Next>
+                                                  <FlowStep x:Name="__ReferenceID4">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <av:Point x:Key="ShapeLocation">590,1239.5</av:Point>
+                                                        <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                        <av:PointCollection x:Key="ConnectorLocation">690,1300.5 690,1330.5 170,1330.5 170,1305.5</av:PointCollection>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKをクリック" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                      <ui:ClickImage.CursorPosition>
+                                                        <ui:CursorPosition Position="Center">
+                                                          <ui:CursorPosition.OffsetX>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:CursorPosition.OffsetX>
+                                                          <ui:CursorPosition.OffsetY>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:CursorPosition.OffsetY>
+                                                        </ui:CursorPosition>
+                                                      </ui:ClickImage.CursorPosition>
+                                                      <ui:ClickImage.Image>
+                                                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAATCAYAAACDW21BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAX/SURBVEhLZVXpU9NHGM5/0GktWgtCLgIkhTCiyFTwBEENIRDOQIgcgnIIclWQG0aqtSIjgi0UhEFbQetQW1CZgQ+lRSggVwMFR7FapHJTKAokT3c3Lco0M+/sZvf5vc97L8fiUx1E5/XrRFK0AnG5DlZX9LA4S+4/J2fFqxCX6WBTvgJJoeHestBwZ1n85tv/9LHvyGp1fpWtlgVk/UwPDj+PbFJXwc9bgSBfD0HuMswzZyA6PQZR+jjMs+YgIBh297YQvDDnb/DSXrJVkLdMRAd+7r96yH96LsxehCDrLwgyZiDIXgCHmzkHbuY8+NlLECX2w05ZAHtZJBxcA+DgFgR79yjYqksgynj5FqEO4oRObFMkMtnumQxJbAt4RBeP6DHPnoet5kt2vk2RwDB2ygyYJ/QQwvQZcE9PQhxSC2dnZ5SWlmJ8fBwrKyt4/fo1RkZGkJmZiV0HFBDFdYBLLKUiiazHpUuXGO7OnTuQhtWAm/oneKfGsDW4BFVVVVheXsbk5CQio+MhCb0Os5Q/wDFLfg5ReCMCI5IwMDDAQE+ePEF9fT3u37+PiYkJvHr1iu1loekQJg2SiMxCHHF7HaG1pgLclKewC72Ki5fLsbi4iNHRURyPioZNYDG4CY9hlkwI+ScHsdcvAe3tHaC/5uZmuMsV2O51Cva+GfDx9cPQ0BD0ej1q6+pgr74AXur4/whtgssgDqpAemYO5ubmMDMzg8TERNj4nAU30UBmcuIROKLAa8jKyWUW0VD6hCWDr/kBW+IewzThKUSRTUjKLmRejo2NwSc4CsLoNkjC6tYROrhpEBOfwjCULDf/DKSeWdgS/SuMo3/DlvjHMIkZAcdGlsG8Wl1dRU1NDcQ+hTAJ7oaxppcAh2EW/wj2gefQ3d3Nwk1JJJpqiI98vY4wIiKCkc3PzyMvLw9bPYjhcQMwjhlmhJTMOLQfHIeDx1isFxYWEH8yAQKfmzBW9xjkSB8BD8FSVYHq6mpmVFNTE6TKPIjVVWuENL/Dw8NYWlpCRWUVHLySYRrZCZNYQnJs0CDhxFOik6MMSWOFMTU1BZeDHuD5NawRGgV2ErAWIr9rKCgoYB5ST6XuKRAHfrVGSENI18bGRjjJj4Ib2sJITGIfwTikH8bBPTAN7sImVTs4ARHpjIyK4143cAPurRHyNa0E9AvM1bXIz89nbdLX1wdb9yRY+X+xRkjP6N309DQiT5yCeRCJ0lESzqghgwT3YoN/u8FDJ/lxPHv2jMU+8lg0+L71JH8klAT0YdBDGAV0wMKnHGVlZUx5S0sLpLI0WPqXrcthbW0t2/f390MZHE9SU0cIHq4ZvymwCxtVneBIXePQ1tbGwCUlJeC6X8b7AQZrmAR1wlqWg9bWVpbDyspKSJSFhPBNSCmhXC5HV1cXa5/e3l7scfMH1+97GJEIvevXRnR24D2/B+CIPS7i4sUiVvZ0quzxTcUG73t4x/dnfECsojkNi8tnvcWmxvFYCFW3YOn9pmgo4TZnDfw0sRgcHIROp0MzicQ+70Rs9L7LdNGQMkIz5V3IvMOg1WoZ8Po3ddhxmIT2wFVwZUXY6x6CH1t/YkOBVuNOeRx4AX0QK66vI5S4n4OV5y0cjUlhVU8L7Nvb9bBzCYORshGbSXo2B3WDY+zfAyvXYiQmpzEPKLCzs5P1UlFRERtzVCn1Xh0WDwuvRkL4HBKPG+sIbWRXYKYawkfuVUj6JJsVEC0kmgJ7t2yY+XaT78aoh0/B99fC1i0f4eHhaGhoYGVOc0FzRpuZ9iAdcRKXUvBUoxCoFyBRrJ80UnkVM0SgGof00AVkZWVhdnaW9ebnhZdhd/gChIET5LWQ6yFU60kpL0G8/yY+3i3DTqd9cHTcBUen3Wy/Y5cKIpcH4Pm+AF81C+ERHayVTeTOeU2kxGOhhryRGqKLGGR36Mxb9/sNGMUNQuipB9dDD55SD1M3Qq54AYlPK6wP3yIGfAfLQx3guU6zOypcBXnZI4hS1RREHlrSjwbhHSQPsUbHCAXEAYHXPDknU0qphQXBiWRaMrF+xz8eAXhmChx4XQAAAABJRU5ErkJggg==" />
+                                                      </ui:ClickImage.Image>
+                                                      <ui:ClickImage.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39891494-b4b9-48c6-87a9-be42708e4b1d" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                        </ui:Target>
+                                                      </ui:ClickImage.Target>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:ClickImage>
+                                                    <FlowStep.Next>
+                                                      <FlowStep x:Name="__ReferenceID5">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <av:Point x:Key="ShapeLocation">70,1244.5</av:Point>
+                                                            <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                            <av:PointCollection x:Key="ConnectorLocation">70,1275 40,1275 40,400 169,400</av:PointCollection>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKをクリック(2回目)" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                                          <ui:ClickImage.CursorPosition>
+                                                            <ui:CursorPosition Position="Center">
+                                                              <ui:CursorPosition.OffsetX>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:CursorPosition.OffsetX>
+                                                              <ui:CursorPosition.OffsetY>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:CursorPosition.OffsetY>
+                                                            </ui:CursorPosition>
+                                                          </ui:ClickImage.CursorPosition>
+                                                          <ui:ClickImage.Image>
+                                                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                                                          </ui:ClickImage.Image>
+                                                          <ui:ClickImage.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b5294a1-24bd-4a7a-ae25-6c8b7abbc75f" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:ClickImage.Target>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </ui:ClickImage>
+                                                        <FlowStep.Next>
+                                                          <x:Reference>__ReferenceID0</x:Reference>
+                                                        </FlowStep.Next>
+                                                      </FlowStep>
+                                                    </FlowStep.Next>
+                                                  </FlowStep>
+                                                </FlowStep.Next>
+                                              </FlowStep>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowDecision.True>
+                                        <FlowDecision.False>
+                                          <FlowStep x:Name="__ReferenceID6">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">600,759.5</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Delay DisplayName="終" Duration="00:00:00.1000000" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="Delay_5">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Delay>
+                                          </FlowStep>
+                                        </FlowDecision.False>
+                                      </FlowDecision>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                      <FlowStep x:Name="__ReferenceID12">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">500,229.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,61</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">500,260 300,260 300,365</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="期限なしをクリック" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                          <ui:ClickImage.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:ClickImage.CursorPosition>
+                          <ui:ClickImage.Image>
+                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                          </ui:ClickImage.Image>
+                          <ui:ClickImage.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4b474181-d925-4c2d-a876-3bc3f78d7fc1" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </ui:ClickImage.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ClickImage>
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID0</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                      <x:Reference>__ReferenceID2</x:Reference>
+                      <x:Reference>__ReferenceID3</x:Reference>
+                      <x:Reference>__ReferenceID4</x:Reference>
+                      <x:Reference>__ReferenceID5</x:Reference>
+                      <x:Reference>__ReferenceID6</x:Reference>
+                      <x:Reference>__ReferenceID0</x:Reference>
+                      <x:Reference>__ReferenceID7</x:Reference>
+                      <FlowDecision Condition="[imageCancel IsNot Nothing]" DisplayName="キャンセルがある？" sap:VirtualizedContainerService.HintSize="93,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">403.5,926.5</av:Point>
+                            <av:Size x:Key="ShapeSize">93,87</av:Size>
+                            <av:PointCollection x:Key="TrueConnector">403.5,970 170,970 170,1009.5</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.True>
+                          <FlowStep x:Name="__ReferenceID9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">70,1009.5</av:Point>
+                                <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">170,1070.5 170,1099.5</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="キャンセルをクリック" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                              <ui:ClickImage.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickImage.CursorPosition>
+                              <ui:ClickImage.Image>
+                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                              </ui:ClickImage.Image>
+                              <ui:ClickImage.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39891494-b4b9-48c6-87a9-be42708e4b1d" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:ClickImage.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ClickImage>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">70,1099.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Delay DisplayName="終" Duration="00:00:00.1000000" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="Delay_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Delay>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.True>
+                      </FlowDecision>
+                      <x:Reference>__ReferenceID8</x:Reference>
+                      <x:Reference>__ReferenceID9</x:Reference>
+                      <x:Reference>__ReferenceID10</x:Reference>
+                      <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID11}" x:Name="__ReferenceID13" DisplayName="フロースイッチ" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_5">
+                        <FlowSwitch.Expression>
+                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CStr(item)" />
+                        </FlowSwitch.Expression>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">335,126.5</av:Point>
+                            <av:Size x:Key="ShapeSize">70,87</av:Size>
+                            <av:PointCollection x:Key="Default">335,148.25 130,148.25 130,274.02</av:PointCollection>
+                            <av:PointCollection x:Key="期限ありConnector">335,191.75 130,191.75 130,274.02</av:PointCollection>
+                            <av:PointCollection x:Key="期限なしConnector">405,148.25 600,148.25 600,229.5</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <x:Reference>__ReferenceID11<x:Key>期限あり</x:Key></x:Reference>
+                        <x:Reference>__ReferenceID12<x:Key>期限なし</x:Key></x:Reference>
+                      </FlowSwitch>
+                    </Flowchart>
+                  </ActivityAction>
+                </ui:ForEach.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <While.Condition>[i &lt; 2]</While.Condition>
-                <Flowchart DisplayName="プレゼント受け取り" sap:VirtualizedContainerService.HintSize="764,1004" sap2010:WorkflowViewState.IdRef="Flowchart_2">
-                  <Flowchart.Variables>
-                    <Variable x:TypeArguments="ui:UiElement" Name="imageRecieve" />
-                  </Flowchart.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">50,42.5</av:Point>
-                      <av:Size x:Key="ShapeSize">60,75</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">110,80 310,80 310,126.5</av:PointCollection>
-                      <x:Double x:Key="Width">730</x:Double>
-                      <x:Double x:Key="Height">968</x:Double>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart.StartNode>
-                    <x:Reference>__ReferenceID10</x:Reference>
-                  </Flowchart.StartNode>
-                  <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID10" DisplayName="プレゼント種類" Expression="[i]" sap:VirtualizedContainerService.HintSize="75,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <av:Point x:Key="ShapeLocation">272.5,126.5</av:Point>
-                        <av:Size x:Key="ShapeSize">75,87</av:Size>
-                        <av:PointCollection x:Key="0Connector">272.5,148.25 130,148.25 130,274.02</av:PointCollection>
-                        <av:PointCollection x:Key="1Connector">347.5,148.25 450,148.25 450,274.5</av:PointCollection>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <FlowStep x:Key="0" x:Name="__ReferenceID1">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">30,274.02</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">230,299.52 310,299.52 310,380</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="期限ありをクリック" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                        <ui:ClickImage.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:ClickImage.CursorPosition>
-                        <ui:ClickImage.Image>
-                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                        </ui:ClickImage.Image>
-                        <ui:ClickImage.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:ClickImage.Target>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ClickImage>
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID0">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">179,380</av:Point>
-                              <av:Size x:Key="ShapeSize">262,60</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">310,440 310,484.02</av:PointCollection>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="変数初期化" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="ui:UiElement">[imageRecieve]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="ui:UiElement">[Nothing]</InArgument>
-                            </Assign.Value>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </Assign>
-                          <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID3">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">210,484.02</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">310,535.02 310,566.5</av:PointCollection>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:WaitImageAppear ContinueOnError="True" DisplayName="一括受取を探す" FoundElement="[imageRecieve]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
-                                <ui:WaitImageAppear.Image>
-                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAeCAYAAAB+MQMgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA7+SURBVGhDnVmHV9ZHFuVf2GTPnpzNGsXee4+aaFRMLAiKSFU6goL0qqIU6SAoiIgKdmwogiXRGI2Jm6KJUdNM1/RE04ya8vbeWd63wxfiesI578x8U968d+e1+eFyrtPDcrVvH0M3Bg4w7fX+/Ux7pU9v017o1dPQiW5d5YhrF/l3zx5/6JPYV9J5pb1dOnf4+0z3bu2IY4fuMWfz4Tr+duZN4nqVS2XjGFvqxVZ1vTN4UDu66ztfpKxEXM49+IBR3AZFwVBSZSmEHqACaJ/Evq7VMSVVWHnob3uPzUt5O8/pPiX+3tn5EdO3QXKWweZFnQgQW+rrDM6dR8fK3eCFAAeWYy8kKSObIQ+gIPZvnWdflbGF6uhGlQfX87fNQ1vuIx+d41r+VmCVbJ5sFSSbdK3Ni60CpEbhDNDtOR7iogtsgNhXUoZ6kCrvfCDHbWBIzsJynb2PYwqCjnNMleVvnddx9pW4h+NKHYFjr1dSnqovw4kzOLQeF04qKUA22QCx5YG2gkocd7YUVZJk77EVJukYScdI+lvXKg/dT7IBIjjOMihfe58tC/XuyHJI7cAh6SZlSkY2cx6oa5SexprtXV1lE+aasGYX2hZXV4eANg+SCs1xKnMMbTP2t2JclbOVtM91lkH5cO8+0B7waUTrzINrbVCU1Ahu/fOhe4PDRbqJjJSxMmerB6iybAlMNiwsYUB/Se/fX3L69ZWq3r2kAXMUWvceauufbgPjYI8eUtuju+T16SNlOH8jxg9gDZXa+Mi/2ilny3AKe45gbSP4N5IX9tbgvPx+/SQb55dg3Q5czlbs39e25jjmSQcwp32ls5D3ItZcGzLYQddB7cDh4aSOYo0KxlZvS8fqoOiSQQPFZ9YsWbRokURFRUkE+vkY29W9uzwNAZoBfDX21WLPRpxVCIEyRwyX6KeekkXBwbIUlDlpomzC2Q3gXY61dQBhC9ZXYC/B3oB96zBfCRCyQEm4jPjBgyV85AiZ/fjj4unhIT5eXhIyYYLkYP0anL0MLhMPK0iEsqQ4rE8bOrQdrRo+3FDpqJEOqhw5smNw1IJsE7YBsa2H81tACQMGSGVujnz88cfy6aefSklBgSx57DFJHjRIUinAhPGSMc1NFnt6SMSCBQbEzMxM2bVrl7z77ruGqkpKZMXEiRI/cKAEDBsmflDaG0K6jRkj48eNk8mTJ8vMmTPF09NTfHx8JCgoSCIiImTx4sWycuVK2b17txw5ckRWoR8DoFMB4MLx42VBYKDExMRIXFzcfVFsbKyE+vmJC4EgMLZLKVFxBYctwWCfLYkuw/iyEZaTioi/ZmWWfPTRR/Lhhx9KUlKSzJgxQ8LCwiQxMVHKyspkx44d8swzz8jly5fl888/l++++06+/PJLefvtt+X06dOyvrpasmFxibA4b4C0ACBSUBU6Ly9PNm3aJHv27JFnn33W8Ll27Zp8++23cvPmTfnmm2/M2S0tLZIRECBxuLDE2bNl3969Zt2PP/4ov/76q9y6dcvs+frrrzsc4+U2btv2v1SugKhLUXn1ebUQ5/5+9At79ZIs+Hkobrp41ap24CxZssQo/cUXXxgQaFUffPCBAeXnn3+W1157TTbU1EhMeJjMAxjeI0ZIDngV9u4tibNmyqGmJrPvp59+Mkp89dVXhgf5/fDDD4bXuXPn5Pjx43L48GE5deqU7Nu3z5wdAn7pACdy0iRJxu+Kigp58cUXDZ+33npLdu7cKdW4jI7GKisrJR6X4XArgqJAsaXr2Km4I6pBTIgYO1YWwARp2lu3bjUWQVq/fr2kpaVJeXm56bPNyMiQrKwseemll8wtbdm8WXzhJr7DhkoqYkNRz55SgzhRjDYEYKdDqUOHDsnVq1flvffekyaAtXr1agMAra2hoUHmzp0r4+ByS5culfPnzxvQTp44Ict9fSUF4ISDt8eoUTIZcm6G1d24cUPOnDkjISEhZh8tkWMXLlyQwsLCdu7lAIduZZNaCEFSMOw+aR1+p8ENmiDsZ599Jt9//7388ssvcvfuXdP/5JNPzE3MwhoKQmKM4G0RnAaAE/7kkxKGgBmF2BSLYBk6ZIgEA5iZo0fLhEcfleTkZLl48aLht3//fuOmBJvn0VVyc3PF3d1dNm7caCyLIGbjAgIQ48LBLwPuzizmD571dXXG/d544w0pQXwjAEePHjWAkh8v9c6dO0YHWrfLJWQN0mkAotQKpQ8y1YL4W/v2eBOoGje8ZMoUKUAs2Au/pkXwcNILL7wgJ3CD2+C7DLx6G7SgK1euGIGOHTsmK1ascMzx9oMXLhR3WBMtIgBxIzo62rgMwWSMycnJkVVw31dffdW4XGtrq7kAuih58kwCyr1eyFxRuJBi6BeEpNAAcAiyc8zhZb7++uuG1/vvv2/kP3nypLhU4sZIZQiCSsVAOxdmTspHutS+TUVYk4CbcUfam4ZsMgVmm5ed3S7mEBQKTSGUGDQZbxgEqYw9x1hCAZcvXy719fUmnrz88svy5ptvmjlaBUHhGGPEO++8Y9yBbkeFyY/jnCcxE+bM85ISCxwq7hxzuI+uVoAMyxhJWehuLjTzv0qhoaHih2wQi5QbDN8uQQpVcOi/zC7bt283B1EQEjMWlaFAzz//vNRBYJ1bt26dZKSnS1pqqhH69u3bcv36dQMwrfJ+iUFbrWFtSLCUImyEtYHzZzGHY6k498CBA8aqaK0uPPyvEmuTWrjJiomPSwSsqLQNHN4y/Zog0d28vb07jDmbEXNmA1ydI01CnIlCXKFb0sq4n8GebnIvWgh3DEQ9M336dFm7dq2RgVZVhuKypG9fCbEsp6OYo4AxqzH20PJcOkL+fum5556TIgTEaPh2pL+/yT5k/Pvvv5sDGSNoGYwbqgRdhkJTSGYdVdwf+z0QWL0AUDjA5D6C+Morrzjc5F5EK6HL0TWKioqM0syeyxC7cgDO/4s5Cg7l46Xzkl08kBVIs0Huo0eZdiZSH0nH7N+z9DfaJxFrnkJAZpCkgIzwv/32mwGGtQefEbxRO34QGGYVugyDn8YQWspaFIoJ06ZJEEr5WTgjCOmY6ZoAEXRmEYLKgK4XRFDIjzGMijcho0UCXE/EwnmorpkBc1Ca3E/MiQA4oai6WS/Ral1qkeZIFXj8kYrAaDXeJST2Oaa/2S/DGGk1CjXWJqEo6es31RmkmT14K3SndFTFbmPHSHR4+D3jB9M0b5BBugX+XkS3wIM0A+f54+01FRfg7uYmdbW1BiBaIwP9FFzKY3ieREZGmiDKizkLBdOg3HIkiwrUYGtQjmxFQVuMjMvnCFO5xhc+X+jSrLYJGMeSsdcL77IaFIE8y1TI+jwgsfDjdxElVsna57xWzVy3GW0SKtoE+DWfB3zbaEDOi0NaRpBOwZzGGLqdF1xnKjKbG+gJkD+sgymdyrUCnFLUPXXguxalwiq4QyKyZRhqn3gIzuKOitDKmA0Zvw4ePGjApTWULlsm+bCYPQBle+fO5vGagwtMRxwLwbl7AQTP4YXUAmwmB7oQL5TgFAbiyQFry0MsokWatxXB0QJPK2OCwc8GCoxWy3bVXIv5/O5dTeHGx2GulcrzcUCoEzj1ACeMr3CYeCT2eA8fJsHz5zvAoeUQHH4X0nN3gIqgZCDWp8bHO9yXrkYiX55XhdtOnzpF6qDPYQC7DXLS+rwATGJCgrEQAkELJhFkFpEEloUfwcnCWy4Or/sSZEwDjlqOAqRWRMGqOj3sEFItRts9aDeAyrt1k2y4G822wHpbrQY4gQAhyQmcyLaKOBz1lA/mQxAfbHCKAF5xN1fZ0LWrVEGeUsiTDCX9hgyWuZjbsGGDqWYZ9PnHW2d8i4F7BY0ZLZmwlAq6PtwqtVcP8UH8qigtNeldH7lnz56VxsZG85Ln80RdjW/BlJQUEx8pj8Ny+FwgKTi0kPpHOjnAoRXpOAFqAvGjUggUDRw/XnygdDnSI4UgONkAx5+WgzqD4DBYOlfEJNZCtAYGxWaAkzLbXRYNHCih4Bs8fpwsgDsE4UYZ3NesWWOshbdOhRg0uY8PUNYn5M11IXDBsDmeEvbEEzIHlrMEwG3ZssU8KBehNvPEY3QWkov93mL84xryp6xM9y621VB5+9WtwJAIlFoNf7OthtUE4EajcGBVVZVJ7bQQVrI5sbEm5qS1gUPTpSI0Y5uoIG+fpt7c1CT+zDQeHiZgMi3zPUUT5zq+zlm/MMMxA9bgRU+robtQQc4zczGbMZWzqFwIYKfh8qYj+81BPImEta5AnCxAEgpEwNcgzUtlEFaXzQfQDnDUYmxSYDQGKShsCRQ/ci1GaZ6XmuJI0fTj1pYWyfTzlRgAl4QahgrQmtgyEGpFTKKb8D106dIl2Yy5BbAcCsYAS0HJk5ZBQPghay1cJAJ1lRdunp845qMATYY70GX5rYhy8HLoenx2FOMRGgN3y0Z2pZvubtNtG78o4PLWw5q4noDyEpqbmyUdddlKZK0/BYfKa0Bm3xkcEr/3LoN/h+OmsxGMWZnmIu6EzZ1jPkmmItMEI04w9ZZCqWiYtwfSrxfiANP0XH7lgxB+bZ88AhCc/Vghw3rIi0+PKrSZCfHij/qHdUsUAvMKKFoMmapxPuNLLFzQH0Dx04Q/zksCr2I8X1YC5Fi3qZKNpMEwYOvQAH35DWoxZGKmZfEXCQ8Iwjn8THoZFtYhOArM3i7trYZkA8WgzIAZiELLk8oi+/gORdplQOzaRVZhjp8NGBTnYc4Pc1kIrvU4g25ajduLxqOX+7jGGze5CDVKIICdgbVe4BmAsQiAzEKOH+A34VyNh0wYlIdfJBuQofJ6dJPleEdFImbNx755UD4B+2qwhuu4j0Qdt+PsRJztg3ehL0CdD+sKQ9uIM/mB/TYA/wM4qjyBUbDUgrS1AeMX/mpXVynD+vy/P2AELnjwb6Yl6R4qQ+JejrGvPLXP9RWdO0mha2fJRZ8gMpVz3uajilJGjvG38mFLPuvQloMX+R10rP8vMCR+3t0DsHcAJP73ohXZ8zwu8iZAcfxrxhkcMiGxT2Y8kIepYDxcheOYEteUP/QPA4y2HCOpYiog+bCvinBO+zbpPuWvPNiqojYftva5JAWTxH0Kjt2n7vzg1/6fe4PkP1Oi9dtUIPn6AAAAAElFTkSuQmCC" />
-                                </ui:WaitImageAppear.Image>
-                                <ui:WaitImageAppear.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="1500" WaitForReady="INTERACTIVE" />
-                                </ui:WaitImageAppear.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:WaitImageAppear>
-                              <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID4" Condition="[imageRecieve IsNot Nothing]" DisplayName="受け取るがある？" sap:VirtualizedContainerService.HintSize="89,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <av:Point x:Key="ShapeLocation">265.5,566.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">89,87</av:Size>
-                                      <av:PointCollection x:Key="TrueConnector">265.5,610 170,610 170,694.5</av:PointCollection>
-                                      <av:PointCollection x:Key="FalseConnector">354.5,610 470,610 470,760</av:PointCollection>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <FlowDecision.True>
-                                    <FlowStep x:Name="__ReferenceID5">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">70,694.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">170,745.5 170,774.5</av:PointCollection>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="一括受取をクリック" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                        <ui:ClickImage.CursorPosition>
-                                          <ui:CursorPosition Position="Center">
-                                            <ui:CursorPosition.OffsetX>
-                                              <InArgument x:TypeArguments="x:Int32" />
-                                            </ui:CursorPosition.OffsetX>
-                                            <ui:CursorPosition.OffsetY>
-                                              <InArgument x:TypeArguments="x:Int32" />
-                                            </ui:CursorPosition.OffsetY>
-                                          </ui:CursorPosition>
-                                        </ui:ClickImage.CursorPosition>
-                                        <ui:ClickImage.Image>
-                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                                        </ui:ClickImage.Image>
-                                        <ui:ClickImage.Target>
-                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
-                                        </ui:ClickImage.Target>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:ClickImage>
-                                      <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID6">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">70,774.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">170,825.5 170,844.5</av:PointCollection>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKをクリック" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                            <ui:ClickImage.CursorPosition>
-                                              <ui:CursorPosition Position="Center">
-                                                <ui:CursorPosition.OffsetX>
-                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                </ui:CursorPosition.OffsetX>
-                                                <ui:CursorPosition.OffsetY>
-                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                </ui:CursorPosition.OffsetY>
-                                              </ui:CursorPosition>
-                                            </ui:ClickImage.CursorPosition>
-                                            <ui:ClickImage.Image>
-                                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                                            </ui:ClickImage.Image>
-                                            <ui:ClickImage.Target>
-                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
-                                            </ui:ClickImage.Target>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ui:ClickImage>
-                                          <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID7">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">70,844.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">70,870 40,870 40,410 179,410</av:PointCollection>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="OKをクリック(2回目)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                                                <ui:ClickImage.CursorPosition>
-                                                  <ui:CursorPosition Position="Center">
-                                                    <ui:CursorPosition.OffsetX>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:CursorPosition.OffsetX>
-                                                    <ui:CursorPosition.OffsetY>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:CursorPosition.OffsetY>
-                                                  </ui:CursorPosition>
-                                                </ui:ClickImage.CursorPosition>
-                                                <ui:ClickImage.Image>
-                                                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                                                </ui:ClickImage.Image>
-                                                <ui:ClickImage.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
-                                                </ui:ClickImage.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:ClickImage>
-                                              <FlowStep.Next>
-                                                <x:Reference>__ReferenceID0</x:Reference>
-                                              </FlowStep.Next>
-                                            </FlowStep>
-                                          </FlowStep.Next>
-                                        </FlowStep>
-                                      </FlowStep.Next>
-                                    </FlowStep>
-                                  </FlowDecision.True>
-                                  <FlowDecision.False>
-                                    <FlowStep x:Name="__ReferenceID9">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">339,760</av:Point>
-                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">470,820 470,859</av:PointCollection>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <Assign DisplayName="カウントアップ" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Int32">[i + 1]</InArgument>
-                                        </Assign.Value>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Assign>
-                                      <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID8">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">370,859</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <Delay DisplayName="NOP" Duration="00:00:00.1000000" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </Delay>
-                                        </FlowStep>
-                                      </FlowStep.Next>
-                                    </FlowStep>
-                                  </FlowDecision.False>
-                                </FlowDecision>
-                              </FlowStep.Next>
-                            </FlowStep>
-                          </FlowStep.Next>
-                        </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
-                    <FlowStep x:Key="1" x:Name="__ReferenceID2">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">350,274.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">350,300 310,300 310,380</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="期限なしをクリック" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                        <ui:ClickImage.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:ClickImage.CursorPosition>
-                        <ui:ClickImage.Image>
-                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                        </ui:ClickImage.Image>
-                        <ui:ClickImage.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:ClickImage.Target>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:ClickImage>
-                      <FlowStep.Next>
-                        <x:Reference>__ReferenceID0</x:Reference>
-                      </FlowStep.Next>
-                    </FlowStep>
-                  </FlowSwitch>
-                  <x:Reference>__ReferenceID1</x:Reference>
-                  <x:Reference>__ReferenceID2</x:Reference>
-                  <x:Reference>__ReferenceID3</x:Reference>
-                  <x:Reference>__ReferenceID4</x:Reference>
-                  <x:Reference>__ReferenceID5</x:Reference>
-                  <x:Reference>__ReferenceID6</x:Reference>
-                  <x:Reference>__ReferenceID7</x:Reference>
-                  <x:Reference>__ReferenceID8</x:Reference>
-                  <x:Reference>__ReferenceID9</x:Reference>
-                  <x:Reference>__ReferenceID0</x:Reference>
-                </Flowchart>
-              </While>
+              </ui:ForEach>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID13">
+                <FlowStep x:Name="__ReferenceID15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">300,385.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">400,436.5 400,484.5</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">290,489.49999999999994</av:Point>
+                      <av:Size x:Key="ShapeSize">200,61</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">390,550.5 390,589.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="共通処理\マイページに戻る.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke マイページに戻る workflow" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="共通処理\マイページに戻る.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:InvokeWorkflowFile.Arguments>
@@ -462,14 +594,14 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID11">
+                    <FlowStep x:Name="__ReferenceID14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">300,484.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:Point x:Key="ShapeLocation">290,589.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,61</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;プレゼント受取終了&quot;]" />
+                      <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;プレゼント受取終了&quot;]" />
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
@@ -479,30 +611,9 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID11</x:Reference>
-    <x:Reference>__ReferenceID12</x:Reference>
-    <x:Reference>__ReferenceID13</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">690,194.02</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:WaitImageAppear ContinueOnError="True" DisplayName="一括受取ボタンを探す" FoundElement="[imageRecieve]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
-        <ui:WaitImageAppear.Image>
-          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-        </ui:WaitImageAppear.Image>
-        <ui:WaitImageAppear.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
-        </ui:WaitImageAppear.Target>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:WaitImageAppear>
-    </FlowStep>
+    <x:Reference>__ReferenceID15</x:Reference>
+    <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
   </Flowchart>
 </Activity>
