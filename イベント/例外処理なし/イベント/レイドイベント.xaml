@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="result" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1108,1647</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,1647</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -16,7 +16,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg1:List x:TypeArguments="AssemblyReference" Capacity="23">
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -29,7 +29,17 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </scg1:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="レイドイベントを自発で行う&#xA;&#xA;引数&#xA;　なし&#xA;&#xA;戻り値&#xA;　result:終了後の状況&#xA;　　正常終了=&quot;COMPLETE&quot;&#xA;　　時間切れ、敗北、クラッシュ=&quot;FAILURE&quot;&#xA;　　戦闘に入らなかった=&quot;PASS&quot;&#xA;" DisplayName="レイドイベント" sap:VirtualizedContainerService.HintSize="1118,1582" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
@@ -338,7 +348,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">910,805.5 910,844.5</av:PointCollection>
                                                 </scg1:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="戦闘を行う（レイド）" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\レイド戦闘.xaml">
+                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="レイド戦闘" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\レイド戦闘.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <InArgument x:TypeArguments="x:Boolean" x:Key="myRaidBoss">True</InArgument>
                                                   <OutArgument x:TypeArguments="x:String" x:Key="condition">[condition]</OutArgument>
@@ -358,10 +368,14 @@
                                                       <av:PointCollection x:Key="ConnectorLocation">810,875 642.5,875 642.5,896.5</av:PointCollection>
                                                     </scg1:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="戦闘終了処理" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="戦闘\戦後処理\戦闘終了処理.xaml">
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="戦闘終了処理" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="戦闘\戦後処理\戦闘終了処理.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="condition">[condition]</InArgument>
-                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful">[isSuccessful]</OutArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="condition">
+                                                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="condition" />
+                                                      </InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful">
+                                                        <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="isSuccessful" />
+                                                      </OutArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg1:Dictionary x:TypeArguments="x:String, x:Object">

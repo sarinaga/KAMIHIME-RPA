@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="レイドクエスト" this:レイドクエスト.difficulty="STANDARD" this:レイドクエスト.attribute="闇" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd2="clr-namespace:System.Diagnostics;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd3="clr-namespace:System.Drawing;assembly=System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:si="clr-namespace:System.IO;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sx="clr-namespace:System.Xml;assembly=System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.Core;assembly=UiPath.UiAutomation.Activities, Version=19.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="レイドクエスト" this:レイドクエスト.difficulty="STANDARD" this:レイドクエスト.attribute="闇" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:s="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd2="clr-namespace:System.Diagnostics;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd3="clr-namespace:System.Drawing;assembly=System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:si="clr-namespace:System.IO;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sx="clr-namespace:System.Xml;assembly=System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.Core;assembly=UiPath.UiAutomation.Activities, Version=19.5.0.0, Culture=neutral, PublicKeyToken=null" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="difficulty" Type="InArgument(x:String)" />
     <x:Property Name="attribute" Type="InArgument(x:String)" />
     <x:Property Name="result" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1178,2050</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,2060</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
-  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -29,9 +30,18 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="レイドクエストを自発で行う&#xA;&#xA;引数&#xA;　difficulty: 難易度(STANDARD|EXPERT|ULTIMATE|RAGNAROK50|RAGNAROK60|RAGNAROK80|MALICIOUS)&#xA;　attribute:属性(火|水|風|雷|光|闇)&#xA;&#xA;戻り値&#xA;　result:終了後の状況&#xA;　　正常終了=&quot;COMPLETE&quot;&#xA;　　時間切れ、敗北、クラッシュ=&quot;FAILURE&quot;&#xA;　　戦闘に入らなかった=&quot;PASS&quot;&#xA;" DisplayName="レイドクエスト" sap:VirtualizedContainerService.HintSize="1188,1985" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="レイドクエストを自発で行う&#xA;&#xA;引数&#xA;　difficulty: 難易度(STANDARD|EXPERT|ULTIMATE|RAGNAROK50|RAGNAROK60|RAGNAROK80|MALICIOUS)&#xA;　attribute:属性(火|水|風|雷|光|闇)&#xA;&#xA;戻り値&#xA;　result:終了後の状況&#xA;　　正常終了=&quot;COMPLETE&quot;&#xA;　　時間切れ、敗北、クラッシュ=&quot;FAILURE&quot;&#xA;　　戦闘に入らなかった=&quot;PASS&quot;&#xA;" DisplayName="レイドクエスト" sap:VirtualizedContainerService.HintSize="1188,1995" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isSuccessful" />
       <Variable x:TypeArguments="x:String" Name="condition" />
@@ -43,7 +53,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">20,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">80,40 110,40 110,39.52 150,39.52</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">80,40 110,40 110,44.519999999999996 150,44.519999999999996</av:PointCollection>
         <x:Double x:Key="Width">1154</x:Double>
         <x:Double x:Key="Height">1756.632</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -56,11 +66,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">430,14.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">630,40 720,40</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,61</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">630,45 660,45 660,59.5 720,59.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
         <ui:ClickImage.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -72,10 +82,10 @@
           </ui:CursorPosition>
         </ui:ClickImage.CursorPosition>
         <ui:ClickImage.Image>
-          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAYAAAA/xX6fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATtSURBVEhLdZZ/aJZVFMeffoDRH0F/FKhYSDWxIGK2CWYyxUKUqRkrEQ2dSEL2hznWEtJGzKSMtmpZIoQuFvZjNENZYbAQR7Bpa3Phm2PlGhu4Bk4t2d7m6fmc1+/DfR/fDlzur3PP55xz733uE71T95lRWl7c6aVnx6uWfeVdm1i9zcvZ5cvt2xXzravzZ/s/6dr1gZ2adbddeXyZF63F3odrNthrT9U6o7HikEVtu1tNhcHdO9+07yrXJosw8Of9M9yRQjJ2cdSdCmH0AW1av9UhISM6vOaXpPPr/s+9BsoCiiKsKCotGCW6G+6b5noCbd+4yer31XvkFNmHlQekSAlDq8tXupcUgBgK5Vzv7z6OHnPSlQ1tE3aJtPngSfM9TIct5XUVzyeL8LxqYWz45R12rOUr+/Rgk/eVCXSAUqeBFPYR2xENCgqCSVkA2jIqQLowBzANwzb10pKXcoeGMO96aJUPpqEYkteKRnoyyjg1hXmNhwUdgGxBxF4ALX7sUZ+UsbTBMJJwXmNhOqlVQhgSZUey3mBPOAAocVplVKAQqHnaIVBr6FOAlcwrTmDDg5MWZTqbvIFwgNJQ2pxCGU7PUTDMvMaoGcNWCLt2vs6iy32V1tX20U1QFskwxoAKwBiFj4HmNCZ9t3Hj3mJ7+MQbBivCg9GOJ63jyJ4EyqUtBMVrGWVc0ckJxgQLI+s98JxlR5Z5OyLMgd4269tTZu3HTtvfl8ddsRBUqQv7wOjLAdZgBwFA+59vtthoz5AHFv12aJ4Nvl/rA3jFt1GigxRCAarQn/i60/qPtns7hCEOiUv22oT1tVbngCi0Nn/s3hBdpueMK0iIlEgAYlhg6qudp73QBsYXSDIydMH3EJvUrJ3sjlPKAiLzvYy9IcI0VJ+xEEJBH0PA0JEAY1y2AKI7eT5jERMsRpQCeRdCDze+5VD00cmOXPR1wMiCRDDZ0BYBO/V9i0VLyha5gqAoKtpCUPaOjwVAYA11NTdm82HUadjcOUUWsejppUvyoMBIxR/9526Csk+6DmFkrMEotaAIMM7IA7Nn+5oIj4EqUhTs+oQvYDE14BBaXjrLXxEJ86wVjMjQF+zB6fc6A0cdqPuzYH6Jnek4kYPGwkJOL/V49rob2VtT6UYkQHhhyIhgCNniIAEjMhiwoh/qK5N7BXTRwgXusUSRCcY+SsYH2224v8uhnGBFBgw9wbDNf1IeUF48e9st/lQRUSJxij/ZtTEP9m/3fr/IOEd0YWToFd1+q9U/UZrY/mLvM24jDyhozeIZHq0kDfsr0+qwqbFuG/hyvfc5ucAa4lNLZNgM7cJJgDS0qXxbp64eTxQxEMIuDffaWCbew6lxG+jY7J8sBBgpL5t7jz8EkxeafQ67AuKAHxo6DAKjT75JGWkJTyN75rBYeEd51tgzDgtO8djWrCv1taQz+1O1B4NNXgwYfg8bqsrdG94sBlF4b9XMvEsNiPeM/QTEndMBITJ0+RgQXe3Dd7odMobNpre3et+BkJUCPGJwxcxpeTCeL/aKVPO6oI8I9vq2tcmzhgAgO2Rq6so+Gzp6wLNISe4hg6S0es4d/jMrwRAnkaMv54iMu4pTABNYHL2Ef5wjL0z39PL8AW/cXJxLKVExQRrxTsJR12XmvumDQOqAERltH4udwClqCfv3Y9UjbjPHWWn/AQEBpHnT+EmWAAAAAElFTkSuQmCC" />
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAYAAAA/xX6fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATtSURBVEhLdZZ/aJZVFMeffoDRH0F/FKhYSDWxIGK2CWYyxUKUqRkrEQ2dSEL2hznWEtJGzKSMtmpZIoQuFvZjNENZYbAQR7Bpa3Phm2PlGhu4Bk4t2d7m6fmc1+/DfR/fDlzur3PP55xz733uE71T95lRWl7c6aVnx6uWfeVdm1i9zcvZ5cvt2xXzravzZ/s/6dr1gZ2adbddeXyZF63F3odrNthrT9U6o7HikEVtu1tNhcHdO9+07yrXJosw8Of9M9yRQjJ2cdSdCmH0AW1av9UhISM6vOaXpPPr/s+9BsoCiiKsKCotGCW6G+6b5noCbd+4yer31XvkFNmHlQekSAlDq8tXupcUgBgK5Vzv7z6OHnPSlQ1tE3aJtPngSfM9TIct5XUVzyeL8LxqYWz45R12rOUr+/Rgk/eVCXSAUqeBFPYR2xENCgqCSVkA2jIqQLowBzANwzb10pKXcoeGMO96aJUPpqEYkteKRnoyyjg1hXmNhwUdgGxBxF4ALX7sUZ+UsbTBMJJwXmNhOqlVQhgSZUey3mBPOAAocVplVKAQqHnaIVBr6FOAlcwrTmDDg5MWZTqbvIFwgNJQ2pxCGU7PUTDMvMaoGcNWCLt2vs6iy32V1tX20U1QFskwxoAKwBiFj4HmNCZ9t3Hj3mJ7+MQbBivCg9GOJ63jyJ4EyqUtBMVrGWVc0ckJxgQLI+s98JxlR5Z5OyLMgd4269tTZu3HTtvfl8ddsRBUqQv7wOjLAdZgBwFA+59vtthoz5AHFv12aJ4Nvl/rA3jFt1GigxRCAarQn/i60/qPtns7hCEOiUv22oT1tVbngCi0Nn/s3hBdpueMK0iIlEgAYlhg6qudp73QBsYXSDIydMH3EJvUrJ3sjlPKAiLzvYy9IcI0VJ+xEEJBH0PA0JEAY1y2AKI7eT5jERMsRpQCeRdCDze+5VD00cmOXPR1wMiCRDDZ0BYBO/V9i0VLyha5gqAoKtpCUPaOjwVAYA11NTdm82HUadjcOUUWsejppUvyoMBIxR/9526Csk+6DmFkrMEotaAIMM7IA7Nn+5oIj4EqUhTs+oQvYDE14BBaXjrLXxEJ86wVjMjQF+zB6fc6A0cdqPuzYH6Jnek4kYPGwkJOL/V49rob2VtT6UYkQHhhyIhgCNniIAEjMhiwoh/qK5N7BXTRwgXusUSRCcY+SsYH2224v8uhnGBFBgw9wbDNf1IeUF48e9st/lQRUSJxij/ZtTEP9m/3fr/IOEd0YWToFd1+q9U/UZrY/mLvM24jDyhozeIZHq0kDfsr0+qwqbFuG/hyvfc5ucAa4lNLZNgM7cJJgDS0qXxbp64eTxQxEMIuDffaWCbew6lxG+jY7J8sBBgpL5t7jz8EkxeafQ67AuKAHxo6DAKjT75JGWkJTyN75rBYeEd51tgzDgtO8djWrCv1taQz+1O1B4NNXgwYfg8bqsrdG94sBlF4b9XMvEsNiPeM/QTEndMBITJ0+RgQXe3Dd7odMobNpre3et+BkJUCPGJwxcxpeTCeL/aKVPO6oI8I9vq2tcmzhgAgO2Rq6so+Gzp6wLNISe4hg6S0es4d/jMrwRAnkaMv54iMu4pTABNYHL2Ef5wjL0z39PL8AW/cXJxLKVExQRrxTsJR12XmvumDQOqAERltH4udwClqCfv3Y9UjbjPHWWn/AQEBpHnT+EmWAAAAAElFTkSuQmCC" />
         </ui:ClickImage.Image>
         <ui:ClickImage.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59d3234d-778d-4a31-a11f-e8457f8c5346" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
         </ui:ClickImage.Target>
         <sap:WorkflowViewStateService.ViewState>
           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -88,11 +98,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">720,29</av:Point>
-              <av:Size x:Key="ShapeSize">200,22</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">920,40 1040,40 1040,113.5</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,61</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">920,59.5 1040,59.5 1040,113.5</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Delay DisplayName="タイミング調整" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_3">
+          <Delay DisplayName="タイミング調整" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="Delay_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,11 +114,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">940,113.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">940,139.5 910,139.5 910,140 830,140</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,61</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">940,144 910,144 910,144.5 830,144.5</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="レイドクエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="レイドクエストボタンを押す" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                 <ui:ClickImage.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -120,10 +130,10 @@
                   </ui:CursorPosition>
                 </ui:ClickImage.CursorPosition>
                 <ui:ClickImage.Image>
-                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAjCAYAAAAnvgICAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABrfSURBVGhDbZl3VNXnuuf5c+aeNWvKzU1ycs/NSU5MMZrYxV5iib1HxYK9YQUrooAiigIiIAICgvTeey/SBOkd6b33Xj7z7O1Mzl2zZq/1LjabvX/7/b7P83zLD5WPDtuoeKHKcN0bfC9sI9fuCtV+l8jUUqU94SRuSz6n7PUsYm9+S4X9H4w1xVHruIvux6pM98dRGfwKrRn/A+/DX1Pso0ex7m+U3NjOYLEvj3/8jEzrs2Q9WYbvrr+RoLGc5ndvmO6NZajejvFWD6ZHkuSagUwU7WQsUpWxCFXGk5cwkbGEFqdFdAUuZtx1lvL1idyl+F5eyv39a3m+eyH2aqqEX99AmvEJcryeURXnSHGSv3KVJfnRne1Dcaw/7TFptKQmkunti+MzE/4EPVDngNvuNaQ+3s9wpT8fbTdT7X4Yp31zCTn1Pal3fqDGeiXjFY50xBnRseJLutJewHgXEdpbufa3v1AU8JyOHHdao00Y7/yA5+mVFEU+Zfi9FqWv9+C2/CcqQwyY6ndnuieWyW5DpgacmR6OY7org7Go5YxbfadcY2GL6TSdQYPDXMZCF9Hvv5guz8UMBKlSF3yf5lRj5WpNM6E1/TklfiYk2upR5PuC4jhPMjx9ac0LozozmPb4DHoKS8nxDMbxiSkqHd5bqLJezURbDIma24i68A2TbS/JlE1m6i6gzPMqNuu/oMh2N9m6W6h2lUOpCKDWeZdcyInpoXrq4p+hv/hL8gON6SoJZqgxTcD40pX6jJHGd3SnvmS8IRXXE1tozQlhJP4QU43hDFU5M5hylcl2G+maMOjJY/KjmlR6pbLqXQELabL9lbFwVQb9F9HutIBReV5kd4KWOH36ykLoLXnFQLWDXD+K3vJwGnOCKA59TZG3KTUxL+hOsibYyZKi5EQKYn2IfnkXlS6PxdR6HGR6MJhS/4e8Xf4ZnZGHyTVfT5bDbfKf7MR38xx8L62kzkqD9PvzqbLdzkCGNgMFRgyUOsuJmxN9cwHNEZfpKnBksNqF4XoLxsoeynVT6c13lEOoJvH5ddrKsukJU2f03RE53FeMfPRlIFuXiWYjpgciGevMorfMkPHiQwxmL6HebA4jIYsZC1lEq+08mt/Iz3CpdMBx+vNtmeoOo6/yDV3FgXKQCfRXRNCU5UKBpwkVgbr0p90h09mIeBdL7HUv4HD31H8CPRxFc9l7TL/5nHrnpdQGbaHtgycfLTdT66qF/8XVdMQ/pVB7o7LV616vlgvepSvXkvb0J5Q/lxYMWK78feCjEX2lJtT7qTPVbiUbCaOnyIGxjjj6aoIo9XnGcPxxhlPOM9XnxnCRO/0J1+S5k7R+OG0VhbTFPGC8+gKNThsYK1mqnOlWmfGK51L9sBt0vjNmMHw90y0pcsCxyg7rqwhnuDqarjxbCj2ekG15hK7wE5QFvZROzpZ9RBFqeh0VRZs2eu9joi8WpkdxVt/Ciy3f0ZJ4ikrXw9TJGm1IEiBRTNbH0BNqRsTF+STemEG59QZ5n66ANqLERJVO7xVSBT36ix7QW/SMGo/DDOfpSOVDaI99JAQWSX+Nv8yeLn3vzjJWcI32tCdMtHvI+3wZfHeLyRZnGKikvzqeqvAXtIVrMNGqxWTVJtq9N1Frs5r21CcyQomM2s2Talsx3ZoqFfeVQxOuaI6TvUbSGHyXhLsbaXZeRkf0fTmUEOUab0pFpTPsuMzPMvmSKBSP8hhLbv78FeH66/nw8hA9718pT3O6KZGpjixacgOoeHuXyFuqpOnNo9rlgJCJMXF3llL4fCWtoffpjtKiJ+uJkOFG2uI0GK6KpCP5CZM9T+V73El785APxlvpK9CUMX7AQI6BMLk9I82pDOa8EOC+0JfPWJd0Rmkogx/ls113GMq/y1D8aUoSrCmLtWHE+hdG028x3ZamXFNd0uK9XkrgvdI9sVfWkqcvPFB6/U/QivZXafY/ToP3AbozHZjuq6An34aYy99jsePvRN1az2RjPDKU9Eulk+0fkGOjyWhdEp053vic+pl8owUC8gyhV+aTb7lJGP+4VPiEEnS5yQI+eh2kPt+HtrB7jBVqMNnsQeYLdeGGX0jQ/knIUEiu+hljVdLeAx5MDTYxXmgi5KYrnSEHPeDJVE+WzLvMa54R9T7HCbq1FecLi6l+s4OphiCGmwLk/e8RxmS4xUuUw1P4IpV35qeIvTaTyQ4dIc2oP4GrNPmfpD7gLE2hZ6QSDkoJeW+4gQ+PlvP++QFGWzMpCLIk30mLj4GPoOuD8hDoL6Ey4AEx176n0mkfiQ92UGi1k+RHu8kw2kT3+8eUCehytz+oee9GW+g9hhNOMVnuIl2xgfdPNxN64e/Eaf6Drhwrhmr8BGSBSGA3XQ1NVPlrMZpxXlrfRubcWZY3DBXLd2dK58V+6r7hYnndnrIsZwxObiPd0YCOgiAmekT/pfKNcZb4nv5OuuU1IzUy6wK4WzpHpTZYk6Ha1xQbL2Sw4L4SdLXPGZJufk+m6T4GaxJpL0qUk8ymtyZd9NCUqlATRisSZEMlZFpdJEXnV0rsj5NtsAiv00uI01lI2ztDsh+tEKnbRaXwQHvSY7ojjjNU5Ij32RVkm+wix2A+YQI8SX8h3XnWMkIJwh++Il/htJRkUeZ7jN5oNSEyPUaa7JV7Uy6FzvdFSMvfl3Y1FrYOID/Zl1DLW9jeVCfo1QXyE50ZKPci8t5mJvtclW39T9DuR6XCbyi2+p0Gj13Kag9UPidEY6nM7mUYbqAqwg5zjb1or5rJ4X/7b2jN/4oKnd1y8jUiMYUEXV5Nc9BdMh/voNpZT1zSQjrCz5F8ezaFL2UGHbXoyH5BnvluPsZaYXtgsby+hVRp7/I3e/jwYDYRmj/TFmUocy1VaXgoG/Wm5p2LVOsRuUaqNLhuZyT98p+rM1ZDNP4s3XGaYk7kEFrTZBQT6SmLIMvNCMOze3DVP0VVtEhhd9qf7a0EXepwSFr4NU0JOrLJn+ivNFaeZp6YkhybcwQ9uoD6F3/h5ef/lfCv/4UbP37FO18HBjMDhWwKYayV6mg7uj+4iCz5y7U+EHF9HU3eh/A99TXvnp+gwHyLMLwxyXfmUBN8G+1tC0m5t4rM+zMpefaJDKvtfydD71eaws+L6ZA571Bou5iXOi/ZuCMx97ZJZ8ylwnQh1a/FLdptoVY6sifJRQ4pWcgrWcxJKEPV0gFt6Yy3JBFjq8/j41sINROJKwoRSYukTwyMSqXdPpoir0vPO5NrsYlk/SXKVioJN2DHjC/Q2b+eG3N+wnfmv9J57TuCjv47eSHinqZGP4H+v0sx5wMlTA43k+9wgYIXG4m4Mk9My3oBdVA6QVvm/yeyzQ7ifW4ldn/MIebS9+Q8lG54tkgOSYCL7W103kK9/xkhSnOpuoMcohyw6PxYZzFVQTqivQdoKYwSsiqSRosTkDEM18Ypjcl0Z5DUwF9eD5dOcWesRea4wJ8g8xs8PrcdP1NNRvIDUCm2VaPCYqW0tRtDH25LNX4i6env9JRbkWZ3Easd6/G7r0P9g1lMVi4T3VxMsZeRtHaVsGWuEJqQy0ApdAh7KkhurIPOVAuZ74W8Wv8zUVdnUuO8R8nq3qd+JerGSjJM9uOqPhf7rd8RcOY/KLfZRIX5UqrdxIXFipo4/U6t7ym6818y1hgsXfSSvlxh8UHR73on8v0syfZ3Z7Qxk4n6eLoK3ektDVJ6gCkBTkeGePskJnpdGagNYaLbi1oJHxY31Ll5cCUqeRZqlJkuoiPBhOEab+oCzpF46ychqH2MNVuLp41WnmiDyxFGorbR/8GcsToJCKLbCoakK/vTc1lCw3IYlTQm2hFybSElgS8JvrSKYtt9fHRRw/PkEqKk9eO1NxCpuZSISzN4c3ghARo/U2izX1npWs8jdIQc46O5qtLn96bpiPa+pytWn7FqT7l+uVTZkZoIHbyenSTXx0zMSIy0rbi+Qgfl3I7VxgpQNyXZTbdGfQJfKdWXuc/3kcCRrq9Kvsk6Ct6cljnyYUjSVp2nRDXT9eS+WCvSc1tMxBth9gS6U16LA/KipzT4T6CfwKdLa2Ux2lFAV1mKYPejqzSO8cFmQqW9c8w3CeiDWG//Cjd1VcKurSX6xmoitVaRdPtHomVsQi/+TIrBCiodD1DpfJhmt628M1hGrdteMRcPpABJNAj7D1b7Ml4p3lxWd6YGgYZ/8OrKHuKcHtH5QfYvhNVd7El3wSuGGyUD1IQIJnu68uVACpwkQfqi4rz7bxS93k+u1SH6c0UW+qXNKy3ECBhTF3uf4IvfkmO9U9jXkq4iSU4FAkh8rhKs2D/FLPeWhdLl/4yYvWtJNNZEdiZzXszk+DARTy6T9vh3JWi7P77h4Y4FUtlVJN5ZToHF78TcXEm23ixh8h+Ju/YPpa4GX1lC1tNtZJtuk8CzgHqvQ1JNH2rCDKn2Pk1nkjb1Ljsk4t4WC71fiHIhz85uxfL6MSEvPYbKAhmTue4qdBUfbqPMA8olY6D4qXJj9r9R432LEklO5TJ3U4p5aJWWlopP9WZJ5cx5veMfwrTzKLA9RXuypbRPlJItR0oiKHh5iqY7p6g/9QsVJ+cpqy7MInNeTn9HG3e27ST86s9K0B7Hf8BHNFpTJM/v/EKStJdR+VaNtEfbxRUeperVGjLu/UyYxjd4HvsK16PfEHZgFmUvd4sv15aq+UtHnmOiLpLmGG1agrWpDHxBe6QZdf5XyHh1BsubaujsW0m09T2G6lPoK3EWl2n9J/DeQjtUHql+Q5XbBUrttpOgM4/Bcm8hgVxlOJjuE5YWAJ25fkTf2UJHlDE9Ga/ESEiOlnYbb0qh1vE2rXqXaX+uTVeotVS5TD5TQ19bDfGPDmC9ZzbGe2ZS+XoLvucWE665gpCra7E4uISIq4tI1l6ivMGQY/wbjUHn6RH9bXYRYpMD+KA/i5Q7PxKw42vSjfeIJ3eVuRXPLUmqJ+M1tYEGdKfbUpvqTEViKMOteUx35VOTGYy3pCm7e6d5H2Am/OoluNyVFntSiE/F7LeZlL05QJ37LnxO/0yF7WbkqlIpYeVuISaFFI000F8WLlU9w3CFsGG7WEFFewvwidZ0OuMc6QqxZqRe2l2IrK++mMAbwtanFxJ3ew1W2+dhs+E/CLy8Btdjog73fidUgL9VX0rKre/JNV5Ni5/MstkicVR7KBKPoAgWPSEHafTcR67hXNH1xTJiBuIJzMl2fEhrhjvv7PV5L7Ncm2BPtt0VUp4fkbbOpjhW2LwyiqoMLwKdTEmy06cwwFxJZiOVEjis9i2k3OmgUqNtN31LvOZPNEXcYXpiQLRYVk+ezGeReOIOsavxFGlvoy3CgEnRx6k2GQVpc4UPVr5vrIXe1nLcLu4l7NJqYsVjOx6ZS9idfbiZSSS9vp6CQHPSDPeQrLeVkCur8T27jGCNRaLPm4mTKLhq3e9EuPjx8LSMg/Fl4l7do1ICTIfXUhqiL/Ax4gU//O0zolwek+TwkESrGySZa9CQ/JxUrZ+oeLhDgEfRJ6BHWtKVSjPeVUCS3ytCLLUJfXwZFcVpVyjmSmc2bmq/4nFoPh/tNtORZsv0SIdUuU6qXQKjzUxPTlLs7kjiztl8vLaLiqcnJLcaUSuVrssIolSck8HhNRhsmkWwVNX3/BqZOUsmu4tFaYLpSjSTnBIgI1BHXZKYoVfHpL0XEHV6PgnXZ3FizQzunzmDv70pl3fvxur+cW4eWkek3UNS3bQp8brJcJ0tb3b+lc2/zODB0Z1k2GuSbXOH928NSdNdTqmB4HE8LBougUQkdaQhSQjYi6GWYiry4gnX+B2VwIuL+eisJiw9kzSjfdxZ+BURujtoDNNiOFNPAL8XQpMQIJLE1DBjI4PURdpTe+0gVVcOkCsBI+nIIvSWz+bqgq+59ttsbm1diP6uxTgeXk6nhS7dtgYSHSMYzg2S3Pye/roMpsS3D7eXi+w44ai2nt/mz2XzouVY6+tj/8QQXfVtuNs8Id7jEdZ6l9A5cwo/eyPi/KwkgNyhxGMtukv+jvrGH0mzuccH60vKuNrsq0bWwzl0prxkpCyAiRrJ8jlvaZCU15PlSLPxVVQS9HdIwlIlQHMtGSIT2tsXYbdFPHL0LRqChSnbHgmhhYuvtlIGdEUAEfS0+N6j6aUmTYaXaNA+h+8fv3Hxl8+5uegLLPbPwGzPYpp0z5OvK/G0IIqeSBsGqvzpEeKZbpZxUBCeYk10M9jVitHNR6z88ntsDfRwsdTH1+kVV/YfE0CHmWjWJMVeF/0Tu+XvhsqbgVMDbyVl3eO90TL0Dq8j68kSKi1X0C7GZjRqjcRlDUl03oyWyXdmGTKQeExpvLKPzUMlzWg71pJ6yqUlbE8tw0aeu51cis2R+WJKHtCRfle8uJUS9EDeY2UImB59T0mcK44Xt+F8dD3u8n6Ps/MJf7afeod1eB39nnD1TeS+PEmJlYZke0f68n3oLomhK80HJnuVPl25FBlayE/BGamR0Vw7cByTG1qEWjuQFZJMuctVBuNOyl6uYnnnOFeOXiDRU4/uegvlXsY7PKlw2UK55Wrago9JAjvLWOxa2iMuMVjqQWf0TUYjVtAcokWV2R9kvb2LisfRJUTe3SYifwjjvQtwPblMmZI0F4vU7JrFaNMDWhNEI+utGU4+y0StifLL+mrscbu/Fzu1pRIW1Kh0PUi8myaxWrMIWfEFdrvn8nzVt7geXEbJ3RNMSx7vzwkW81Mhc/6Y0ZKoT6AV1VZ4dwVwUYlHl9R5rKUjrW1Ba1UhlQnR4gz/YCTzHB+jT8sIfMvdo3soTfeQ3J1Giasm+c9/oyVOipOquJ/2kHHfxUw0WTJaqEOr/wG6I6/Sl2NHp98zrKQrVTxP/iq2T41k01083rkArzMrRE9X4aS+HMu1s4jQnkWfBJFarxP0RZ+gSdpe4X1HW6x5b3YY38u30J/7JVdX/MCpz/8Fs4WfM/pkJuOvf6D46Twc93zL43lfEbLuR4mMoXTbGRC+egbFt9bTlvKUKWHXqcZ4ybwfJP4FcfC3RZjJXKc4e0uLW1FZUkCYz1tqXdaJVGrhYX6GR+f24myuS3WALpn6c2mOvSMM/Zbe4jdMlL5mOPEsI5K8si2OUB8sIWS0m768d8Ro7+Xgmp9Qibq5iv6YE7w9ugiHHT9S7HKdPmHuwUxvMfs25Dw7Tp71fmnLW9R5naTKYTtDxQ8k+ZjQHqBGR4w57hrbebVpJk0+h2gNVGc09Tjjb9cTcnGGOLj7pJjs5vSO5bhf20Lkpb0kq29Fa9NiIbxluBw6SNKri6S43MT6/FF2rdqM9cM7uFtbEGRrx2ujuwwPdhNqoUHpy/X05pzn0eEN3L9ygwidVdS57WP0o5VIpqS8gQ9CXMb0V8dSF3JfGukVXTUpNOVnCTc84O3plRxds06RsvZQ4XSUh2sl61rcEn8q0UzB1IqM3JPPWEU8jba6pJvsoj3JkFLLTdTYrFaCbvPcTnPYPQqCrIi4vIj3j5aRbbKdEN0tDNY+ozX5IKX2eyUbPxJpuYiX6W38jG9ieeEMy+etY8bfF/PNvBUs/W0Va3dt48YRTW6o7cdI87yAfoHRlZMcWDOLotQQEl9pkfl4lTi1dYTcUWXHshUEWOuS43yFic7IT0ZKQI82u9KUYMVE4wsh4AAZJy/lXdyeqjT8rA3Q2roIlTqZxYCLq7E4u0MI5xWTDbGfZk1xEcUS06GQq3jDC7iJb671UOedzhwhl3M0+F1WMmZPtC2p1ud5e+hr8ryeY3nvEsnPdzPZeZ2mxJPEml5ksl2Txrcribi1T+a4nPqaSsxun+f0zmPsXLqNHUu2cXL7MY5t3sHVvauEqXfhYGTCIzEp7jYmuOjtU7o3xU3Iei81Dqmqcl1Nk1x/AabI0D2KfyV5054XSk/MRQHrIYVT3Ghs/8QZiueTQ4x8yEKlwFqdW/P+SonxGdFMCeqKKreny+nkMdzSzKhk0zER+FGZPZ8L2wi8uoHiN2c/hQS/SxSbraPQTY9qn8u4X5hDfUEatVkxeJ2dTdHT+dQ47cZp99/J8tOlMvQ2sYYnGe3u+eT2pkbE9DRJHCwnPz2euMBgDK/fQG31r+xbtQoDjeOYah3DVHM/jte2k6i3CvejX5FhtAGHkyvR2Lich2fUyQ1yoEn23iRFq03zFB8gaSrfXqyzm8jsu3/e6FD8nBxAJfTmRux3/0q7ux6DEiymW96JR40Q01RAb1Wm+NfAP1ehrxVmW2cTemMTRdZ/UPj6OKkPt5Pz8gQFdjoEGj1gYmiIwlgfvK9ukqpuxuvRUTw1lvNg1UystsyjJMJG+U8FpWwpgP+nx+jkNF2tbcR5+KOx6w+Wf/M/0d6kiu/eORRt+oEkzU1KP2+zcQbex5dyYv1CTm3aT/BTbfHemqS52OOvd5Jcu6vKNNj8wZ36PC8GKkSvG5PFzSUIriRUHA6pEqh5gJ4IW6m0l/LOg2LVZgVRkuRP3lt9knQ3E3ZbTeb6CBbHfufSvH/njfoyEgwOEX93K5nm6iRbXKIgzE5pNqaH6xhua5YTb6As7R2ZXt7kuRlhduMQsa7mnxAqQP8/a6ille6aBj5ml5IenILpZQ3Cfv5XJpvKhFuyyVL7DQ+1rzDe8gsP1v6AmRxk54LP6Nv4JZ3yvs5Zn1H4w3/n4bpfcHp4XKROpC3GXnD4URzppAwiCkwqb9RmEqS1X0C/VrZ3c14wxQm+5Pm9xOe1Oela2+i2f0GN6TWqnl6g6OJO7H/9gmsyEr6X1iurmfz0E+imNEemx3sYam4RCakREC0yRl3/Z3Uy2pZHRYwDxUkB9DVWM9lfr/zbeFet8jPd1fVySMmk+XviaWtJ0OVjtDgZyjXHEOMvVjaD7gvbido0F+3v/xfOc/5Kp6Xhp0OUx3R/C0MGWris/AEd6ZCnJ05Ix20gxegY0aYPSNc7RKWOGip2u+cTanBBCbopyYOSZKmuAA61NMDe8CYphzeKsRAykMfU+IiIfBjvln/HleXf82DFj8RpbyH88TViDAR0ihmjXe1KAP+/NdzSIPpeQVf2O1oLIxlo+Kh8vbeukaaSKgEcT5qfF772Vvgc3UH+1V2iza3K757sLGBApEhx37r6/AF0v/4LDz/7L/8EPdah/Mddr+F5Xm78Bd11c7i94leurlpKlMTntEOz6fS3Yaq1mf8NNQrtFZUFUEQAAAAASUVORK5CYII=" />
                 </ui:ClickImage.Image>
                 <ui:ClickImage.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e04d2e5e-ec50-4ba0-a925-c908fc71cbdf" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
                 </ui:ClickImage.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -136,11 +146,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">630,114</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">630,139.5 600,139.5 600,139.02 590,139.02</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,61</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">630,144.5 600,144.5 600,144.01999999999998 590,144.01999999999998</av:PointCollection>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レイドクエストボス選択" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\レイドクエスト相手選択.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="レイドクエストボス選択" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\レイドクエスト相手選択.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="attribute">[attribute]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="difficulty">[difficulty]</InArgument>
@@ -156,11 +166,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">390,113.52</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">390,139.52 270,139.52 270,206.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,61</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">390,144.01999999999998 270,144.01999999999998 270,206.5</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="結果未確認のバトルの処理" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\結果未確認のバトルの処理.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="結果未確認のバトルの処理" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\結果未確認のバトルの処理.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:Boolean" x:Key="processed">[processed]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
@@ -186,11 +196,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">70,489</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">170,511 170,1210</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">170,550 170,1210</av:PointCollection>
                                 </scg1:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Delay DisplayName="NOP" Duration="00:00:00.1000000" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2">
+                              <Delay DisplayName="NOP" Duration="00:00:00.1000000" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="Delay_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,11 +212,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">39,1210</av:Point>
-                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">170,1270 170,1300 600,1300 600,1329</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">262,70</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">170,1280 170,1310 600,1310 600,1329</av:PointCollection>
                                     </scg1:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="戦闘なし" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign DisplayName="戦闘なし" sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_1">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
                                     </Assign.To>
@@ -224,11 +234,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">500,1329</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">600,1351 600,1394</av:PointCollection>
+                                          <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">600,1390 600,1444</av:PointCollection>
                                         </scg1:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Delay DisplayName="NOP" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                      <Delay DisplayName="NOP" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="Delay_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -239,11 +249,11 @@
                                         <FlowStep x:Name="__ReferenceID8">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">500,1394</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                              <av:Point x:Key="ShapeLocation">500,1444</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,61</av:Size>
                                             </scg1:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[String.Format(&quot;レイドクエスト終了:result={0}&quot;, result)]">
+                                          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[String.Format(&quot;レイドクエスト終了:result={0}&quot;, result)]">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,11 +273,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">360,294</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">460,346 460,396.5</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">460,355 460,396.5</av:PointCollection>
                                 </scg1:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="回数アイテム制限処理" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\回数アイテム制限処理.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="回数アイテム制限処理" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\回数アイテム制限処理.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <OutArgument x:TypeArguments="x:Boolean" x:Key="enableStart">[enableStart]</OutArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
@@ -278,12 +288,12 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID19" Condition="[Not enableStart]" DisplayName="制限に引っかかった？" sap:VirtualizedContainerService.HintSize="107,87" sap2010:WorkflowViewState.IdRef="FlowDecision_8" True="{x:Reference __ReferenceID0}">
+                                <FlowDecision x:Name="__ReferenceID19" Condition="[Not enableStart]" DisplayName="制限に引っかかった？" sap:VirtualizedContainerService.HintSize="108,87" sap2010:WorkflowViewState.IdRef="FlowDecision_8" True="{x:Reference __ReferenceID0}">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <av:Point x:Key="ShapeLocation">406.5,396.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">107,87</av:Size>
+                                      <av:Size x:Key="ShapeSize">108,87</av:Size>
                                       <av:PointCollection x:Key="TrueConnector">406.5,440 170,440 170,489</av:PointCollection>
                                       <av:PointCollection x:Key="FalseConnector">513.5,440 640,440 640,524.5</av:PointCollection>
                                     </scg1:Dictionary>
@@ -293,11 +303,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">540,524.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">640,576.5 640,614.5</av:PointCollection>
+                                          <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">640,585.5 640,614.5</av:PointCollection>
                                         </scg1:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="戦闘開始時AP補充" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\AP補充.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="戦闘開始時AP補充" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\AP補充.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <OutArgument x:TypeArguments="x:Boolean" x:Key="useElixir" />
                                         </ui:InvokeWorkflowFile.Arguments>
@@ -312,11 +322,11 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">540,614.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">640,666.5 640,704</av:PointCollection>
+                                              <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">640,675.5 640,704</av:PointCollection>
                                             </scg1:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="幻獣・パーティーを選択する" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\幻獣とパーティーを選択して戦闘開始.xaml">
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="幻獣・パーティーを選択する" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="戦闘\戦闘準備\幻獣とパーティーを選択して戦闘開始.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="x:Boolean" x:Key="selectChaos">False</InArgument>
                                               <OutArgument x:TypeArguments="x:Boolean" x:Key="closed" />
@@ -332,11 +342,11 @@
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">540,704</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">640,756 640,794</av:PointCollection>
+                                                  <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">640,765 640,794</av:PointCollection>
                                                 </scg1:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="戦闘を行う（救援あり）" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\レイド戦闘.xaml">
+                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="戦闘を行う（救援あり）" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="戦闘\戦闘中処理\レイド戦闘.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <InArgument x:TypeArguments="x:Boolean" x:Key="myRaidBoss">True</InArgument>
                                                   <OutArgument x:TypeArguments="x:String" x:Key="condition">[condition]</OutArgument>
@@ -352,11 +362,11 @@
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">540,794</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">640,846 640,916.5</av:PointCollection>
+                                                      <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">640,855 640,916.5</av:PointCollection>
                                                     </scg1:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="戦闘終了処理" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="戦闘\戦後処理\戦闘終了処理.xaml">
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="戦闘終了処理" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="戦闘\戦後処理\戦闘終了処理.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
                                                       <InArgument x:TypeArguments="x:String" x:Key="condition">[condition]</InArgument>
                                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="isSuccessful">[isSuccessful]</OutArgument>
@@ -368,12 +378,12 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InvokeWorkflowFile>
                                                   <FlowStep.Next>
-                                                    <FlowDecision x:Name="__ReferenceID9" Condition="[isSuccessful]" DisplayName="戦闘に勝利した？" sap:VirtualizedContainerService.HintSize="93,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                                                    <FlowDecision x:Name="__ReferenceID9" Condition="[isSuccessful]" DisplayName="戦闘に勝利した？" sap:VirtualizedContainerService.HintSize="92,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <av:Point x:Key="ShapeLocation">593.5,916.5</av:Point>
-                                                          <av:Size x:Key="ShapeSize">93,87</av:Size>
+                                                          <av:Size x:Key="ShapeSize">92,87</av:Size>
                                                           <av:PointCollection x:Key="TrueConnector">593.5,960 480,960 480,1114.5</av:PointCollection>
                                                           <av:PointCollection x:Key="FalseConnector">686.5,960 800,960 800,1210</av:PointCollection>
                                                         </scg1:Dictionary>
@@ -383,11 +393,11 @@
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">380,1114.5</av:Point>
-                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                              <av:PointCollection x:Key="ConnectorLocation">480,1166.5 480,1210</av:PointCollection>
+                                                              <av:Size x:Key="ShapeSize">200,61</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">480,1175.5 480,1210</av:PointCollection>
                                                             </scg1:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke 結果処理 workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘\戦後処理\結果処理.xaml">
+                                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 結果処理 workflow" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="戦闘\戦後処理\結果処理.xaml">
                                                             <ui:InvokeWorkflowFile.Arguments>
                                                               <scg1:Dictionary x:TypeArguments="x:String, Argument" />
                                                             </ui:InvokeWorkflowFile.Arguments>
@@ -402,11 +412,11 @@
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <av:Point x:Key="ShapeLocation">349,1210</av:Point>
-                                                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                  <av:PointCollection x:Key="ConnectorLocation">480,1270 480,1300 600,1300 600,1329</av:PointCollection>
+                                                                  <av:Size x:Key="ShapeSize">262,70</av:Size>
+                                                                  <av:PointCollection x:Key="ConnectorLocation">480,1280 480,1310 600,1310 600,1329</av:PointCollection>
                                                                 </scg1:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <Assign DisplayName="正常終了" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                              <Assign DisplayName="正常終了" sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_2">
                                                                 <Assign.To>
                                                                   <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
                                                                 </Assign.To>
@@ -431,16 +441,16 @@
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">669,1210</av:Point>
-                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                              <av:PointCollection x:Key="ConnectorLocation">800,1270 800,1300 600,1300 600,1329</av:PointCollection>
+                                                              <av:Size x:Key="ShapeSize">262,70</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">800,1280 800,1310 600,1310 600,1329</av:PointCollection>
                                                             </scg1:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign DisplayName="時間切れまたは敗北" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                          <Assign DisplayName="時間切れまたは敗北" sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_3">
                                                             <Assign.To>
                                                               <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
                                                             </Assign.To>
                                                             <Assign.Value>
-                                                              <InArgument x:TypeArguments="x:String">[”FAILURE”]</InArgument>
+                                                              <InArgument x:TypeArguments="x:String">["FAILURE"]</InArgument>
                                                             </Assign.Value>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -487,11 +497,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">150,14.02</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">350,39.52 380,39.52 380,40 430,40</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,61</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">350,44.519999999999996 380,44.519999999999996 380,45 430,45</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;レイドクエスト開始:attribute={0},difficulty={1}&quot;, attribute, difficulty)]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;レイドクエスト開始:attribute={0},difficulty={1}&quot;, attribute, difficulty)]">
         <sap:WorkflowViewStateService.ViewState>
           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
