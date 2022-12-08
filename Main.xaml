@@ -107,7 +107,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">940,736</av:Point>
           <av:Size x:Key="ShapeSize">200,90</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">940,781 910,781 910,889.5 540,889.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">940,781 910,781 910,894.5 540,894.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="ブラウザを閉じる" sap:VirtualizedContainerService.HintSize="200,90" sap2010:WorkflowViewState.IdRef="Sequence_27">
@@ -147,11 +147,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">340,864</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:Size x:Key="ShapeSize">200,61</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">170,125.5 153,125.5 153,155.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;巡回終了&quot;]">
+          <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;巡回終了&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,39 +188,28 @@
               <av:PointCollection x:Key="ConnectorLocation">730,167 730,204.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="確認受取等" sap:VirtualizedContainerService.HintSize="498,696" sap2010:WorkflowViewState.IdRef="Sequence_132">
+          <Sequence DisplayName="確認受取等" sap:VirtualizedContainerService.HintSize="400,486" sap2010:WorkflowViewState.IdRef="Sequence_132">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="436,271" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="無視されたアクティビティ" sap:VirtualizedContainerService.HintSize="400,183" sap2010:WorkflowViewState.IdRef="Sequence_138">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.weaponsell&quot;))]" DisplayName="還元" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="If_39">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポン処分 workflow" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_59" UnSafe="False" WorkflowFileName="確認受取等\還元.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                        </ui:InvokeWorkflowFile.Arguments>
-                      </ui:InvokeWorkflowFile>
-                    </If.Then>
-                  </If>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.receivemission&quot;))]" DisplayName="ミッション報酬受け取り" sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="If_32">
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.weaponsell&quot;))]" DisplayName="還元" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="If_41">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポン処分 workflow" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_59" UnSafe="False" WorkflowFileName="確認受取等\還元.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </If.Then>
+            </If>
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.receivemission&quot;))]" DisplayName="ミッション報酬受け取り" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="If_32">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -244,7 +233,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.recievepresent&quot;))]" DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="If_31">
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.recievepresent&quot;))]" DisplayName="プレゼント受取" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="If_31">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -268,7 +257,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.gacha&quot;))]" DisplayName="ノーマルガチャ" sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="If_29">
+            <If Condition="[CBool(parsedValue.SelectToken(&quot;$.gacha&quot;))]" DisplayName="ノーマルガチャ" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="If_29">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -698,7 +687,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,634.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,61</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">200,665 230,665 230,889.5 340,889.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">200,665 230,665 230,894.5 340,894.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="ログ：キャンセル" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;巡回はキャンセルされた&quot;]">
