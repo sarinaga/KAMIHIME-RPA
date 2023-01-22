@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1704,1111" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1704,1102" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -72,7 +72,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="神姫プロジェクト" sap:VirtualizedContainerService.HintSize="1714,1046" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="神姫プロジェクト" sap:VirtualizedContainerService.HintSize="1714,1037" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="canceled" />
       <Variable x:TypeArguments="x:String" Name="inputedValue" />
@@ -164,12 +164,12 @@
     <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">320,404</av:Point>
-          <av:Size x:Key="ShapeSize">200,61</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">520,434.5 600,434.5 600,47 730,47 730,77</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">390,414</av:Point>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">590,440 810,440 810,139.5 940,139.5 940,169.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 起動 workflow" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="起動\起動.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 起動 workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="起動\起動.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
@@ -183,12 +183,12 @@
         <FlowStep x:Name="__ReferenceID16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">630,77</av:Point>
-              <av:Size x:Key="ShapeSize">200,90</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">730,167 730,204.5</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">840,169.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,81</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">940,250.5 940,294</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="確認受取等" sap:VirtualizedContainerService.HintSize="400,486" sap2010:WorkflowViewState.IdRef="Sequence_132">
+          <Sequence DisplayName="確認受取等" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_132">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,12 +282,12 @@
             <FlowStep x:Name="__ReferenceID12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">630,204.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,61</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">730,265.5 730,305.5</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">840,294</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">940,346 940,384</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.accessoryquest&quot;))]" DisplayName="アクセサリクエスト" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="If_15">
+              <If Condition="[CBool(parsedValue.SelectToken(&quot;$.accessoryquest&quot;))]" DisplayName="アクセサリクエスト" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -314,21 +314,20 @@
                 <FlowStep x:Name="__ReferenceID11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">630,305.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,61</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">730,366.5 730,477</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">840,384</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">940,436 940,466 960,466 960,479.50000000000006</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If sap2010:Annotation.AnnotationText="" Condition="[CBool(parsedValue.SelectToken(&quot;$.weaponbreak&quot;))]" DisplayName="ウェポンブレイク(兵仗の戦場)" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="If_13">
+                  <If Condition="[CBool(parsedValue.SelectToken(&quot;$.weaponbreak&quot;))]" DisplayName="ウェポンブレイク(兵仗の戦場)" sap:VirtualizedContainerService.HintSize="440,389" sap2010:WorkflowViewState.IdRef="If_13">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポンブレイク巡回 workflow" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_69" UnSafe="False" WorkflowFileName="巡回\クエスト\ウェポンブレイク巡回.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポンブレイク巡回 workflow" sap:VirtualizedContainerService.HintSize="362,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_69" UnSafe="False" WorkflowFileName="巡回\クエスト\ウェポンブレイク巡回.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="weapon">[parsedValue.SelectToken("$.weapontype").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="difficulty">[parsedValue.SelectToken("$.difficult").ToString]</InArgument>
@@ -340,12 +339,12 @@
                     <FlowStep x:Name="__ReferenceID17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">630,477</av:Point>
-                          <av:Size x:Key="ShapeSize">200,90</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">730,567 730,614.5</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">860,479.50000000000006</av:Point>
+                          <av:Size x:Key="ShapeSize">200,81</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">960,560.5 960,590.5 730,590.5 730,614.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="イベント" sap:VirtualizedContainerService.HintSize="200,90" sap2010:WorkflowViewState.IdRef="Sequence_135">
+                      <Sequence DisplayName="イベント" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_135">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -648,11 +647,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">8,269.5</av:Point>
-          <av:Size x:Key="ShapeSize">204,151</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">110,420.5 110,450.5 163,450.5 163,476.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">204,142</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">110,411.5 110,441.5 163,441.5 163,476.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="27f3ef6c-0da3-409c-a247-256eb23dffca" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" Dismissed="[canceled]" DisplayName="巡回内容入力" EnableAccessibility="False" FormFieldsOutputData="[inputedValue]" FormHeight="600" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;確認・受取&quot;,&quot;key&quot;:&quot;recive&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;ウェポン・幻獣・アクセサリ還元&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;なし&quot;},&quot;key&quot;:&quot;weaponsell&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;ミッション報酬受取&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;receivemission&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;プレゼント受取&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;recievepresent&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ノーマルガチャ&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;gacha&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;素材収集&quot;,&quot;key&quot;:&quot;collect&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;素材収集&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;collect1_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;素材収集&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;神姫強化回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;kamihime&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;ウェポン強化回数&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;weapon&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:0},{&quot;label&quot;:&quot;幻獣強化回数&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;mythicalbeast&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:0},{&quot;label&quot;:&quot;ジェム回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;jem&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;属性クエスト回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;elementquest&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;&lt;b&gt;アクセサリクエスト&lt;/b&gt;&quot;,&quot;key&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;},{&quot;label&quot;:&quot;実行する&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;accessoryquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;推究の正殿用の素材収集&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;collect2_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;推究の正殿用の素材収集&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;mainbuilding&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true}],&quot;collapsed&quot;:false}]},{&quot;label&quot;:&quot;兵仗の戦場&quot;,&quot;key&quot;:&quot;battlefield&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;ウェポンブレイク&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;weaponbreak_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;ウェポンブレイク&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;実行する&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;weaponbreak&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;武器種&quot;,&quot;tableView&quot;:true,&quot;defaultValue&quot;:&quot;剣&quot;,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;剣&quot;,&quot;value&quot;:&quot;剣&quot;},{&quot;label&quot;:&quot;槍&quot;,&quot;value&quot;:&quot;槍&quot;},{&quot;label&quot;:&quot;特殊剣&quot;,&quot;value&quot;:&quot;特殊剣&quot;},{&quot;label&quot;:&quot;斧&quot;,&quot;value&quot;:&quot;斧&quot;},{&quot;label&quot;:&quot;ハンマー&quot;,&quot;value&quot;:&quot;ハンマー&quot;},{&quot;label&quot;:&quot;杖&quot;,&quot;value&quot;:&quot;杖&quot;},{&quot;label&quot;:&quot;銃&quot;,&quot;value&quot;:&quot;銃&quot;},{&quot;label&quot;:&quot;弓&quot;,&quot;value&quot;:&quot;弓&quot;},{&quot;label&quot;:&quot;魔導具&quot;,&quot;value&quot;:&quot;魔導具&quot;}]},&quot;validate&quot;:{&quot;required&quot;:true,&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;weapontype&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;難易度&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;NORMAL&quot;,&quot;value&quot;:&quot;NORMAL&quot;},{&quot;label&quot;:&quot;HARD&quot;,&quot;value&quot;:&quot;HARD&quot;}]},&quot;validate&quot;:{&quot;required&quot;:true,&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;difficult&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;defaultValue&quot;:&quot;HARD&quot;}]},{&quot;title&quot;:&quot;タイタンハント&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;titanhunt_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;タイタンハント&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;実行する&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;titanhunt&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]}]},{&quot;label&quot;:&quot;レイドクエスト&quot;,&quot;key&quot;:&quot;raid&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;自発&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;raid1_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;自発&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ultimate以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidultimate&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidragnarok&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;raidragnarokplus&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;title&quot;:&quot;支援&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;raid2_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;支援&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ragnarok以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupportragnarok&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;number&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}]}]},{&quot;label&quot;:&quot;イベント&quot;,&quot;key&quot;:&quot;event&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;降臨戦&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;event1_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;降臨戦&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;週替&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;customMessage&quot;:&quot;0から500までの数値を入力してください&quot;,&quot;min&quot;:0,&quot;max&quot;:500},&quot;errorLabel&quot;:&quot;weeklyadventerror&quot;,&quot;key&quot;:&quot;weeklyadvent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;イベント&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;advent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;ユニオン&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;event2_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;ユニオン&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;サブ&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionsub&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;メイン&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:true,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionmain&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;レイドイベント&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;event3_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;レイドイベント&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;自発&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidevent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;支援&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupport&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false}]}],&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="204,151" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" StartAsMinimized="False">
+      <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="27f3ef6c-0da3-409c-a247-256eb23dffca" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" Dismissed="[canceled]" DisplayName="巡回内容入力" EnableAccessibility="False" FormFieldsOutputData="[inputedValue]" FormHeight="600" FormSchema="%[{&quot;components&quot;:[{&quot;label&quot;:&quot;確認・受取&quot;,&quot;key&quot;:&quot;recive&quot;,&quot;components&quot;:[{&quot;label&quot;:&quot;ウェポン・幻獣・アクセサリ還元&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;validate&quot;:{&quot;customMessage&quot;:&quot;なし&quot;},&quot;key&quot;:&quot;weaponsell&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;ミッション報酬受取&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;receivemission&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;プレゼント受取&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;recievepresent&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false},{&quot;label&quot;:&quot;ノーマルガチャ&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;gacha&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;label&quot;:&quot;素材収集&quot;,&quot;key&quot;:&quot;collect&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;素材収集&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;collect1_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;素材収集&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;神姫強化回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;kamihime&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;ウェポン強化回数&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;weapon&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:0},{&quot;label&quot;:&quot;幻獣強化回数&quot;,&quot;tableView&quot;:false,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;mythicalbeast&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:0},{&quot;label&quot;:&quot;ジェム回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;jem&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;属性クエスト回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;elementquest&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;&lt;b&gt;アクセサリクエスト&lt;/b&gt;&quot;,&quot;key&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;},{&quot;label&quot;:&quot;実行する&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;accessoryquest&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;推究の正殿用の素材収集&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;collect2_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;推究の正殿用の素材収集&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;回数&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:100},&quot;key&quot;:&quot;mainbuilding&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true}],&quot;collapsed&quot;:false}]},{&quot;label&quot;:&quot;兵仗の戦場&quot;,&quot;key&quot;:&quot;battlefield&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;ウェポンブレイク&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;weaponbreak_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;ウェポンブレイク&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;実行する&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;weaponbreak&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;武器種&quot;,&quot;tableView&quot;:true,&quot;defaultValue&quot;:&quot;剣&quot;,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;剣&quot;,&quot;value&quot;:&quot;剣&quot;},{&quot;label&quot;:&quot;槍&quot;,&quot;value&quot;:&quot;槍&quot;},{&quot;label&quot;:&quot;特殊剣&quot;,&quot;value&quot;:&quot;特殊剣&quot;},{&quot;label&quot;:&quot;斧&quot;,&quot;value&quot;:&quot;斧&quot;},{&quot;label&quot;:&quot;ハンマー&quot;,&quot;value&quot;:&quot;ハンマー&quot;},{&quot;label&quot;:&quot;杖&quot;,&quot;value&quot;:&quot;杖&quot;},{&quot;label&quot;:&quot;銃&quot;,&quot;value&quot;:&quot;銃&quot;},{&quot;label&quot;:&quot;弓&quot;,&quot;value&quot;:&quot;弓&quot;},{&quot;label&quot;:&quot;魔導具&quot;,&quot;value&quot;:&quot;魔導具&quot;}]},&quot;validate&quot;:{&quot;required&quot;:true,&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;weapontype&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true},{&quot;label&quot;:&quot;難易度&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;NORMAL&quot;,&quot;value&quot;:&quot;NORMAL&quot;},{&quot;label&quot;:&quot;HARD&quot;,&quot;value&quot;:&quot;HARD&quot;}]},&quot;validate&quot;:{&quot;required&quot;:true,&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;difficult&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;defaultValue&quot;:&quot;HARD&quot;}]},{&quot;title&quot;:&quot;タイタンハント&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;titanhunt_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;タイタンハント&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;実行する&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;titanhunt&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]}]},{&quot;label&quot;:&quot;レイドクエスト&quot;,&quot;key&quot;:&quot;raid&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;自発&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;raid1_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;自発&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ultimate以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidultimate&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;raidragnarok&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;raidragnarokplus&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true,&quot;defaultValue&quot;:false}]},{&quot;title&quot;:&quot;支援&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;raid2_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;支援&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Ragnarok以下&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupportragnarok&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;Ragnarok+以上&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;number&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}]}]},{&quot;label&quot;:&quot;イベント&quot;,&quot;key&quot;:&quot;event&quot;,&quot;components&quot;:[{&quot;title&quot;:&quot;降臨戦&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;event1_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;降臨戦&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;週替&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;customMessage&quot;:&quot;0から500までの数値を入力してください&quot;,&quot;min&quot;:0,&quot;max&quot;:500},&quot;errorLabel&quot;:&quot;weeklyadventerror&quot;,&quot;key&quot;:&quot;weeklyadvent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;decimalLimit&quot;:0,&quot;input&quot;:true},{&quot;label&quot;:&quot;イベント&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;advent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;ユニオン&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;event2_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;ユニオン&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;サブ&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionsub&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;メイン&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:true,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;unionmain&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false},{&quot;title&quot;:&quot;レイドイベント&quot;,&quot;collapsible&quot;:true,&quot;key&quot;:&quot;event3_panel&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;レイドイベント&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;自発&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidevent&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;支援&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:0,&quot;delimiter&quot;:false,&quot;requireDecimal&quot;:false,&quot;validate&quot;:{&quot;required&quot;:true,&quot;min&quot;:0,&quot;max&quot;:500},&quot;key&quot;:&quot;raidsupport&quot;,&quot;type&quot;:&quot;number&quot;,&quot;input&quot;:true}],&quot;collapsed&quot;:false}]}],&quot;key&quot;:&quot;tabs&quot;,&quot;type&quot;:&quot;tabs&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Tabs&quot;},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;../../assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="204,142" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" StartAsMinimized="False">
         <ufa:FormActivity.Body>
           <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
         </ufa:FormActivity.Body>
@@ -677,7 +676,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">140,476.5</av:Point>
               <av:Size x:Key="ShapeSize">92,87</av:Size>
-              <av:PointCollection x:Key="FalseConnector">232,520 262,520 262,40 420,40 420,70</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">232,520 262,520 262,111 289,111</av:PointCollection>
               <av:PointCollection x:Key="TrueConnector">140,520 100,520 100,634.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -707,11 +706,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">289,70</av:Point>
-                  <av:Size x:Key="ShapeSize">262,70</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">420,140 420,184.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">434,82</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">506,152 506,182 540,182 540,204</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="フォームのjson解析" sap:VirtualizedContainerService.HintSize="262,70" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="フォームのjson解析" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="njl:JToken">[parsedValue]</OutArgument>
                 </Assign.To>
@@ -728,12 +727,12 @@
                 <FlowStep x:Name="__ReferenceID8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">320,184.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,61</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">420,245.5 420,276</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">440,204</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">540,256 540,286 560,286 560,299.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="ログ：解析されたjson" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[parsedValue]">
+                  <ui:LogMessage DisplayName="ログ：解析されたjson" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[parsedValue]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -744,12 +743,12 @@
                     <FlowStep x:Name="__ReferenceID10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">320,276</av:Point>
-                          <av:Size x:Key="ShapeSize">200,90</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">420,366 420,404</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">460,299.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,81</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">560,380.5 560,410.5 490,410.5 490,414</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="数値変換" sap:VirtualizedContainerService.HintSize="200,90" sap2010:WorkflowViewState.IdRef="Sequence_131">
+                      <Sequence DisplayName="数値変換" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_131">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -837,11 +836,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">10,164.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,61</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">110,225.5 110,269.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">110,216.5 110,269.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;巡回開始&quot;]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;巡回開始&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -862,11 +861,11 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">910,274</av:Point>
-          <av:Size x:Key="ShapeSize">200,92</av:Size>
+          <av:Point x:Key="ShapeLocation">1100,288.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,83</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If sap2010:Annotation.AnnotationText="未実装" Condition="[CBool(parsedValue.SelectToken(&quot;$.mainbuilding&quot;))]" DisplayName="推究の正殿" sap:VirtualizedContainerService.HintSize="200,92" sap2010:WorkflowViewState.IdRef="If_14">
+      <If sap2010:Annotation.AnnotationText="未実装" Condition="[CBool(parsedValue.SelectToken(&quot;$.mainbuilding&quot;))]" DisplayName="推究の正殿" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="If_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -881,10 +880,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">1120,54.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,61</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.elementquest&quot;))]" DisplayName="属性クエスト" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="If_16">
+      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.elementquest&quot;))]" DisplayName="属性クエスト" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_16">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -914,10 +913,10 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">910,66</av:Point>
-          <av:Size x:Key="ShapeSize">200,61</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.materialquest&quot;))]" DisplayName="素材クエスト" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="If_25">
+      <If Condition="[CBool(parsedValue.SelectToken(&quot;$.materialquest&quot;))]" DisplayName="素材クエスト" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_25">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
