@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>777,702</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1135,702</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>兵仗の戦場ウェポンブレイク巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -101,9 +101,9 @@
           <av:PointCollection x:Key="ConnectorLocation">300,261.5 300,299.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InterruptibleDoWhile Condition="[not result = &quot;LIMIT&quot;]" DisplayName="繰り返し (後判定)" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile Condition="[not result = &quot;LIMIT&quot;]" DisplayName="繰り返し (後判定)" sap:VirtualizedContainerService.HintSize="455,321" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
-          <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="412,244" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="421,201" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="variable1" />
             </Sequence.Variables>
@@ -112,11 +112,17 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 兵仗の戦場ウェポンブレイク workflow" sap:VirtualizedContainerService.HintSize="350,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="イベント\例外処理なし\常設\ウェポンブレイク.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポンブレイク_例外処理付 workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="イベント\例外処理あり\ウェポンブレイク_例外処理付.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="weapon">[weapon]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="difficulty">[difficulty]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="result">[result]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="weapon">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="weapon" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="difficulty">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="difficulty" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="result">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="result" />
+                </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
@@ -153,7 +159,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,161.5 300,209.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;兵仗の戦場ウェポンブレイク巡回開始&quot;]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;兵仗の戦場ウェポンブレイク巡回開始&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
