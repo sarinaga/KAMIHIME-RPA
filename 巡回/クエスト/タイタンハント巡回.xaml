@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>993,702</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1225,702</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>タイタンハント巡回_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,6 +113,9 @@
                 <InArgument x:TypeArguments="x:String" x:Key="difficulty">
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="difficulty" />
                 </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="result">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="result" />
+                </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
