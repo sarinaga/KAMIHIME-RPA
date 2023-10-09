@@ -1,51 +1,57 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="マイページに戻る" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1104,833" sap2010:WorkflowViewState.IdRef="マイページに戻る_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="マイページに戻る" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1104,833" sap2010:WorkflowViewState.IdRef="マイページに戻る_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="マイページに戻る" sap:VirtualizedContainerService.HintSize="376,668" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -67,10 +73,14 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAYAAAACTR1pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEuSURBVChTTdFPSwJBGAbw+Rx7Cj9CXyA6eAry0KVzsIR5k25Gh4U6ZSSBVpdg2yC61SEI+wOdIiiTVNKEFSnTFgMhkGq3p55XJuaFlzns/N5nZlYF3Q5YxxcNWJYFd3kCGD6iUbuHm18BvjpwHAep1ALKpVvZZ9s2RjD6FOx6nuCgti/YL2/haCeN8akZxGJj0vHEIjK5Xajc3TlKaAsMhyfIry3harD538XDLCbTc4IJmCjwNHxC/aePAB94968Fm5DJvecq5s+ySD4cgEFsgWyd+lq/FGAO0FV4awviqjhJI95VbybUGNFAPvNkhegG2/0XKLU6LYksDtBQY64y+G8o0xJeZpQ4u74h5+cdTWRCNstvNWWvQL4Sf4MJ+ZIa6uZxw0oFUbeHveI3fgEkoZqMfYs9QQAAAABJRU5ErkJggg==" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA4AAAAJCAYAAAACTR1pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEuSURBVChTTdFPSwJBGAbw+Rx7Cj9CXyA6eAry0KVzsIR5k25Gh4U6ZSSBVpdg2yC61SEI+wOdIiiTVNKEFSnTFgMhkGq3p55XJuaFlzns/N5nZlYF3Q5YxxcNWJYFd3kCGD6iUbuHm18BvjpwHAep1ALKpVvZZ9s2RjD6FOx6nuCgti/YL2/haCeN8akZxGJj0vHEIjK5Xajc3TlKaAsMhyfIry3harD538XDLCbTc4IJmCjwNHxC/aePAB94968Fm5DJvecq5s+ySD4cgEFsgWyd+lq/FGAO0FV4awviqjhJI95VbybUGNFAPvNkhegG2/0XKLU6LYksDtBQY64y+G8o0xJeZpQ4u74h5+cdTWRCNstvNWWvQL4Sf4MJ+ZIa6uZxw0oFUbeHveI3fgEkoZqMfYs9QQAAAABJRU5ErkJggg==" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="61b0bbc4-b145-48b3-97ee-eee662235b3b" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
       </ui:ClickImage.Target>
     </ui:ClickImage>
     <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="マイページに戻る" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -85,10 +95,10 @@
         </ui:CursorPosition>
       </ui:ClickImage.CursorPosition>
       <ui:ClickImage.Image>
-        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARzSURBVEhLjdZPiFdVFAfwRxuzTdCuP0SBEESbWtRCglxEYETUIgoyYqywRYuwrEVJs1CkRWNmRa6CitBEShdZKUTUBDVJzGRlDkNFTGQITWiDmfN6n1Pndn/PF3XhcN+995zv9/y79/drvvrkmfaHvTva+QNPhXz42oPts4/c0j6/9pp216Mr211bbovZmjj7/eiRsiYHt9wUdvRgnf7xWPv9tvFif/itDQW/lqa/QRHQwa1jIYx33nNh++WLr8c3siRHemjyQJD4rmfnse4w/pW8jjqFckoCnfj0s/ItsgQ3MjvhbDdv67LjWxBDxMk5EnlNOvfG3WGcJKIdIj+9eKrds/3hyE5ma2bHHSNYNUctg+RIAYho4taLo34j5B1h7dTczP5YSzm7jPh/k9fEQBIc+cIHuwfJRasc385+XfTTidqBmrCWpk+KDMgrT68r3wgIYGLkN8eUIbP00sZ7wybK0OEpX3L0HYnIbWa074zd2R4/9nM0xUMrlkcNRY0EuKt2FnmXibdffrJ94PLl5arBcQ53iDjIa+JMLzDeP77qonZy5+bYAzp+5XmFfHzdjaUkyD56d0+cs7OWKTZ9B2pHGulmIEIGiAjiBLfWdEPk9tkhtGaXZWILF37dA7+9eX/MjUNGvKRsTO1/IYh4jRhQn9xsneTt0qm43/ZkS/bgZfRDDdjwilAMkG5oGvWuUz5EvuGKc2OfLTJOs2NvwJvd+/5fmf27+WppRO2RyHSTOn2Ap9c/VsgTuCYn7I5MHwpykXIma68ZdX+/8xuKIsvUiRYAb/84+VOc1eSu1BA5vZO/LgQxew1owPVtvx99kFMI8m7oAVfGbCR4n1x9kzzLYngf2LtqGTmJ974j9wIWcpGGwvHvSsciUT+pm1t/10jNgRvZXLKSpcnMcQoO3HTAvtSPkEuJemV35hWzx6gGR5YZGSKn/8v8TGA447RhHw/cjJ40DuZnp0JJqkrDdB6LNsFlYOLqs8ntO8/065OsO7z2zEL88ODJm1XIM0KSRkHAqANGDrRPruuRI8iyZN3pwNl383XhmGzgydRn9EFOGEoXAUYAJyjyOu01eeogc68RRvk6Z+1ngDClPh1opDfTmilPYnsJbF2T63qNVZMDtEaEBB4M69oBqedA/I06s29TSbk5nQGY83+R01s8uinSma8avK0rrw080neiYeiAp8SafLF6dQElUgrMa2hkXYGn3vz0E0FuDVx00p+YMMxZ6mZp/uO40xkFI0A1OSNR0xGVYc495/Q8mcjrJkUOV4D0yNLcexF948Oh5qCMELHvFAZeLSXhsTfBbG0/yUMm1xYyTsim87LueKIE3aPWZMopZHo+X3XBCDlhlDdBk5qzo1MnnO7IYTmH5bwupzJtv31NzNFwdePwbogc4JpLl7VTG5+LN4De2GX/pDzFH4Vv7rsqsGA7h+9MoP6EXL/snLBvdK3aOWTA+8Obb4j6ZfrNvK9/MIAit5/E9OJfSmfvGxn9OrhXLzm/XZzQ/bvbPwE7sXLDdWukdgAAAABJRU5ErkJggg==" />
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAcCAYAAACZOmSXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARzSURBVEhLjdZPiFdVFAfwRxuzTdCuP0SBEESbWtRCglxEYETUIgoyYqywRYuwrEVJs1CkRWNmRa6CitBEShdZKUTUBDVJzGRlDkNFTGQITWiDmfN6n1Pndn/PF3XhcN+995zv9/y79/drvvrkmfaHvTva+QNPhXz42oPts4/c0j6/9pp216Mr211bbovZmjj7/eiRsiYHt9wUdvRgnf7xWPv9tvFif/itDQW/lqa/QRHQwa1jIYx33nNh++WLr8c3siRHemjyQJD4rmfnse4w/pW8jjqFckoCnfj0s/ItsgQ3MjvhbDdv67LjWxBDxMk5EnlNOvfG3WGcJKIdIj+9eKrds/3hyE5ma2bHHSNYNUctg+RIAYho4taLo34j5B1h7dTczP5YSzm7jPh/k9fEQBIc+cIHuwfJRasc385+XfTTidqBmrCWpk+KDMgrT68r3wgIYGLkN8eUIbP00sZ7wybK0OEpX3L0HYnIbWa074zd2R4/9nM0xUMrlkcNRY0EuKt2FnmXibdffrJ94PLl5arBcQ53iDjIa+JMLzDeP77qonZy5+bYAzp+5XmFfHzdjaUkyD56d0+cs7OWKTZ9B2pHGulmIEIGiAjiBLfWdEPk9tkhtGaXZWILF37dA7+9eX/MjUNGvKRsTO1/IYh4jRhQn9xsneTt0qm43/ZkS/bgZfRDDdjwilAMkG5oGvWuUz5EvuGKc2OfLTJOs2NvwJvd+/5fmf27+WppRO2RyHSTOn2Ap9c/VsgTuCYn7I5MHwpykXIma68ZdX+/8xuKIsvUiRYAb/84+VOc1eSu1BA5vZO/LgQxew1owPVtvx99kFMI8m7oAVfGbCR4n1x9kzzLYngf2LtqGTmJ974j9wIWcpGGwvHvSsciUT+pm1t/10jNgRvZXLKSpcnMcQoO3HTAvtSPkEuJemV35hWzx6gGR5YZGSKn/8v8TGA447RhHw/cjJ40DuZnp0JJqkrDdB6LNsFlYOLqs8ntO8/065OsO7z2zEL88ODJm1XIM0KSRkHAqANGDrRPruuRI8iyZN3pwNl383XhmGzgydRn9EFOGEoXAUYAJyjyOu01eeogc68RRvk6Z+1ngDClPh1opDfTmilPYnsJbF2T63qNVZMDtEaEBB4M69oBqedA/I06s29TSbk5nQGY83+R01s8uinSma8avK0rrw080neiYeiAp8SafLF6dQElUgrMa2hkXYGn3vz0E0FuDVx00p+YMMxZ6mZp/uO40xkFI0A1OSNR0xGVYc495/Q8mcjrJkUOV4D0yNLcexF948Oh5qCMELHvFAZeLSXhsTfBbG0/yUMm1xYyTsim87LueKIE3aPWZMopZHo+X3XBCDlhlDdBk5qzo1MnnO7IYTmH5bwupzJtv31NzNFwdePwbogc4JpLl7VTG5+LN4De2GX/pDzFH4Vv7rsqsGA7h+9MoP6EXL/snLBvdK3aOWTA+8Obb4j6ZfrNvK9/MIAit5/E9OJfSmfvGxn9OrhXLzm/XZzQ/bvbPwE7sXLDdWukdgAAAABJRU5ErkJggg==" />
       </ui:ClickImage.Image>
       <ui:ClickImage.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2eba532c-98b7-4e76-9a69-bea8edf33e61" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
       </ui:ClickImage.Target>
     </ui:ClickImage>
     <Delay DisplayName="タイミング合わせ" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
