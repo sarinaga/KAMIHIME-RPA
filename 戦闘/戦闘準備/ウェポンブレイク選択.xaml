@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,924</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1225,915</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>兵仗の戦場_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -41,33 +41,44 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
-      <AssemblyReference>System.Activities</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="ウェポンブレイクのクエストを選択する&#xA;&#xA;引数：&#xA;　weapon: 対象武器(剣|槍|特殊剣|斧|ハンマー|杖|銃|弓|魔道具)&#xA;　difficulty: 難易度(NORMAL|HARD)" DisplayName="ウェポンブレイク選択" sap:VirtualizedContainerService.HintSize="1024,859" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="ウェポンブレイクのクエストを選択する&#xA;&#xA;引数：&#xA;　weapon: 対象武器(剣|槍|特殊剣|斧|ハンマー|杖|銃|弓|魔道具)&#xA;　difficulty: 難易度(NORMAL|HARD)" DisplayName="ウェポンブレイク選択" sap:VirtualizedContainerService.HintSize="1024,850" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -86,11 +97,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">80,114.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,61</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">180,175.5 180,205.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">180,166.5 180,205.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ウェポンブレイク選択開始:weapon=&quot; &amp; weapon &amp; &quot; difficulty=&quot; &amp; difficulty]">
+      <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ウェポンブレイク選択開始:weapon=&quot; &amp; weapon &amp; &quot;, difficulty=&quot; &amp; difficulty]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -102,11 +113,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">80,205.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,61</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">180,266.5 180,294.5</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">180,257.5 180,294.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Flowchart DisplayName="難易度選択" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+          <Flowchart DisplayName="難易度選択" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_3">
             <Flowchart.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="imageNormal" />
               <Variable x:TypeArguments="ui:UiElement" Name="imageHard" />
@@ -246,11 +257,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">80,294.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,61</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">180,355.5 180,404.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">180,346.5 180,404.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Flowchart DisplayName="武器選択" sap:VirtualizedContainerService.HintSize="1036,1284" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+              <Flowchart DisplayName="武器選択" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -353,10 +364,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ClickImage>
                           <FlowStep.Next>
-                            <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID6}" x:Name="__ReferenceID14" DisplayName="武器" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_3">
-                              <FlowSwitch.Expression>
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="weapon" />
-                              </FlowSwitch.Expression>
+                            <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID6}" x:Name="__ReferenceID14" DisplayName="武器" Expression="[weapon]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">415,866.5</av:Point>
@@ -685,11 +693,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">80,404.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,61</av:Size>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">190,175.5 190,234.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,61" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;ウェポンブレイク選択終了&quot;]">
+                  <ui:LogMessage DisplayName="終了ログ" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;ウェポンブレイク選択終了&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

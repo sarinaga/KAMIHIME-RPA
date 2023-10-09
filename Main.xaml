@@ -366,7 +366,7 @@
                                   <av:Size x:Key="ShapeSize">200,53</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="アクセクエスト巡回" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_77" UnSafe="False" WorkflowFileName="巡回\クエスト\アクセクエスト巡回.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="アクセクエスト巡回" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_77" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\アクセクエスト巡回.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:Int32" x:Key="level">[CInt(parsedValue.SelectToken("$.accessoryLevel"))]</InArgument>
                                   <InArgument x:TypeArguments="x:Int32" x:Key="dweek">[accessoryAttribute]</InArgument>
@@ -437,7 +437,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポンブレイク巡回 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_69" UnSafe="False" WorkflowFileName="巡回\クエスト\ウェポンブレイク巡回.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ウェポンブレイク巡回 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_69" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\ウェポンブレイク巡回.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="weapon">[parsedValue.SelectToken("$.weapontype").ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="difficulty">[parsedValue.SelectToken("$.difficult").ToString]</InArgument>
@@ -471,7 +471,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke タイタンハント巡回 workflow" sap:VirtualizedContainerService.HintSize="353,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_80" UnSafe="False" WorkflowFileName="巡回\クエスト\タイタンハント巡回.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke タイタンハント巡回 workflow" sap:VirtualizedContainerService.HintSize="353,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_80" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\タイタンハント巡回.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="difficulty">HYPERON</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
@@ -490,7 +490,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke タイタンハント巡回 workflow" sap:VirtualizedContainerService.HintSize="353,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_81" UnSafe="False" WorkflowFileName="巡回\クエスト\タイタンハント巡回.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke タイタンハント巡回 workflow" sap:VirtualizedContainerService.HintSize="353,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_81" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\タイタンハント巡回.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="difficulty">ATLAS</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
@@ -528,7 +528,7 @@
                                 <InArgument x:TypeArguments="s:Int32[]">[{CInt(parsedValue.SelectToken("$.jem")),CInt(parsedValue.SelectToken("$.kamihime")),CInt(parsedValue.SelectToken("$.weapon")),CInt(parsedValue.SelectToken("$.mythicalbeast"))}]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 素材クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_74" UnSafe="False" WorkflowFileName="巡回\クエスト\素材クエスト巡回.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 素材クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_74" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\素材クエスト巡回.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="s:Int32[]" x:Key="targets">[materialquest]</InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
@@ -623,7 +623,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 属性クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_78" UnSafe="False" WorkflowFileName="巡回\クエスト\属性クエスト巡回.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 属性クエスト巡回 workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_78" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\属性クエスト巡回.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="max">[elementquest]</InArgument>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="dweek">[dweek]</InArgument>
@@ -675,7 +675,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 降臨戦週替り巡回 workflow" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_67" UnSafe="False" WorkflowFileName="巡回\降臨戦週替り巡回.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 降臨戦週替り巡回 workflow" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_67" UnSafe="False" WorkflowFileName="起動\巡回\降臨戦週替り巡回.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:Int32" x:Key="count">[weeklyadvent]</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -694,7 +694,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドイベント巡回 workflow" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_63" UnSafe="False" WorkflowFileName="巡回\イベント\レイドイベント巡回.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドイベント巡回 workflow" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_63" UnSafe="False" WorkflowFileName="起動\巡回\イベント\レイドイベント巡回.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="max">[raidevent]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
@@ -717,7 +717,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_62" UnSafe="False" WorkflowFileName="巡回\レイドボス支援巡回.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_62" UnSafe="False" WorkflowFileName="起動\巡回\レイドボス支援巡回.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="count">[raidsupport]</InArgument>
                                             <InArgument x:TypeArguments="x:Boolean" x:Key="isEvent">True</InArgument>
@@ -736,7 +736,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ユニオンイベント主巡回 workflow" sap:VirtualizedContainerService.HintSize="377,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_64" UnSafe="False" WorkflowFileName="巡回\イベント\ユニオンイベント主巡回.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ユニオンイベント主巡回 workflow" sap:VirtualizedContainerService.HintSize="377,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_64" UnSafe="False" WorkflowFileName="起動\巡回\イベント\ユニオンイベント主巡回.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="max">[unionmain]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
@@ -759,7 +759,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ユニオンイベント副巡回 workflow" sap:VirtualizedContainerService.HintSize="377,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_65" UnSafe="False" WorkflowFileName="巡回\イベント\ユニオンイベント副巡回.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ユニオンイベント副巡回 workflow" sap:VirtualizedContainerService.HintSize="377,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_65" UnSafe="False" WorkflowFileName="起動\巡回\イベント\ユニオンイベント副巡回.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="max">[unionsub]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
@@ -782,7 +782,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 降臨戦イベント巡回 workflow" sap:VirtualizedContainerService.HintSize="364,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_66" UnSafe="False" WorkflowFileName="巡回\イベント\降臨戦イベント巡回.xaml">
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 降臨戦イベント巡回 workflow" sap:VirtualizedContainerService.HintSize="364,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_66" UnSafe="False" WorkflowFileName="起動\巡回\イベント\降臨戦イベント巡回.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:Int32" x:Key="max">[advent]</InArgument>
                                           </ui:InvokeWorkflowFile.Arguments>
@@ -814,7 +814,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回 workflow(Ultimateまで)" sap:VirtualizedContainerService.HintSize="352,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="巡回\クエスト\レイドクエスト巡回.xaml">
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回 workflow(Ultimateまで)" sap:VirtualizedContainerService.HintSize="352,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\レイドクエスト巡回.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"風", "火","水","雷","光","闇"}]</InArgument>
                                               <InArgument x:TypeArguments="s:String[]" x:Key="dificulties" xml:space="preserve">[{"ULTIMATE", "EXPERT",  "STANDARD"}]</InArgument>
@@ -846,7 +846,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="巡回\クエスト\レイドクエスト巡回.xaml">
+                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\レイドクエスト巡回.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"火","水","風","雷","光","闇"}]</InArgument>
                                                   <InArgument x:TypeArguments="s:String[]" x:Key="dificulties">[{"RAGNAROK50", "RAGNAROK60"}]</InArgument>
@@ -875,7 +875,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <If.Then>
-                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（超高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="巡回\クエスト\レイドクエスト巡回.xaml">
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドクエスト巡回（超高難易度） workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="起動\巡回\クエスト\レイドクエスト巡回.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
                                                       <InArgument x:TypeArguments="s:String[]" x:Key="attributes">[{"火","水","風","雷","光","闇"}]</InArgument>
                                                       <InArgument x:TypeArguments="s:String[]" x:Key="dificulties">[{"RAGNAROK80", "MALICIOUS"}]</InArgument>
@@ -897,7 +897,7 @@
                                                       <av:PointCollection x:Key="ConnectorLocation">1450,856.5 1450,886.5 1330,886.5 1330,594 1620,594 1620,624</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="巡回\レイドボス支援巡回.xaml">
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke レイドボス支援巡回 workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="起動\巡回\レイドボス支援巡回.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
                                                       <InArgument x:TypeArguments="x:Int32" x:Key="count">[Cint(parsedValue.SelectToken("$.raidsupportragnarok"))]</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
