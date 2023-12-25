@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1225,1242</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1040,1242</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>レイドクエスト選択_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -971,7 +971,7 @@
           <av:PointCollection x:Key="ConnectorLocation">570,565.5 570,595.5 430,595.5 430,844.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="雷" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_17">
+      <Flowchart DisplayName="雷" sap:VirtualizedContainerService.HintSize="1284,1026" sap2010:WorkflowViewState.IdRef="Flowchart_17">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1195,6 +1195,7 @@
                   <av:PointCollection x:Key="Default">475,138.25 190,138.25 190,164.5</av:PointCollection>
                   <av:PointCollection x:Key="RAGNAROK60Connector">545,181.75 900,181.75 900,279</av:PointCollection>
                   <av:PointCollection x:Key="MALICIOUSConnector">545,138.25 900,138.25 900,279</av:PointCollection>
+                  <av:PointCollection x:Key="MALICIOUS+Connector">510,203.5 510,233.5 900,233.5 900,279</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID29">
@@ -1376,6 +1377,7 @@
               </FlowStep>
               <x:Reference>__ReferenceID29<x:Key>RAGNAROK60</x:Key></x:Reference>
               <x:Reference>__ReferenceID29<x:Key>MALICIOUS</x:Key></x:Reference>
+              <x:Reference>__ReferenceID29<x:Key>MALICIOUS+</x:Key></x:Reference>
             </FlowSwitch>
           </FlowStep.Next>
         </FlowStep>
@@ -1623,7 +1625,7 @@
                   <av:PointCollection x:Key="Default">475,138.25 190,138.25 190,164.5</av:PointCollection>
                   <av:PointCollection x:Key="RAGNAROK60Connector">545,181.75 900,181.75 900,279</av:PointCollection>
                   <av:PointCollection x:Key="MALICIOUSConnector">545,138.25 900,138.25 900,279</av:PointCollection>
-                  <av:PointCollection x:Key="RAGNAROK50Connector">527.5,203.5 527.5,233.5 900,233.5 900,279</av:PointCollection>
+                  <av:PointCollection x:Key="MALICIOUS+Connector">510,203.5 510,233.5 900,233.5 900,279</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowStep x:Key="RAGNAROK80" x:Name="__ReferenceID43">
@@ -1770,7 +1772,7 @@
                           <av:Size x:Key="ShapeSize">200,52</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="風MALICIOUS+" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="ClickImage_142" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="風MALICIOUS+" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ClickImage_142" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                         <ui:ClickImage.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -1802,8 +1804,8 @@
                 </FlowStep.Next>
               </FlowStep>
               <x:Reference>__ReferenceID43<x:Key>RAGNAROK60</x:Key></x:Reference>
-              <x:Reference>__ReferenceID43<x:Key>RAGNAROK50</x:Key></x:Reference>
               <x:Reference>__ReferenceID43<x:Key>MALICIOUS</x:Key></x:Reference>
+              <x:Reference>__ReferenceID43<x:Key>MALICIOUS+</x:Key></x:Reference>
             </FlowSwitch>
           </FlowStep.Next>
         </FlowStep>
@@ -2423,17 +2425,18 @@
               <av:Point x:Key="ShapeLocation">265,116.5</av:Point>
               <av:Size x:Key="ShapeSize">70,87</av:Size>
               <av:PointCollection x:Key="Default">265,138.25 120,138.25 120,214.5</av:PointCollection>
-              <av:PointCollection x:Key="MALICIOUSConnector">335,181.75 980,181.75 980,224</av:PointCollection>
-              <av:PointCollection x:Key="RAGNAROK60Connector">335,160 980,160 980,224</av:PointCollection>
-              <av:PointCollection x:Key="RAGNAROK80Connector">335,138.25 980,138.25 980,224</av:PointCollection>
+              <av:PointCollection x:Key="MALICIOUSConnector">335,181.75 930,181.75 930,254</av:PointCollection>
+              <av:PointCollection x:Key="RAGNAROK60Connector">335,160 930,160 930,254</av:PointCollection>
+              <av:PointCollection x:Key="RAGNAROK80Connector">335,138.25 930,138.25 930,254</av:PointCollection>
+              <av:PointCollection x:Key="MALICIOUS+Connector">300,203.5 300,233.5 930,233.5 930,254</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowStep x:Key="RAGNAROK60" x:Name="__ReferenceID70">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">880,224</av:Point>
+                <av:Point x:Key="ShapeLocation">830,254</av:Point>
                 <av:Size x:Key="ShapeSize">200,52</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">980,276 980,306 977.5,306 977.5,616.5</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">930,306 930,336 977.5,336 977.5,616.5</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Delay DisplayName="NOP" Duration="00:00:00.1000000" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Delay_6">
@@ -2606,6 +2609,7 @@
           </FlowStep>
           <x:Reference>__ReferenceID70<x:Key>RAGNAROK80</x:Key></x:Reference>
           <x:Reference>__ReferenceID70<x:Key>MALICIOUS</x:Key></x:Reference>
+          <x:Reference>__ReferenceID70<x:Key>MALICIOUS+</x:Key></x:Reference>
         </FlowSwitch>
         <x:Reference>__ReferenceID72</x:Reference>
         <x:Reference>__ReferenceID73</x:Reference>
