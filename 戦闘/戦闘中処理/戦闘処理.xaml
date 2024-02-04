@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1225,1266</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1225,1750</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>戦闘処理_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,11 +93,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:Stopwatch" Default="[Nothing]" Name="stopwatch" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="complete" />
-      <Variable x:TypeArguments="sd:Stopwatch" Name="stopwatch_reload">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="sd:Stopwatch" ExpressionText="Nothing" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="sd:Stopwatch" Default="[Nothing]" Name="stopwatch_reload" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -131,7 +127,7 @@
               <av:PointCollection x:Key="ConnectorLocation">150,286.5 150,354</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeCode ContinueOnError="{x:Null}" Code="swatch = New System.Diagnostics.Stopwatch()&#xD;&#xA;swatch.Start()&#xD;&#xA;" DisplayName="援軍ストップウォッチ開始" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="swatch = New System.Diagnostics.Stopwatch()&#xA;swatch.Start()&#xA;" DisplayName="援軍ストップウォッチ開始" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
             <ui:InvokeCode.Arguments>
               <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="swatch">[stopwatch]</InOutArgument>
             </ui:InvokeCode.Arguments>
@@ -151,11 +147,9 @@
                   <av:PointCollection x:Key="ConnectorLocation">150,406 150,458</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeCode ContinueOnError="{x:Null}" Code="swatch = New System.Diagnostics.Stopwatch()&#xD;&#xA;swatch.Start()&#xD;&#xA;" DisplayName="再読み込みストップウォッチ開始" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+              <ui:InvokeCode ContinueOnError="{x:Null}" Code="swatch = New System.Diagnostics.Stopwatch()&#xA;swatch.Start()&#xA;" DisplayName="再読み込みストップウォッチ開始" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
                 <ui:InvokeCode.Arguments>
-                  <InArgument x:TypeArguments="sd:Stopwatch" x:Key="swatch">
-                    <VisualBasicValue x:TypeArguments="sd:Stopwatch" ExpressionText="stopwatch_reload" />
-                  </InArgument>
+                  <InArgument x:TypeArguments="sd:Stopwatch" x:Key="swatch">[stopwatch_reload]</InArgument>
                 </ui:InvokeCode.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -337,7 +331,10 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:InvokeCode>
                                               <FlowStep.Next>
-                                                <FlowDecision x:Name="__ReferenceID2" Condition="[stopwatch.ElapsedMilliseconds &gt; 315000 And request]" DisplayName="10分経過？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                                <FlowDecision x:Name="__ReferenceID2" DisplayName="10分経過？" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                                  <FlowDecision.Condition>
+                                                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="stopwatch.ElapsedMilliseconds &gt; 630000" />
+                                                  </FlowDecision.Condition>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -394,9 +391,7 @@
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <ui:InvokeCode ContinueOnError="{x:Null}" Code="swatch.Reset()&#xA;swatch.Start()" DisplayName="リロードタイマー初期化" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
                                                             <ui:InvokeCode.Arguments>
-                                                              <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="swatch">
-                                                                <VisualBasicReference x:TypeArguments="sd:Stopwatch" ExpressionText="stopwatch_reload" />
-                                                              </InOutArgument>
+                                                              <InOutArgument x:TypeArguments="sd:Stopwatch" x:Key="swatch">[stopwatch_reload]</InOutArgument>
                                                             </ui:InvokeCode.Arguments>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
