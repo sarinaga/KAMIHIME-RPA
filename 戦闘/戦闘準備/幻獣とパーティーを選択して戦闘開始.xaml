@@ -9,62 +9,60 @@
   <VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Reflection</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Activities</x:String>
-      <x:String>System</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>System.Activities.Statements</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="幻獣とパーティーを選択してバトルスタート。人数満員や戦闘終了の場合はキャンセルしてホームに戻る&#xA;&#xA;引数&#xA;　selectChaos: 属性を混沌にする=True,有利属性で戦う=False&#xA;&#xA;戻り値&#xA;　closed:&#xA;　　(レイド支援で)戦闘開始できなかった場合=True&#xA;　　戦闘開始した場合=False&#xD;&#xA;　noList:&#xD;&#xA;　　幻獣一覧が表示されていない=True&#xD;&#xA;　　幻獣一覧が表示されている=False" DisplayName="幻獣とパーティーを選択して戦闘開始" sap:VirtualizedContainerService.HintSize="1387,1866" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+  <Flowchart sap2010:Annotation.AnnotationText="幻獣とパーティーを選択してバトルスタート。人数満員や戦闘終了の場合はキャンセルしてホームに戻る&#xA;&#xA;引数&#xA;　selectChaos: 属性を混沌にする=True,有利属性で戦う=False&#xA;&#xA;戻り値&#xA;　closed:&#xA;　　(レイド支援で)戦闘開始できなかった場合=True&#xA;　　戦闘開始した場合=False&#xA;　noList:&#xA;　　幻獣一覧が表示されていない=True&#xA;　　幻獣一覧が表示されている=False" DisplayName="幻獣とパーティーを選択して戦闘開始" sap:VirtualizedContainerService.HintSize="1387,1866" sap2010:WorkflowViewState.IdRef="Flowchart_6">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="type" />
-      <Variable x:TypeArguments="ui:UiElement" Name="imageList">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="Nothing" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="ui:UiElement" Default="[Nothing]" Name="imageList" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -288,10 +286,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:WaitImageAppear>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID14" DisplayName="幻獣が表示されていない？" sap:VirtualizedContainerService.HintSize="134,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-          <FlowDecision.Condition>
-            <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="imageList Is Nothing" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID14" Condition="[imageList Is Nothing]" DisplayName="幻獣が表示されていない？" sap:VirtualizedContainerService.HintSize="134,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
