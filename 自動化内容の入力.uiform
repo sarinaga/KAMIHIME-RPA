@@ -1,0 +1,689 @@
+﻿{
+  "Metadata": {
+    "Id": "e54f44d6-ce6e-4853-8564-a917741d3651",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "自動化内容の入力",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "components": [
+          {
+            "label": "素材１",
+            "key": "material1",
+            "components": [
+              {
+                "title": "素材",
+                "collapsible": true,
+                "key": "matterPanel",
+                "type": "panel",
+                "label": "Panel",
+                "collapsed": false,
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "神姫",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "required": true,
+                      "min": 0,
+                      "max": 100
+                    },
+                    "key": "materialKamihime",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  },
+                  {
+                    "label": "ウェポン",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "min": 0,
+                      "max": 100
+                    },
+                    "key": "materialWeapon",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  },
+                  {
+                    "label": "幻獣",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "required": true,
+                      "min": 0,
+                      "max": 100
+                    },
+                    "key": "materialBeast",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  },
+                  {
+                    "label": "ジェム",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "required": true,
+                      "min": 0,
+                      "max": 100
+                    },
+                    "key": "materialJem",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "属性",
+                "collapsible": false,
+                "key": "attributePanel",
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "属性",
+                    "labelPosition": "left-left",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "defaultValue": -1,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "火",
+                          "value": "1"
+                        },
+                        {
+                          "label": "水",
+                          "value": "2"
+                        },
+                        {
+                          "label": "風",
+                          "value": "3"
+                        },
+                        {
+                          "label": "雷",
+                          "value": "4"
+                        },
+                        {
+                          "label": "光",
+                          "value": "5"
+                        },
+                        {
+                          "label": "闇",
+                          "value": "6"
+                        },
+                        {
+                          "label": "混沌",
+                          "value": "0"
+                        },
+                        {
+                          "label": "曜日",
+                          "value": "-1"
+                        }
+                      ]
+                    },
+                    "validate": {
+                      "required": true
+                    },
+                    "key": "elementQuestAttribute",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "回数",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "required": true,
+                      "min": 0,
+                      "max": 100
+                    },
+                    "key": "elementQuest",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "アクセサリー",
+                "collapsible": false,
+                "key": "accessoryPanel",
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "アクセサリークエストを実施する",
+                    "tableView": false,
+                    "key": "accessoryQuest",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": true
+                  },
+                  {
+                    "label": "属性",
+                    "labelPosition": "left-left",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "火",
+                          "value": "1"
+                        },
+                        {
+                          "label": "水",
+                          "value": "2"
+                        },
+                        {
+                          "label": "風",
+                          "value": "3"
+                        },
+                        {
+                          "label": "雷",
+                          "value": "4"
+                        },
+                        {
+                          "label": "光",
+                          "value": "5"
+                        },
+                        {
+                          "label": "闇",
+                          "value": "6"
+                        },
+                        {
+                          "label": "混沌",
+                          "value": "0"
+                        },
+                        {
+                          "label": "曜日",
+                          "value": "-1"
+                        }
+                      ]
+                    },
+                    "validate": {
+                      "required": true
+                    },
+                    "key": "accessoryAttribute",
+                    "type": "select",
+                    "input": true,
+                    "defaultValue": -1
+                  },
+                  {
+                    "label": "階層",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 10,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "required": true,
+                      "min": 1,
+                      "max": 10
+                    },
+                    "key": "accessoryLevel",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "素材２",
+            "key": "material2",
+            "components": [
+              {
+                "title": "兵仗の戦場",
+                "collapsible": true,
+                "key": "battlefieldPanel",
+                "type": "panel",
+                "label": "Panel",
+                "collapsed": false,
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "ウェポンブレイクを実施する",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "weaponbreak",
+                    "type": "checkbox",
+                    "input": true
+                  },
+                  {
+                    "label": "武器種",
+                    "labelPosition": "left-left",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "剣",
+                          "value": "剣"
+                        },
+                        {
+                          "label": "槍",
+                          "value": "槍"
+                        },
+                        {
+                          "label": "特殊剣",
+                          "value": "特殊剣"
+                        },
+                        {
+                          "label": "斧",
+                          "value": "斧"
+                        },
+                        {
+                          "label": "ハンマー",
+                          "value": "ハンマー"
+                        },
+                        {
+                          "label": "杖",
+                          "value": "杖"
+                        },
+                        {
+                          "label": "銃",
+                          "value": "銃"
+                        },
+                        {
+                          "label": "弓",
+                          "value": "弓"
+                        },
+                        {
+                          "label": "魔道具",
+                          "value": "魔道具"
+                        }
+                      ]
+                    },
+                    "key": "weaponBreak",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "難易度",
+                    "labelPosition": "left-left",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Easy",
+                          "value": "easy"
+                        },
+                        {
+                          "label": "Hard",
+                          "value": "hard"
+                        }
+                      ]
+                    },
+                    "key": "weaponBreakDifficulty",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "タイタンハント(TT-01ヒュペリオン)を実施する",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "titanHyperion",
+                    "type": "checkbox",
+                    "input": true
+                  },
+                  {
+                    "label": "タイタンハント(TT-02アトラース)を実施する",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "titanAtlas",
+                    "type": "checkbox",
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "真化の試練(第2部)",
+                "collapsible": true,
+                "key": "ordealPanel",
+                "type": "panel",
+                "label": "Panel",
+                "collapsed": false,
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "真化の試練を実施する",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "ordeal",
+                    "type": "checkbox",
+                    "input": true
+                  },
+                  {
+                    "label": "神姫",
+                    "labelPosition": "left-left",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "ニケ",
+                          "value": "ニケ"
+                        },
+                        {
+                          "label": "キュベレー",
+                          "value": "キュベレー"
+                        },
+                        {
+                          "label": "アルテミス",
+                          "value": "アルテミス"
+                        },
+                        {
+                          "label": "バアル",
+                          "value": "バアル"
+                        },
+                        {
+                          "label": "アマテラス",
+                          "value": "アマテラス"
+                        },
+                        {
+                          "label": "アモン",
+                          "value": "アモン"
+                        },
+                        {
+                          "label": "クー・フーリン",
+                          "value": "クー・フーリン"
+                        },
+                        {
+                          "label": "アーシラト",
+                          "value": "アーシラト"
+                        },
+                        {
+                          "label": "ユースティティア",
+                          "value": "ユースティティア"
+                        },
+                        {
+                          "label": "ヴィシュヌ",
+                          "value": "ヴィシュヌ"
+                        }
+                      ]
+                    },
+                    "key": "ordealKamihime",
+                    "type": "select",
+                    "input": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "イベント",
+            "key": "event",
+            "components": [
+              {
+                "title": "レイドイベント",
+                "collapsible": false,
+                "key": "raidEventPanel",
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "自発",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "required": true,
+                      "min": 0,
+                      "max": 300
+                    },
+                    "key": "raidEvent",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  },
+                  {
+                    "label": "支援",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "min": 0,
+                      "max": 300
+                    },
+                    "key": "raidEventSupport",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  }
+                ]
+              },
+              {
+                "title": "ユニオンイベント",
+                "collapsible": false,
+                "key": "unionPanel",
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "デーモンバトル回数",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "delimiter": true,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "customMessage": "0から300までを指定してください",
+                      "min": 0,
+                      "max": 300
+                    },
+                    "errorLabel": "デーモンバトルの値",
+                    "key": "unionsub",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true,
+                    "defaultValue": 0
+                  },
+                  {
+                    "label": "リリムバトル回数",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "delimiter": true,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "customMessage": "0から300までを指定してください",
+                      "min": 0,
+                      "max": 300
+                    },
+                    "errorLabel": "リリムバトルの値",
+                    "key": "unionmain",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true,
+                    "defaultValue": 0
+                  }
+                ]
+              },
+              {
+                "title": "降臨戦イベント",
+                "collapsible": false,
+                "key": "adventPanel",
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "回数",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "defaultValue": 0,
+                    "delimiter": true,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "customMessage": "0から300までを指定してください",
+                      "min": 0,
+                      "max": 300
+                    },
+                    "errorLabel": "降臨戦の値",
+                    "key": "advent",
+                    "type": "number",
+                    "decimalLimit": 0,
+                    "input": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "レイド",
+            "key": "raid",
+            "components": [
+              {
+                "title": "レイドクエスト",
+                "collapsible": false,
+                "key": "panel",
+                "type": "panel",
+                "label": "Panel",
+                "input": false,
+                "tableView": false,
+                "components": [
+                  {
+                    "label": "レイドクエスト(自発)を実施する",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "raidBoss",
+                    "type": "checkbox",
+                    "input": true
+                  },
+                  {
+                    "label": "最大難易度",
+                    "labelPosition": "left-left",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                      "values": [
+                        {
+                          "label": "STANDARD",
+                          "value": "STANDARD"
+                        },
+                        {
+                          "label": "EXPERT",
+                          "value": "EXPERT"
+                        },
+                        {
+                          "label": "STANDARD",
+                          "value": "STANDARD"
+                        },
+                        {
+                          "label": "RAGNAROK1",
+                          "value": "RAGNAROK50"
+                        },
+                        {
+                          "label": "RAGNAROK2",
+                          "value": "RAGNAROK60"
+                        },
+                        {
+                          "label": "RAGNAROK+",
+                          "value": "RAGNAROK80"
+                        },
+                        {
+                          "label": "MALICIOUS",
+                          "value": "MALICIOUS"
+                        },
+                        {
+                          "label": "MALICIOUS+",
+                          "value": "MALICIOUS+"
+                        }
+                      ]
+                    },
+                    "key": "raidBossDifficulty",
+                    "type": "select",
+                    "input": true
+                  },
+                  {
+                    "label": "レイドボスサポート回数",
+                    "labelPosition": "left-left",
+                    "tableView": false,
+                    "delimiter": false,
+                    "requireDecimal": false,
+                    "truncateMultipleSpaces": false,
+                    "validate": {
+                      "min": 0,
+                      "max": 100
+                    },
+                    "key": "raidBossSupport",
+                    "type": "number",
+                    "input": true,
+                    "decimalLimit": 0
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "key": "tabs",
+        "type": "tabs",
+        "input": false,
+        "tableView": false,
+        "label": "Tabs"
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}
