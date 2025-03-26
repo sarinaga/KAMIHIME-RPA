@@ -59,7 +59,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="リロード_ゲームスタート" sap:VirtualizedContainerService.HintSize="546,1288" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="リロード_ゲームスタート" sap:VirtualizedContainerService.HintSize="1213,1125" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="attached" />
     </Sequence.Variables>
@@ -68,30 +68,30 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;リロード・ゲームスタート開始&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ 'chrome.exe 神姫PROJECT'" sap:VirtualizedContainerService.HintSize="484,671" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="594dd2ff4af51377f5c3ffc0cda341cd" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;">
+    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="484,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;リロード・ゲームスタート開始&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" BrowserType="Chrome" ContinueOnError="{x:Null}" DisplayName="ブラウザーにアタッチ 'chrome.exe 神姫PROJECT'" sap:VirtualizedContainerService.HintSize="484,659" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="594dd2ff4af51377f5c3ffc0cda341cd" SearchScope="{x:Null}" Selector="&lt;html app='chrome.exe' title='神姫PROJECT R【ブラウザ版】 - FANZA GAMES' /&gt;" TimeoutMS="{x:Null}" UiBrowser="{x:Null}">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="アタッチ後処理" sap:VirtualizedContainerService.HintSize="450,524" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="アタッチ後処理" sap:VirtualizedContainerService.HintSize="450,480" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RefreshBrowser Browser="{x:Null}" DisplayName="ブラウザーを更新" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
-            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="ホームボタンで一番上に移動" EmptyField="False" sap:VirtualizedContainerService.HintSize="388,153" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="home" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+            <ui:RefreshBrowser Browser="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ブラウザーを更新" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
+            <ui:SendHotkey Activate="True" ClickBeforeTyping="False" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DisplayName="ホームボタンで一番上に移動" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="home" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
               <ui:SendHotkey.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1efed0c0-e1d6-4446-b3a2-7f905ad05e1e" InformativeScreenshot="92f557d940289095b7becf44861e7ddc" Selector="&lt;webctrl id='page' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1efed0c0-e1d6-4446-b3a2-7f905ad05e1e" InformativeScreenshot="b30e5245ca87f9537cdc5c659180eb84" Selector="&lt;webctrl parentid='root' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
                 </ui:Target>
               </ui:SendHotkey.Target>
             </ui:SendHotkey>
-            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ゲームスタートボタンを押す" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+            <ui:ClickImage ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="ゲームスタートボタンを押す" sap:VirtualizedContainerService.HintSize="416,178" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
               <ui:ClickImage.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -122,7 +122,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <Delay DisplayName="十分に待つ" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,97" sap2010:WorkflowViewState.IdRef="Delay_1">
+    <Delay DisplayName="十分に待つ" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="484,122" sap2010:WorkflowViewState.IdRef="Delay_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

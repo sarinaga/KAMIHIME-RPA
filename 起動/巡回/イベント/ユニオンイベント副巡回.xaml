@@ -80,9 +80,12 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="払暁戦ソロネ巡回" sap:VirtualizedContainerService.HintSize="1213,920" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="払暁戦ソロネ巡回" sap:VirtualizedContainerService.HintSize="949,921" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="i" />
     </Sequence.Variables>
@@ -91,14 +94,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="514,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ユニオンイベント副回開始&quot;]">
+    <ui:LogMessage DisplayName="開始ログ" sap:VirtualizedContainerService.HintSize="514,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;ユニオンイベント副順回開始:max=&quot; &amp; max]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <While DisplayName="繰り返し (前判定)" sap:VirtualizedContainerService.HintSize="514,560" sap2010:WorkflowViewState.IdRef="While_1" Condition="[i &lt; max]">
+    <While DisplayName="繰り返し (前判定)" sap:VirtualizedContainerService.HintSize="514,561" sap2010:WorkflowViewState.IdRef="While_1" Condition="[i &lt; max]">
       <Sequence DisplayName="繰り返し内容" sap:VirtualizedContainerService.HintSize="468,369" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">

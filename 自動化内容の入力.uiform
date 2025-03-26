@@ -191,10 +191,10 @@
                   {
                     "label": "アクセサリークエストを実施する",
                     "tableView": false,
+                    "defaultValue": false,
                     "key": "accessoryQuest",
                     "type": "checkbox",
-                    "input": true,
-                    "defaultValue": true
+                    "input": true
                   },
                   {
                     "label": "属性",
@@ -285,7 +285,7 @@
                     "label": "ウェポンブレイクを実施する",
                     "tableView": false,
                     "defaultValue": false,
-                    "key": "weaponbreak",
+                    "key": "weaponBreakp",
                     "type": "checkbox",
                     "input": true
                   },
@@ -294,6 +294,7 @@
                     "labelPosition": "left-left",
                     "widget": "choicesjs",
                     "tableView": true,
+                    "defaultValue": "剣",
                     "data": {
                       "values": [
                         {
@@ -334,6 +335,9 @@
                         }
                       ]
                     },
+                    "validate": {
+                      "required": true
+                    },
                     "key": "weaponBreak",
                     "type": "select",
                     "input": true
@@ -343,6 +347,7 @@
                     "labelPosition": "left-left",
                     "widget": "choicesjs",
                     "tableView": true,
+                    "defaultValue": "hard",
                     "data": {
                       "values": [
                         {
@@ -354,6 +359,9 @@
                           "value": "hard"
                         }
                       ]
+                    },
+                    "validate": {
+                      "required": true
                     },
                     "key": "weaponBreakDifficulty",
                     "type": "select",
@@ -444,9 +452,13 @@
                         }
                       ]
                     },
+                    "validate": {
+                      "required": true
+                    },
                     "key": "ordealKamihime",
                     "type": "select",
-                    "input": true
+                    "input": true,
+                    "defaultValue": "ニケ"
                   }
                 ]
               }
@@ -515,6 +527,7 @@
                     "label": "デーモンバトル回数",
                     "labelPosition": "left-left",
                     "tableView": false,
+                    "defaultValue": 0,
                     "delimiter": true,
                     "requireDecimal": false,
                     "truncateMultipleSpaces": false,
@@ -524,16 +537,16 @@
                       "max": 300
                     },
                     "errorLabel": "デーモンバトルの値",
-                    "key": "unionsub",
+                    "key": "unionMain",
                     "type": "number",
                     "decimalLimit": 0,
-                    "input": true,
-                    "defaultValue": 0
+                    "input": true
                   },
                   {
                     "label": "リリムバトル回数",
                     "labelPosition": "left-left",
                     "tableView": false,
+                    "defaultValue": 0,
                     "delimiter": true,
                     "requireDecimal": false,
                     "truncateMultipleSpaces": false,
@@ -543,11 +556,10 @@
                       "max": 300
                     },
                     "errorLabel": "リリムバトルの値",
-                    "key": "unionmain",
+                    "key": "unionSub",
                     "type": "number",
                     "decimalLimit": 0,
-                    "input": true,
-                    "defaultValue": 0
+                    "input": true
                   }
                 ]
               },
@@ -609,6 +621,7 @@
                     "labelPosition": "left-left",
                     "widget": "choicesjs",
                     "tableView": true,
+                    "defaultValue": "RAGNAROK50",
                     "data": {
                       "values": [
                         {
@@ -618,10 +631,6 @@
                         {
                           "label": "EXPERT",
                           "value": "EXPERT"
-                        },
-                        {
-                          "label": "STANDARD",
-                          "value": "STANDARD"
                         },
                         {
                           "label": "RAGNAROK1",
@@ -662,8 +671,9 @@
                     },
                     "key": "raidBossSupport",
                     "type": "number",
+                    "decimalLimit": 0,
                     "input": true,
-                    "decimalLimit": 0
+                    "defaultValue": 0
                   }
                 ]
               }
